@@ -21,6 +21,20 @@ def fecha_larga(texto):
     return f"{DIAS_LARGOS[dia.weekday()]}, {dia.day} de {MESES_LARGOS[dia.month - 1]} de {dia.year}"
 
 
+def _p(contenido):
+    return f"<!-- wp:paragraph -->\n<p>{contenido}</p>\n<!-- /wp:paragraph -->"
+
+
+def _h(contenido, nivel=2):
+    atributos = "" if nivel == 2 else f' {{"level":{nivel}}}'
+    return (f"<!-- wp:heading{atributos} -->\n<h{nivel} class=\"wp-block-heading\">{contenido}</h{nivel}>"
+            "\n<!-- /wp:heading -->")
+
+
+SEPARADOR = ('<!-- wp:separator -->\n<hr class="wp-block-separator has-alpha-channel-opacity"/>'
+             "\n<!-- /wp:separator -->")
+
+
 def _cierre(item, hoy):
     if not item.get("fecha_limite"):
         return ""
@@ -37,9 +51,9 @@ def _cierre(item, hoy):
 def licitacion_html(item, hoy):
     partes = []
     lugar = f" · {escape(item['lugar'])}" if item.get("lugar") else ""
-    partes.append(f"<h3>{escape(item['titulo'])}{lugar}</h3>")
+    partes.append(_h(f"{escape(item['titulo'])}{lugar}", 3))
     if item.get("etiquetas"):
-        partes.append(f"<p><em>{escape(' · '.join(item['etiquetas']))}</em></p>")
+        partes.append(_p(f"<em>{escape(' · '.join(item['etiquetas']))}</em>"))
     datos = [f"<strong>Cierra:</strong> {escape(_cierre(item, hoy))}"]
     if item.get("presupuesto_sin_iva") is not None:
         datos.append(f"<strong>Presupuesto base:</strong> {escape(euros(item['presupuesto_sin_iva']))} sin IVA")
@@ -47,25 +61,25 @@ def licitacion_html(item, hoy):
         datos.append(f"<strong>Procedimiento:</strong> {escape(item['procedimiento'])}")
     if item.get("organo"):
         datos.append(f"<strong>Organismo:</strong> {escape(item['organo'])}")
-    partes.append("<p>" + "<br>".join(datos) + "</p>")
+    partes.append(_p("<br>".join(datos)))
     if item.get("clave"):
-        partes.append(f"<p>{escape(item['clave'])}</p>")
+        partes.append(_p(escape(item['clave'])))
     if item.get("fecha_prudente"):
-        partes.append("<p><small>Fecha prudente: confirma la hora exacta en el anuncio.</small></p>")
+        partes.append(_p("<small>Fecha prudente: confirma la hora exacta en el anuncio.</small>"))
     codigos = []
     if item.get("expediente"):
         codigos.append(f"Expte. {item['expediente']}")
     if item.get("cpv"):
         codigos.append("CPV " + ", ".join(item["cpv"][:3]))
     if codigos:
-        partes.append(f"<p><small>{escape(' · '.join(codigos))}</small></p>")
+        partes.append(_p(f"<small>{escape(' · '.join(codigos))}</small>"))
     if item.get("url"):
-        partes.append(f'<p><a href="{escape(item["url"], quote=True)}">Ver expediente oficial</a></p>')
-    return "\n".join(partes)
+        partes.append(_p(f'<a href="{escape(item["url"], quote=True)}">Ver expediente oficial</a>'))
+    return "\n\n".join(partes)
 
 
 def ayuda_html(ayuda, hoy):
-    partes = [f"<h3>{escape(ayuda['titulo'])}</h3>"]
+    partes = [_h(escape(ayuda["titulo"]), 3)]
     datos = []
     if ayuda.get("organo"):
         datos.append(f"<strong>Organismo:</strong> {escape(ayuda['organo'])}")
@@ -74,41 +88,41 @@ def ayuda_html(ayuda, hoy):
     elif ayuda.get("texto_fin"):
         datos.append(f"<strong>Plazo:</strong> {escape(ayuda['texto_fin'])}")
     if datos:
-        partes.append("<p>" + "<br>".join(datos) + "</p>")
+        partes.append(_p("<br>".join(datos)))
     if ayuda.get("clave"):
-        partes.append(f"<p>{escape(ayuda['clave'])}</p>")
+        partes.append(_p(escape(ayuda['clave'])))
     if ayuda.get("url"):
-        partes.append(f'<p><a href="{escape(ayuda["url"], quote=True)}">Ver convocatoria oficial</a></p>')
-    return "\n".join(partes)
+        partes.append(_p(f'<a href="{escape(ayuda["url"], quote=True)}">Ver convocatoria oficial</a>'))
+    return "\n\n".join(partes)
 
 
 def renderizar(curada):
     hoy = date.fromisoformat(curada["fecha"])
-    bloques = [f"<p><strong>{escape(fecha_larga(curada['fecha']).capitalize())}</strong></p>"]
+    bloques = [_p(f"<strong>{escape(fecha_larga(curada['fecha']).capitalize())}</strong>")]
     if curada.get("intro"):
-        bloques.append(f"<p>{escape(curada['intro'])}</p>")
+        bloques.append(_p(escape(curada["intro"])))
     for seccion in curada.get("secciones", []):
         if not seccion.get("items"):
             continue
-        bloques.append(f"<h2>{escape(seccion['titulo'])} ({len(seccion['items'])})</h2>")
+        bloques.append(_h(f"{escape(seccion['titulo'])} ({len(seccion['items'])})"))
         if seccion.get("nota"):
-            bloques.append(f"<p>{escape(seccion['nota'])}</p>")
+            bloques.append(_p(escape(seccion["nota"])))
         for item in seccion["items"]:
             bloques.append(licitacion_html(item, hoy))
-            bloques.append("<hr>")
+            bloques.append(SEPARADOR)
     if curada.get("ayudas"):
-        bloques.append(f"<h2>Ayudas ({len(curada['ayudas'])})</h2>")
+        bloques.append(_h(f"Ayudas ({len(curada['ayudas'])})"))
         for ayuda in curada["ayudas"]:
             bloques.append(ayuda_html(ayuda, hoy))
-            bloques.append("<hr>")
+            bloques.append(SEPARADOR)
     pie = curada.get("pie") or (
         "Datos de la Plataforma de Contratación del Sector Público, la Plataforma de serveis de "
         "contractació pública de la Generalitat, el BOE y la Base de Datos Nacional de Subvenciones. "
         "Los importes son el presupuesto base de licitación. Antes de ofertar, lee siempre el pliego: "
         "manda el anuncio oficial."
     )
-    bloques.append(f"<p><small>{escape(pie)}</small></p>")
-    return "\n".join(bloques)
+    bloques.append(_p(f"<small>{escape(pie)}</small>"))
+    return "\n\n".join(bloques)
 
 
 def main(argv=None):
