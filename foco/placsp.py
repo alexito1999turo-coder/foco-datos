@@ -5,12 +5,14 @@ las actualizaciones más recientes y un enlace rel="next" al fichero anterior. L
 hacia atrás hasta cubrir los últimos días y nos quedamos con lo que sigue en plazo.
 """
 
+import re
 import sys
 import time
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta
 
-from .comun import a_numero, cpv_limpio, descargar, es_de_eventos, nombre_procedimiento
+from .comun import (a_numero, cpv_limpio, descargar, es_de_eventos, nombre_procedimiento,
+                    normalizar)
 
 FEEDS = {
     "PLACSP": "https://contrataciondelestado.es/sindicacion/sindicacion_643/"
@@ -62,6 +64,71 @@ def _fecha_iso(texto):
         return datetime.fromisoformat(texto.replace("Z", "+00:00"))
     except ValueError:
         return None
+
+
+RESULTADOS = {"8": "adjudicado", "9": "formalizado", "3": "desierto", "4": "desistimiento",
+              "5": "renuncia"}
+# Primera letra del NIF de una persona jurídica. Un DNI (dígitos) o un NIE (X, Y, Z) es una persona
+# física: de esas no guardamos el nombre.
+LETRAS_SOCIEDAD = set("ABCDEFGHJNPQRSUVW")
+FORMA_SOCIETARIA = re.compile(
+    r"\b(s\.?l\.?u?|s\.?a\.?u?|slu|sll|slp|sccl|scp|coop|cooperativa|ute|sociedad|fundacion|"
+    r"fundacio|asociacion|associacio|limitada|anonima)\b")
+
+
+def es_persona_juridica(nif, nombre):
+    if nif:
+        return nif.strip()[:1].upper() in LETRAS_SOCIEDAD
+    return bool(FORMA_SOCIETARIA.search(normalizar(nombre)))
+
+
+def _entero(texto):
+    return int(texto) if texto and texto.isdigit() else None
+
+
+def _resultados(estado_carpeta):
+    """Resultados de adjudicación. Nunca se guarda el NIF ni el nombre de una persona física."""
+    lista = []
+    for resultado in estado_carpeta:
+        if _local(resultado.tag) != "TenderResult":
+            continue
+        ganador = _hijo(resultado, "WinningParty")
+        nif = _texto(_ruta(ganador, "PartyIdentification", "ID"))
+        nombre = _texto(_ruta(ganador, "PartyName", "Name"))
+        empresa = es_persona_juridica(nif, nombre) if (nif or nombre) else None
+        proyecto = _hijo(resultado, "AwardedTenderedProject")
+        totales = _hijo(proyecto, "LegalMonetaryTotal")
+        codigo = _texto(_hijo(resultado, "ResultCode"))
+        fecha = _texto(_hijo(resultado, "AwardDate"))
+        lista.append({
+            "resultado": RESULTADOS.get(codigo, "otro"),
+            "fecha": fecha[:10] if fecha else None,
+            "ofertas": _entero(_texto(_hijo(resultado, "ReceivedTenderQuantity"))),
+            "oferta_minima": a_numero(_texto(_hijo(resultado, "LowerTenderAmount"))),
+            "oferta_maxima": a_numero(_texto(_hijo(resultado, "HigherTenderAmount"))),
+            "pyme": _texto(_hijo(resultado, "SMEAwardedIndicator")) == "true",
+            "ganador": nombre if empresa else ("persona física" if nombre else None),
+            "ganador_empresa": empresa,
+            "lote": _texto(_hijo(proyecto, "ProcurementProjectLotID")),
+            "importe_sin_iva": a_numero(_texto(_hijo(totales, "TaxExclusiveAmount"))),
+            "importe_con_iva": a_numero(_texto(_hijo(totales, "PayableAmount"))),
+        })
+    return lista
+
+
+def _fecha_publicacion(estado_carpeta):
+    """Fecha del anuncio de licitación (o del primer anuncio publicado, si no hay)."""
+    avisos = {}
+    for aviso in estado_carpeta:
+        if _local(aviso.tag) != "ValidNoticeInfo":
+            continue
+        tipo = _texto(_hijo(aviso, "NoticeTypeCode")) or "?"
+        fechas = [f[:10] for f in (_texto(e) for e in _descendientes(aviso, "IssueDate")) if f]
+        if fechas:
+            avisos[tipo] = min([avisos[tipo], *fechas] if tipo in avisos else fechas)
+    if not avisos:
+        return None
+    return avisos.get("DOC_CN") or avisos.get("DOC_CD") or min(avisos.values())
 
 
 def parsear_feed(contenido):
@@ -133,6 +200,8 @@ def parsear_feed(contenido):
             "fecha_limite": fecha[:10] if fecha else None,
             "hora_limite": hora[:5] if hora else None,
             "url": enlace,
+            "publicada": _fecha_publicacion(estado_carpeta),
+            "resultados": _resultados(estado_carpeta),
         })
     return licitaciones, siguiente
 
@@ -170,14 +239,7 @@ def _leer_hacia_atras(url, limite, vistas, fuente, hoy_iso, descargador, max_fic
             previa = vistas.get(clave)
             if previa is not None and (lic["actualizado"] or "") <= previa[0]:
                 continue
-            guardar = None
-            if lic["estado"] != "PUB":
-                guardar = "cerrada"
-            elif lic["fecha_limite"] and lic["fecha_limite"] >= hoy_iso:
-                relevante, motivo = es_de_eventos(lic["titulo"], lic["cpv"])
-                if relevante:
-                    guardar = {**lic, "fuente": fuente, "motivo": motivo}
-            vistas[clave] = (lic["actualizado"] or "", guardar)
+            vistas[clave] = (lic["actualizado"] or "", *clasificar(lic, fuente, hoy_iso))
         if leidos % 5 == 0:
             print(f"[{fuente}] {leidos} ficheros, {entradas} entradas, hasta "
                   f"{ultima.isoformat(timespec='minutes') if ultima else '?'} "
@@ -191,16 +253,37 @@ def _leer_hacia_atras(url, limite, vistas, fuente, hoy_iso, descargador, max_fic
             "parada": parada, "siguiente": url, "segundos": reloj() - inicio}
 
 
+def clasificar(lic, fuente, hoy_iso):
+    """Devuelve (tipo, registro): «abierta» con la licitación si es de eventos y sigue en plazo;
+    «cerrada» si ya no está en plazo, con el registro de adjudicación si es de eventos y lo tiene;
+    «nada» en otro caso."""
+    if lic["estado"] != "PUB":
+        registro = None
+        if lic["estado"] in ("ADJ", "RES") and lic.get("resultados"):
+            relevante, motivo = es_de_eventos(lic["titulo"], lic["cpv"])
+            if relevante:
+                registro = {**{k: v for k, v in lic.items() if k not in ("lotes", "fecha_limite",
+                                                                      "hora_limite")},
+                            "fuente": fuente, "motivo": motivo}
+        return "cerrada", registro
+    if lic["fecha_limite"] and lic["fecha_limite"] >= hoy_iso:
+        relevante, motivo = es_de_eventos(lic["titulo"], lic["cpv"])
+        if relevante:
+            return "abierta", {**lic, "fuente": fuente, "motivo": motivo}
+    return "nada", None
+
+
 def _iso(momento):
     return momento.isoformat(timespec="minutes") if momento else None
 
 
 def recoger(dias=3, hoy=None, max_ficheros=400, descargador=descargar, limite_segundos=None,
             reloj=time.monotonic, estado_previo=None):
-    """Lee los feeds de PLACSP y devuelve (selección, informe, ids_cerradas).
+    """Lee los feeds de PLACSP y devuelve (selección, informe, ids_cerradas, adjudicadas).
 
     La selección son las licitaciones de eventos en plazo; ids_cerradas, las que pasaron a otro
-    estado (evaluación, adjudicada, anulada...) y deben salir del listado acumulado.
+    estado (evaluación, adjudicada, anulada...) y deben salir del listado acumulado; adjudicadas,
+    las de eventos con resultado (ganador, importe, número de ofertas).
 
     Cada feed se lee en dos fases dentro de `limite_segundos`:
     1. Lo nuevo: desde el fichero más reciente hasta donde llegó la ejecución anterior.
@@ -261,7 +344,9 @@ def recoger(dias=3, hoy=None, max_ficheros=400, descargador=descargar, limite_se
             "segundos": round(reloj() - inicio),
         }
 
-    seleccion = [guardar for _, guardar in vistas.values() if isinstance(guardar, dict)]
-    cerradas = [clave for clave, (_, guardar) in vistas.items() if guardar == "cerrada"]
+    seleccion = [registro for _, tipo, registro in vistas.values() if tipo == "abierta"]
+    cerradas = [clave for clave, (_, tipo, _) in vistas.items() if tipo == "cerrada"]
+    adjudicadas = [registro for _, tipo, registro in vistas.values()
+                   if tipo == "cerrada" and registro]
     seleccion.sort(key=lambda l: (l["fecha_limite"], l["hora_limite"] or "23:59"))
-    return seleccion, informe, cerradas
+    return seleccion, informe, cerradas, adjudicadas

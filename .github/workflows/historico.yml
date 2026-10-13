@@ -1,0 +1,80 @@
+name: Histórico de licitaciones
+
+on:
+  workflow_dispatch:
+    inputs:
+      accion:
+        description: "probar (comprueba los zips) o cargar"
+        default: "probar"
+      periodos:
+        description: 'Periodos en JSON, por ejemplo ["202510","202511"] o ["2025"]'
+        default: '["202509"]'
+
+permissions:
+  contents: write
+
+jobs:
+  probar:
+    if: github.event.inputs.accion == 'probar'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m foco.historico probar ${{ join(fromJSON(github.event.inputs.periodos), ' ') }}
+
+  cargar:
+    if: github.event.inputs.accion == 'cargar'
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix:
+        periodo: ${{ fromJSON(github.event.inputs.periodos) }}
+        feed: [estado, agregadas]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m foco.historico cargar --periodo ${{ matrix.periodo }} --feed ${{ matrix.feed }} --salida parcial
+      - uses: actions/upload-artifact@v4
+        with:
+          name: parcial-${{ matrix.periodo }}-${{ matrix.feed }}
+          path: parcial/
+          retention-days: 3
+
+  guardar:
+    needs: cargar
+    if: always() && github.event.inputs.accion == 'cargar'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    concurrency:
+      group: recogida
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          path: parcial
+          pattern: parcial-*
+      - run: python -m foco.historico unir parcial --salida data/historico_eventos
+      - name: Guardar el histórico en el repositorio
+        run: |
+          git config user.name "foco-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/historico_eventos
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "Histórico de eventos: ${{ join(fromJSON(github.event.inputs.periodos), ', ') }}"
+            git pull --rebase origin main
+            git push
+          fi

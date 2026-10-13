@@ -4,7 +4,9 @@ import tempfile
 import unittest
 from datetime import date
 
-from foco import ayudas, catalunya, componer, placsp, recoger
+import zipfile
+
+from foco import ayudas, catalunya, componer, historico, placsp, recoger
 from foco.comun import a_numero, es_de_eventos, normalizar
 from foco.edicion import agrupar, euros, fecha_corta
 from foco.plantilla import fecha_larga, renderizar
@@ -83,7 +85,7 @@ class Placsp(unittest.TestCase):
                 return ficheros[url]
             return leer("placsp_anterior.atom").replace(b'rel="next"', b'rel="prev"')
 
-        seleccion, informe, cerradas = placsp.recoger(dias=3, hoy=HOY, descargador=falso)
+        seleccion, informe, cerradas, _ = placsp.recoger(dias=3, hoy=HOY, descargador=falso)
         titulos = [l["titulo"] for l in seleccion]
         self.assertEqual(len(seleccion), 2)
         self.assertIn("Realización del programa Parque Infantil de Navidad 2026-2027", titulos)
@@ -111,7 +113,7 @@ class Placsp(unittest.TestCase):
                 return leer("placsp_anterior.atom")
             return leer("placsp_anterior.atom").replace(b'rel="next"', b'rel="prev"')
 
-        _, informe, _ = placsp.recoger(dias=30, hoy=HOY, descargador=falso, limite_segundos=150,
+        _, informe, _, _ = placsp.recoger(dias=30, hoy=HOY, descargador=falso, limite_segundos=150,
                                        reloj=lambda: reloj[0])
         primero = informe["PLACSP"]
         self.assertEqual(primero["parada"], "tiempo agotado")
@@ -120,7 +122,7 @@ class Placsp(unittest.TestCase):
 
         reloj[0] = 0
         pedidas.clear()
-        _, informe, _ = placsp.recoger(dias=3, hoy=HOY, descargador=falso, limite_segundos=1000,
+        _, informe, _, _ = placsp.recoger(dias=3, hoy=HOY, descargador=falso, limite_segundos=1000,
                                        reloj=lambda: reloj[0], estado_previo=informe)
         segundo = informe["PLACSP"]
         self.assertIn(mas_antiguo, pedidas)
@@ -130,7 +132,7 @@ class Placsp(unittest.TestCase):
 
     def test_para_si_se_agota_el_tiempo(self):
         momentos = iter(range(0, 10000, 100))
-        _, informe, _ = placsp.recoger(dias=30, hoy=HOY, limite_segundos=150,
+        _, informe, _, _ = placsp.recoger(dias=30, hoy=HOY, limite_segundos=150,
                                        descargador=lambda url, *a, **k: leer("placsp.atom"),
                                        reloj=lambda: next(momentos))
         self.assertEqual(informe["PLACSP"]["parada"], "tiempo agotado")
@@ -290,6 +292,67 @@ class Componer(unittest.TestCase):
             seleccion = {"fecha": "2026-10-13", "secciones": [{"titulo": "X", "items": [{"id": ident}]}]}
             with self.assertRaises(componer.SeleccionInvalida):
                 componer.componer(seleccion, self.DATOS)
+
+
+class Adjudicaciones(unittest.TestCase):
+    def test_parsea_resultado_y_protege_personas_fisicas(self):
+        licitaciones, _ = placsp.parsear_feed(leer("placsp_adjudicadas.atom"))
+        cabalgata, sonido = licitaciones
+        self.assertEqual(cabalgata["publicada"], "2025-10-17")
+        resultado = cabalgata["resultados"][0]
+        self.assertEqual(resultado["ganador"], "FIESTAS DEL SUR SL")
+        self.assertEqual(resultado["ofertas"], 4)
+        self.assertEqual(resultado["importe_sin_iva"], 98000.0)
+        self.assertEqual(sonido["resultados"][0]["ganador"], "persona física")
+        self.assertNotIn("12345678Z", json.dumps(sonido))
+        self.assertNotIn("NOMBRE APELLIDO", json.dumps(sonido))
+
+    def test_recoger_guarda_el_archivo_de_precios(self):
+        def falso(url, *args, **kwargs):
+            if url == placsp.FEEDS["PLACSP"]:
+                return leer("placsp_adjudicadas.atom")
+            return leer("placsp_anterior.atom").replace(b'rel="next"', b'rel="prev"')
+
+        _, _, cerradas, adjudicadas = placsp.recoger(dias=400, hoy=HOY, descargador=falso)
+        self.assertEqual(len(adjudicadas), 2)
+        with tempfile.TemporaryDirectory() as carpeta:
+            nuevas = recoger.guardar_adjudicaciones(carpeta, adjudicadas, "2026-10-13")
+            otra_vez = recoger.guardar_adjudicaciones(carpeta, adjudicadas, "2026-10-14")
+            with open(os.path.join(carpeta, "adjudicaciones.json"), encoding="utf-8") as fichero:
+                archivo = json.load(fichero)
+        self.assertEqual(len(nuevas), 2)
+        self.assertEqual(otra_vez, [])
+        self.assertTrue(all(r["vista"] == "2026-10-13" for r in archivo.values()))
+
+
+class Historico(unittest.TestCase):
+    def test_leer_zip_y_unir(self):
+        with tempfile.TemporaryDirectory() as carpeta:
+            ruta = os.path.join(carpeta, "periodo.zip")
+            with zipfile.ZipFile(ruta, "w") as archivo:
+                archivo.writestr("a.atom", leer("placsp_adjudicadas.atom"))
+                archivo.writestr("b.atom", leer("placsp.atom"))
+            eventos = historico.leer_zip(ruta, "PLACSP")
+            self.assertIn("https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/2001",
+                          eventos)
+            parcial = os.path.join(carpeta, "parcial", "parcial-202512-estado")
+            os.makedirs(parcial)
+            with open(os.path.join(parcial, "202512-estado.json"), "w", encoding="utf-8") as fichero:
+                json.dump(eventos, fichero)
+            historico.unir([os.path.join(carpeta, "parcial")], os.path.join(carpeta, "hist"))
+            with open(os.path.join(carpeta, "hist", "202512.json"), encoding="utf-8") as fichero:
+                unido = json.load(fichero)
+        self.assertEqual(len(unido), len(eventos))
+
+    def test_fusionar_conserva_publicacion_y_resultado(self):
+        antigua = {"actualizado": "2025-10-17", "publicada": "2025-10-17", "estado": "PUB",
+                   "resultados": []}
+        nueva = {"actualizado": "2025-12-15", "publicada": None, "estado": "RES",
+                 "resultados": [{"ganador": "X SL"}]}
+        fusion = historico.fusionar(antigua, nueva)
+        self.assertEqual(fusion["estado"], "RES")
+        self.assertEqual(fusion["publicada"], "2025-10-17")
+        self.assertEqual(fusion["resultados"][0]["ganador"], "X SL")
 
 
 if __name__ == "__main__":

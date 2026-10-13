@@ -41,6 +41,28 @@ def quitar_duplicados(licitaciones):
                   key=lambda l: (l.get("fecha_limite") or "9999", l.get("hora_limite") or "23:59"))
 
 
+def guardar_adjudicaciones(salida, nuevas, hoy_iso):
+    """Suma las adjudicaciones de eventos a data/adjudicaciones.json, el archivo de precios del
+    sector, y devuelve las que no se habían visto antes (para la sección «Quién ganó»)."""
+    ruta = os.path.join(salida, "adjudicaciones.json")
+    try:
+        with open(ruta, encoding="utf-8") as fichero:
+            archivo = json.load(fichero)
+    except (OSError, ValueError):
+        archivo = {}
+    recien = []
+    for registro in nuevas:
+        previo = archivo.get(registro["id"])
+        registro = {**registro, "vista": (previo or {}).get("vista") or hoy_iso}
+        if previo is None:
+            recien.append(registro)
+        archivo[registro["id"]] = registro
+    os.makedirs(salida, exist_ok=True)
+    with open(ruta, "w", encoding="utf-8") as fichero:
+        json.dump(archivo, fichero, ensure_ascii=False, indent=0, sort_keys=True)
+    return sorted(recien, key=lambda r: r.get("titulo") or "")
+
+
 def _cargar_previo(salida):
     try:
         with open(os.path.join(salida, "latest.json"), encoding="utf-8") as fichero:
@@ -99,6 +121,7 @@ def ejecutar(salida, dias=3, dias_ayudas=7, hoy=None, fuentes=None):
         "ayudas": [],
         "informe": {},
         "errores": [],
+        "adjudicaciones_nuevas": [],
     }
     for nombre, funcion in fuentes.items():
         try:
@@ -116,6 +139,9 @@ def ejecutar(salida, dias=3, dias_ayudas=7, hoy=None, fuentes=None):
                 acumuladas.pop(clave, None)
             for lic in lista:
                 acumuladas[lic["id"]] = lic
+            nuevas_adjudicaciones = respuesta[3] if len(respuesta) > 3 else []
+            resultado["adjudicaciones_nuevas"] = guardar_adjudicaciones(
+                salida, nuevas_adjudicaciones, hoy_iso)
         elif nombre == "catalunya":
             catalanas = lista
         else:

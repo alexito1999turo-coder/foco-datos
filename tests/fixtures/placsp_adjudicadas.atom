@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:cac="urn:dgpe:names:draft:codice:schema:xsd:CommonAggregateComponents-2"
+      xmlns:cbc="urn:dgpe:names:draft:codice:schema:xsd:CommonBasicComponents-2"
+      xmlns:cac-place-ext="urn:dgpe:names:draft:codice-place-ext:schema:xsd:CommonAggregateComponents-2"
+      xmlns:cbc-place-ext="urn:dgpe:names:draft:codice-place-ext:schema:xsd:CommonBasicComponents-2">
+  <entry>
+    <id>https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/2001</id>
+    <link href="https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&amp;idEvl=BBB%3D%3D"/>
+    <title>Organización de la Cabalgata de Reyes 2026</title>
+    <updated>2025-12-15T12:00:00.000+01:00</updated>
+    <cac-place-ext:ContractFolderStatus>
+      <cbc:ContractFolderID>CAB-2025/77</cbc:ContractFolderID>
+      <cbc-place-ext:ContractFolderStatusCode>RES</cbc-place-ext:ContractFolderStatusCode>
+      <cac-place-ext:LocatedContractingParty>
+        <cac:Party>
+          <cac:PartyName><cbc:Name>Alcaldía del Ayuntamiento de Motril</cbc:Name></cac:PartyName>
+          <cac:PostalAddress><cbc:CityName>Motril</cbc:CityName></cac:PostalAddress>
+        </cac:Party>
+      </cac-place-ext:LocatedContractingParty>
+      <cac:ProcurementProject>
+        <cbc:Name>Organización de la Cabalgata de Reyes 2026</cbc:Name>
+        <cac:BudgetAmount>
+          <cbc:EstimatedOverallContractAmount currencyID="EUR">120000</cbc:EstimatedOverallContractAmount>
+          <cbc:TotalAmount currencyID="EUR">145200</cbc:TotalAmount>
+          <cbc:TaxExclusiveAmount currencyID="EUR">120000</cbc:TaxExclusiveAmount>
+        </cac:BudgetAmount>
+        <cac:RequiredCommodityClassification><cbc:ItemClassificationCode>92312000</cbc:ItemClassificationCode></cac:RequiredCommodityClassification>
+        <cac:RealizedLocation><cbc:CountrySubentity>Granada</cbc:CountrySubentity></cac:RealizedLocation>
+      </cac:ProcurementProject>
+      <cac:TenderResult>
+        <cbc:ResultCode>9</cbc:ResultCode>
+        <cbc:AwardDate>2025-12-02</cbc:AwardDate>
+        <cbc:ReceivedTenderQuantity>4</cbc:ReceivedTenderQuantity>
+        <cbc:LowerTenderAmount currencyID="EUR">98000</cbc:LowerTenderAmount>
+        <cbc:HigherTenderAmount currencyID="EUR">119500</cbc:HigherTenderAmount>
+        <cbc:SMEAwardedIndicator>true</cbc:SMEAwardedIndicator>
+        <cac:WinningParty>
+          <cac:PartyIdentification><cbc:ID schemeName="NIF">B18000000</cbc:ID></cac:PartyIdentification>
+          <cac:PartyName><cbc:Name>FIESTAS DEL SUR SL</cbc:Name></cac:PartyName>
+        </cac:WinningParty>
+        <cac:AwardedTenderedProject>
+          <cbc:ProcurementProjectLotID>0</cbc:ProcurementProjectLotID>
+          <cac:LegalMonetaryTotal>
+            <cbc:TaxExclusiveAmount currencyID="EUR">98000</cbc:TaxExclusiveAmount>
+            <cbc:PayableAmount currencyID="EUR">118580</cbc:PayableAmount>
+          </cac:LegalMonetaryTotal>
+        </cac:AwardedTenderedProject>
+      </cac:TenderResult>
+      <cac:TenderingProcess>
+        <cbc:ProcedureCode>1</cbc:ProcedureCode>
+        <cac:TenderSubmissionDeadlinePeriod><cbc:EndDate>2025-11-03</cbc:EndDate><cbc:EndTime>23:59:00</cbc:EndTime></cac:TenderSubmissionDeadlinePeriod>
+      </cac:TenderingProcess>
+      <cac-place-ext:ValidNoticeInfo>
+        <cbc-place-ext:NoticeTypeCode>DOC_CN</cbc-place-ext:NoticeTypeCode>
+        <cac-place-ext:AdditionalPublicationStatus>
+          <cbc-place-ext:PublicationMediaName>Perfil del Contratante</cbc-place-ext:PublicationMediaName>
+          <cac-place-ext:AdditionalPublicationDocumentReference><cbc:IssueDate>2025-10-17</cbc:IssueDate></cac-place-ext:AdditionalPublicationDocumentReference>
+        </cac-place-ext:AdditionalPublicationStatus>
+      </cac-place-ext:ValidNoticeInfo>
+      <cac-place-ext:ValidNoticeInfo>
+        <cbc-place-ext:NoticeTypeCode>DOC_CAN_ADJ</cbc-place-ext:NoticeTypeCode>
+        <cac-place-ext:AdditionalPublicationStatus>
+          <cac-place-ext:AdditionalPublicationDocumentReference><cbc:IssueDate>2025-12-03</cbc:IssueDate></cac-place-ext:AdditionalPublicationDocumentReference>
+        </cac-place-ext:AdditionalPublicationStatus>
+      </cac-place-ext:ValidNoticeInfo>
+    </cac-place-ext:ContractFolderStatus>
+  </entry>
+  <entry>
+    <id>https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/2002</id>
+    <link href="https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&amp;idEvl=CCC%3D%3D"/>
+    <title>Sonido para las fiestas patronales</title>
+    <updated>2025-09-10T09:00:00.000+02:00</updated>
+    <cac-place-ext:ContractFolderStatus>
+      <cbc:ContractFolderID>SON-12</cbc:ContractFolderID>
+      <cbc-place-ext:ContractFolderStatusCode>ADJ</cbc-place-ext:ContractFolderStatusCode>
+      <cac-place-ext:LocatedContractingParty>
+        <cac:Party><cac:PartyName><cbc:Name>Ayuntamiento de Ejemplo</cbc:Name></cac:PartyName></cac:Party>
+      </cac-place-ext:LocatedContractingParty>
+      <cac:ProcurementProject>
+        <cbc:Name>Sonido para las fiestas patronales</cbc:Name>
+        <cac:BudgetAmount><cbc:TaxExclusiveAmount currencyID="EUR">10000</cbc:TaxExclusiveAmount></cac:BudgetAmount>
+        <cac:RequiredCommodityClassification><cbc:ItemClassificationCode>79952100</cbc:ItemClassificationCode></cac:RequiredCommodityClassification>
+      </cac:ProcurementProject>
+      <cac:TenderResult>
+        <cbc:ResultCode>8</cbc:ResultCode>
+        <cbc:AwardDate>2025-09-09</cbc:AwardDate>
+        <cbc:ReceivedTenderQuantity>1</cbc:ReceivedTenderQuantity>
+        <cac:WinningParty>
+          <cac:PartyIdentification><cbc:ID schemeName="NIF">12345678Z</cbc:ID></cac:PartyIdentification>
+          <cac:PartyName><cbc:Name>NOMBRE APELLIDO APELLIDO</cbc:Name></cac:PartyName>
+        </cac:WinningParty>
+        <cac:AwardedTenderedProject>
+          <cac:LegalMonetaryTotal><cbc:TaxExclusiveAmount currencyID="EUR">9500</cbc:TaxExclusiveAmount></cac:LegalMonetaryTotal>
+        </cac:AwardedTenderedProject>
+      </cac:TenderResult>
+    </cac-place-ext:ContractFolderStatus>
+  </entry>
+</feed>
