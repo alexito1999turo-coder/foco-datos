@@ -11,6 +11,7 @@ from html import escape
 
 from .comun import normalizar
 from .edicion import dias_restantes, euros, fecha_corta
+from .precedentes import mes_y_anio
 
 DIAS_LARGOS = ("lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo")
 MESES_LARGOS = ("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
@@ -73,6 +74,44 @@ def _cierre(item, hoy):
     return texto
 
 
+def _ganador(dato):
+    if dato.get("ganador") == "persona física":
+        return "un profesional autónomo"
+    ganador = dato.get("ganador")
+    if ganador and dato.get("varios_ganadores"):
+        ganador += " y otras empresas"
+    return ganador
+
+
+def _cifras_adjudicacion(dato):
+    """«por 98.000,00 € sin IVA, con 4 ofertas y una baja del 18,3 %»"""
+    partes = []
+    if dato.get("importe_sin_iva") is not None:
+        partes.append(f"por {euros(dato['importe_sin_iva'])} sin IVA")
+    extras = []
+    if dato.get("ofertas") is not None:
+        extras.append(f"{dato['ofertas']} {'oferta' if dato['ofertas'] == 1 else 'ofertas'}")
+    if dato.get("baja") is not None:
+        extras.append(f"una baja del {str(dato['baja']).replace('.', ',')} %")
+    if extras:
+        partes.append("con " + " y ".join(extras))
+    return ", ".join(partes)
+
+
+def precedente_texto(previo):
+    if not previo or not previo.get("publicada"):
+        return None
+    cuando = mes_y_anio(previo["publicada"])
+    ganador = _ganador(previo)
+    if ganador:
+        texto = f"en {cuando} lo ganó {ganador}"
+        cifras = _cifras_adjudicacion(previo)
+        return f"{texto} {cifras}." if cifras else f"{texto}."
+    if previo.get("presupuesto_sin_iva") is not None:
+        return f"se licitó en {cuando} con {euros(previo['presupuesto_sin_iva'])} sin IVA."
+    return None
+
+
 def licitacion_html(item, hoy):
     partes = []
     lugar = f" · {escape(item['lugar'])}" if item.get("lugar") else ""
@@ -89,6 +128,13 @@ def licitacion_html(item, hoy):
     partes.append(_p("<br>".join(datos)))
     if item.get("clave"):
         partes.append(_p(escape(item['clave'])))
+    previo = precedente_texto(item.get("precedente"))
+    if previo:
+        enlace = item["precedente"].get("url")
+        texto = escape(previo)
+        if enlace:
+            texto += f' <a href="{escape(enlace, quote=True)}">Ver el del año pasado</a>'
+        partes.append(_p(f"<strong>Precedente:</strong> {texto}"))
     if item.get("fecha_prudente"):
         partes.append(_p("<small>Fecha prudente: confirma la hora exacta en el anuncio.</small>"))
     codigos = []
@@ -121,6 +167,58 @@ def ayuda_html(ayuda, hoy):
     return "\n\n".join(partes)
 
 
+def proxima_html(item, hoy):
+    lugar = f" · {escape(item['lugar'])}" if item.get("lugar") else ""
+    partes = [_h(f"{escape(item['titulo'])}{lugar}", 3)]
+    datos = []
+    if item.get("publicada"):
+        datos.append(f"<strong>El año pasado salió:</strong> {escape(fecha_corta(item['publicada']))}"
+                     f" de {item['publicada'][:4]}")
+    if item.get("presupuesto_sin_iva") is not None:
+        datos.append(f"<strong>Presupuesto entonces:</strong> {escape(euros(item['presupuesto_sin_iva']))}"
+                     " sin IVA")
+    ganador = _ganador(item)
+    if ganador:
+        cifras = _cifras_adjudicacion(item)
+        datos.append(f"<strong>Lo ganó:</strong> {escape(ganador)}" + (f", {escape(cifras)}" if cifras else ""))
+    if item.get("organo"):
+        datos.append(f"<strong>Organismo:</strong> {escape(item['organo'])}")
+    partes.append(_p("<br>".join(datos)))
+    if item.get("clave"):
+        partes.append(_p(escape(item["clave"])))
+    if item.get("url"):
+        partes.append(_p(f'<a href="{escape(item["url"], quote=True)}">Ver el expediente del año pasado</a>'))
+    return "\n\n".join(partes)
+
+
+def adjudicacion_html(item, hoy):
+    lugar = f" · {escape(item['lugar'])}" if item.get("lugar") else ""
+    partes = [_h(f"{escape(item['titulo'])}{lugar}", 3)]
+    datos = []
+    ganador = _ganador(item)
+    if ganador:
+        datos.append(f"<strong>Ganador:</strong> {escape(ganador)}")
+    if item.get("importe_sin_iva") is not None:
+        datos.append(f"<strong>Adjudicado por:</strong> {escape(euros(item['importe_sin_iva']))} sin IVA")
+    if item.get("presupuesto_sin_iva") is not None:
+        datos.append(f"<strong>Presupuesto base:</strong> {escape(euros(item['presupuesto_sin_iva']))} sin IVA")
+    extras = []
+    if item.get("ofertas") is not None:
+        extras.append(f"{item['ofertas']} {'oferta' if item['ofertas'] == 1 else 'ofertas'}")
+    if item.get("baja") is not None:
+        extras.append(f"baja del {str(item['baja']).replace('.', ',')} %")
+    if extras:
+        datos.append(f"<strong>Competencia:</strong> {escape(', '.join(extras))}")
+    if item.get("organo"):
+        datos.append(f"<strong>Organismo:</strong> {escape(item['organo'])}")
+    partes.append(_p("<br>".join(datos)))
+    if item.get("clave"):
+        partes.append(_p(escape(item["clave"])))
+    if item.get("url"):
+        partes.append(_p(f'<a href="{escape(item["url"], quote=True)}">Ver expediente oficial</a>'))
+    return "\n\n".join(partes)
+
+
 def renderizar(curada):
     hoy = date.fromisoformat(curada["fecha"])
     bloques = [_p(f"<strong>{escape(fecha_larga(curada['fecha']).capitalize())}</strong>")]
@@ -134,6 +232,18 @@ def renderizar(curada):
             bloques.append(_p(escape(seccion["nota"])))
         for item in seccion["items"]:
             bloques.append(licitacion_html(item, hoy))
+            bloques.append(SEPARADOR)
+    if curada.get("proximas"):
+        bloques.append(_h(f"Lo que viene ({len(curada['proximas'])})"))
+        bloques.append(_p("Salieron el año pasado por estas fechas y este año todavía no se han "
+                          "publicado. Buen momento para prepararse."))
+        for item in curada["proximas"]:
+            bloques.append(proxima_html(item, hoy))
+            bloques.append(SEPARADOR)
+    if curada.get("adjudicaciones"):
+        bloques.append(_h(f"Quién ganó ({len(curada['adjudicaciones'])})"))
+        for item in curada["adjudicaciones"]:
+            bloques.append(adjudicacion_html(item, hoy))
             bloques.append(SEPARADOR)
     if curada.get("ayudas"):
         bloques.append(_h(f"Ayudas ({len(curada['ayudas'])})"))

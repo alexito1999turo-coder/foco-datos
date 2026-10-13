@@ -10,7 +10,7 @@ Empresas pequeñas y medianas de eventos, espectáculos y producción técnica e
 ## Pasos
 
 1. `git pull` y comprobar que `data/latest.json` tiene `"fecha"` de hoy. Si no, la recogida aún no ha terminado: esperar y reintentar. Sin datos de hoy no se publica.
-2. Candidatos: `python -m foco.edicion data/latest.json --fecha AAAA-MM-DD > candidatos.txt`. Cada línea trae días restantes, título, organismo, lugar, presupuesto, motivo del filtro e `id=`.
+2. Candidatos: `python -m foco.edicion data/latest.json --fecha AAAA-MM-DD > candidatos.txt`. Cada línea trae días restantes, título, organismo, lugar, presupuesto, motivo del filtro e `id=`. Debajo, si existe, el precedente del año pasado (`↳ precedente: ...`). Al final, dos listas más: `proximas` (lo que salió el año pasado por estas fechas y este año aún no) y `adjudicaciones` (lo adjudicado en los últimos 7 días).
 3. Leer la última edición publicada (posts.list, la más reciente) para no repetir las mismas licitaciones salvo como recordatorio en «Cierran esta semana».
 4. Elegir y escribir `seleccion.json` (formato en `foco/componer.py`).
 5. Montar: `python -m foco.componer seleccion.json --datos data/latest.json --salida edicion.html`. Imprime el `TITULO:` de la entrada. Si da error, corregir la selección; nunca saltarse la comprobación.
@@ -31,9 +31,11 @@ Empresas pequeñas y medianas de eventos, espectáculos y producción técnica e
 1. **Cierran esta semana**: plazo en los próximos 7 días.
 2. **Navidad y Reyes** (hasta el 6 de enero): cabalgatas, luces, belenes, Nochevieja, programación navideña.
 3. **Más contratos abiertos**: el resto, primero las nuevas.
-4. Ayudas: van aparte en `ayudas` y salen al final.
+4. **Lo que viene** (`proximas` en seleccion.json, hasta 5): de la lista `proximas`, lo que más interesa al sector y aniversario más cercano. Es lo que nos diferencia: avisa antes de que salga.
+5. **Quién ganó** (`adjudicaciones` en seleccion.json, hasta 5): de la lista `adjudicaciones`, las más relevantes que no hayan salido ya en una edición anterior.
+6. Ayudas: van aparte en `ayudas` y salen al final.
 
-Una sección vacía no se pone.
+Una sección vacía no se pone. El precedente de cada licitación lo añade `componer` solo; no hay que escribirlo.
 
 ## Cómo se escribe
 
@@ -42,6 +44,7 @@ Una sección vacía no se pone.
 - `titulo`: claro y corto (máximo unos 90 caracteres), en castellano aunque el original esté en catalán, gallego o euskera. Conserva los nombres propios.
 - `lugar`: municipio y, si no es obvio, la provincia entre paréntesis.
 - `clave`: una frase, máximo 25 palabras, con el ángulo práctico. Solo con lo que dicen los datos (título, lotes, procedimiento, presupuesto, CPV); no se inventa nada que no esté ahí. Ejemplos: «Dos lotes: puedes ofertar solo al de sonido.» «Concesión: cobras de la taquilla, no del ayuntamiento.» «Contrato menor de importe bajo, adecuado para empresas locales.»
+- Si el precedente dice algo útil (una sola oferta el año pasado, una baja muy alta, mismo ganador varios años), la `clave` puede comentarlo, siempre con las cifras que trae el candidato.
 - `etiquetas`: opcionales, dos como mucho (Navidad, Sonido, Iluminación, Carpas, Programación, Fiestas...).
 - Plazos, horas, importes, organismos, expedientes y enlaces **no se escriben a mano**: `componer` los toma de los datos.
 

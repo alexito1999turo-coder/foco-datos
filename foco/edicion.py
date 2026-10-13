@@ -7,10 +7,12 @@ No usa la red: solo lee el JSON que deja la recogida diaria.
 
 import argparse
 import json
+import os
 import re
-from datetime import date
+from datetime import date, timedelta
 
 from .comun import normalizar
+from .precedentes import indice_desde, mes_y_anio
 
 NAVIDAD = re.compile(
     r"\b(navidad|naviden[oa]s?|nadal|nadalen[ca]s?|cabalgatas?|cavalcad[ae]s?|reyes magos|"
@@ -65,6 +67,34 @@ def agrupar(datos, hoy):
     return secciones
 
 
+def texto_precedente(previo):
+    if not previo:
+        return ""
+    partes = [mes_y_anio(previo["publicada"])]
+    if previo.get("ganador"):
+        partes.append(f"ganó {previo['ganador']}" + (" (y otros)" if previo.get("varios_ganadores") else ""))
+    if previo.get("importe_sin_iva") is not None:
+        partes.append(f"por {euros(previo['importe_sin_iva'])}")
+    elif previo.get("presupuesto_sin_iva") is not None:
+        partes.append(f"presupuesto {euros(previo['presupuesto_sin_iva'])}")
+    if previo.get("ofertas") is not None:
+        partes.append(f"{previo['ofertas']} ofertas")
+    if previo.get("baja") is not None:
+        partes.append(f"baja {previo['baja']} %")
+    return " · ".join(partes)
+
+
+def adjudicaciones_recientes(carpeta, hoy, dias=7):
+    try:
+        with open(os.path.join(carpeta, "adjudicaciones.json"), encoding="utf-8") as fichero:
+            archivo = json.load(fichero)
+    except (OSError, ValueError):
+        return []
+    desde = (hoy - timedelta(days=dias)).isoformat()
+    return sorted((r for r in archivo.values() if (r.get("vista") or "") >= desde),
+                  key=lambda r: r.get("vista") or "", reverse=True)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument("datos")
@@ -75,10 +105,26 @@ def main(argv=None):
     with open(args.datos, encoding="utf-8") as fichero:
         datos = json.load(fichero)
     secciones = agrupar(datos, hoy)
+    carpeta = os.path.dirname(os.path.abspath(args.datos))
+    indice = indice_desde(carpeta, datos)
+    for nombre in ("cierra_7_dias", "navidad_reyes", "resto"):
+        for item in secciones[nombre]:
+            item["precedente"] = indice.precedente(item, hoy)
+    secciones["proximas"] = indice.proximas(hoy)
+    from .precedentes import resumen
+    secciones["adjudicaciones"] = [
+        {**resumen(r), "municipio": r.get("municipio"), "provincia": r.get("provincia")}
+        for r in adjudicaciones_recientes(carpeta, hoy)]
     with open(args.salida, "w", encoding="utf-8") as fichero:
         json.dump(secciones, fichero, ensure_ascii=False, indent=1)
+    print(f"Histórico disponible: {len(indice)} licitaciones de eventos")
     for nombre, items in secciones.items():
         print(f"\n## {nombre} ({len(items)})")
+        if nombre in ("proximas", "adjudicaciones"):
+            for item in items[:80]:
+                print(f"- [{item.get('publicada')}] {(item.get('titulo') or '')[:200]} | "
+                      f"{item.get('organo')} | {texto_precedente(item)} | id={item.get('id')}")
+            continue
         for item in items[:80]:
             marca = "NUEVA " if item.get("nueva") else ""
             titulo = (item.get("titulo") or "")[:220]
@@ -88,6 +134,8 @@ def main(argv=None):
                   f"{item.get('organo')} | {lugar or '-'} | "
                   f"{item.get('presupuesto_texto') or item.get('presupuesto')} | "
                   f"{item.get('motivo') or item.get('fuente')} | id={ident}")
+            if item.get("precedente"):
+                print(f"    ↳ precedente: {texto_precedente(item['precedente'])}")
     if datos.get("errores"):
         print("\nErrores de recogida:", datos["errores"])
 

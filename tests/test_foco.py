@@ -6,7 +6,7 @@ from datetime import date
 
 import zipfile
 
-from foco import ayudas, catalunya, componer, historico, placsp, recoger
+from foco import ayudas, catalunya, componer, historico, placsp, precedentes, recoger
 from foco.comun import a_numero, es_de_eventos, normalizar
 from foco.edicion import agrupar, euros, fecha_corta
 from foco.plantilla import fecha_larga, renderizar
@@ -353,6 +353,37 @@ class Historico(unittest.TestCase):
         self.assertEqual(fusion["estado"], "RES")
         self.assertEqual(fusion["publicada"], "2025-10-17")
         self.assertEqual(fusion["resultados"][0]["ganador"], "X SL")
+
+
+class Precedentes(unittest.TestCase):
+    def setUp(self):
+        historicas, _ = placsp.parsear_feed(leer("placsp_adjudicadas.atom"))
+        self.actuales, _ = placsp.parsear_feed(leer("placsp.atom"))
+        self.indice = precedentes.Indice(historicas + self.actuales)
+        self.motril = next(l for l in self.actuales if "Motril" in (l["organo"] or ""))
+
+    def test_encuentra_el_del_anio_pasado(self):
+        previo = self.indice.precedente(self.motril, HOY)
+        self.assertEqual(previo["ganador"], "FIESTAS DEL SUR SL")
+        self.assertEqual(previo["ofertas"], 4)
+        self.assertEqual(previo["baja"], 18.3)
+        texto = renderizar({"fecha": "2026-10-13", "secciones": [{"titulo": "X", "items": [
+            {**self.motril, "precedente": previo}]}]})
+        self.assertIn("en oct 2025 lo ganó FIESTAS DEL SUR SL por 98.000,00 € sin IVA, "
+                      "con 4 ofertas y una baja del 18,3 %", texto)
+
+    def test_proximas_omite_lo_que_ya_ha_salido(self):
+        # El 10 de octubre de 2026 la cabalgata de Motril de 2025 (17 oct) aún no había salido.
+        sin_actual = precedentes.Indice(placsp.parsear_feed(leer("placsp_adjudicadas.atom"))[0])
+        proximas = sin_actual.proximas(date(2026, 10, 10))
+        self.assertEqual([p["organo"] for p in proximas], ["Alcaldía del Ayuntamiento de Motril"])
+        self.assertEqual(proximas[0]["dias_para_aniversario"], 7)
+        # Con la de este año ya publicada, deja de estar en «lo que viene».
+        self.assertEqual(self.indice.proximas(date(2026, 10, 10)), [])
+
+    def test_no_mezcla_contratos_distintos(self):
+        self.assertIsNone(self.indice.precedente(
+            {**self.motril, "titulo": "Iluminación navideña de las calles"}, HOY))
 
 
 if __name__ == "__main__":

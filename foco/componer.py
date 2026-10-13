@@ -14,16 +14,25 @@ seleccion.json:
   "secciones": [{"titulo": "Cierran esta semana", "nota": "opcional",
                  "items": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "...",
                             "etiquetas": ["Navidad"]}]}],
-  "ayudas": [{"codigo": "934700", "titulo": "...", "clave": "..."}]
+  "ayudas": [{"codigo": "934700", "titulo": "...", "clave": "..."}],
+  "proximas": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "..."}],
+  "adjudicaciones": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "..."}]
 }
+
+A cada licitación se le añade sola su precedente del año anterior, si existe (para quitarlo,
+"precedente": false en el item). «proximas» son licitaciones del año pasado que aún no han salido
+este año; «adjudicaciones», las recién adjudicadas. Sus datos salen del histórico y del archivo
+de adjudicaciones, igual que el resto.
 """
 
 import argparse
 import json
+import os
 import sys
 from datetime import date
 
 from .plantilla import DIAS_LARGOS, MESES_LARGOS, renderizar
+from .precedentes import resumen
 
 CAMPOS_LICITACION = ("organo", "fecha_limite", "hora_limite", "presupuesto_sin_iva",
                      "procedimiento", "expediente", "cpv", "url", "fuente")
@@ -35,7 +44,20 @@ class SeleccionInvalida(ValueError):
     pass
 
 
-def componer(seleccion, datos):
+def _historico(seleccion, indice, clave_lista, errores, hoy_iso):
+    elegidos = []
+    for elegido in seleccion.get(clave_lista, []):
+        registro = indice.por_id.get(elegido.get("id")) if indice else None
+        if registro is None:
+            errores.append(f"{clave_lista}: sin datos para {elegido.get('id')}")
+            continue
+        item = resumen(registro)
+        item.update({campo: elegido[campo] for campo in EDITORIALES if elegido.get(campo)})
+        elegidos.append(item)
+    return elegidos
+
+
+def componer(seleccion, datos, indice=None):
     fecha = seleccion["fecha"]
     hoy = date.fromisoformat(fecha)
     licitaciones = {l["id"]: l for l in datos.get("licitaciones", [])}
@@ -62,6 +84,10 @@ def componer(seleccion, datos):
             item = {campo: original.get(campo) for campo in CAMPOS_LICITACION}
             item.update({campo: elegido[campo] for campo in EDITORIALES if elegido.get(campo)})
             item.setdefault("titulo", original.get("titulo"))
+            if indice is not None and elegido.get("precedente") is not False:
+                previo = indice.precedente(original, hoy)
+                if previo:
+                    item["precedente"] = previo
             items.append(item)
         if items:
             secciones.append({**{k: v for k, v in seccion.items() if k != "items"}, "items": items})
@@ -81,13 +107,16 @@ def componer(seleccion, datos):
             ayuda["clave"] = elegida["clave"]
         lista_ayudas.append(ayuda)
 
+    proximas = _historico(seleccion, indice, "proximas", errores, fecha)
+    adjudicaciones = _historico(seleccion, indice, "adjudicaciones", errores, fecha)
+
     if errores:
         raise SeleccionInvalida("; ".join(errores))
     if not secciones and not lista_ayudas:
         raise SeleccionInvalida("la selección está vacía")
 
     curada = {"fecha": fecha, "intro": seleccion.get("intro"), "secciones": secciones,
-              "ayudas": lista_ayudas}
+              "ayudas": lista_ayudas, "proximas": proximas, "adjudicaciones": adjudicaciones}
     if seleccion.get("pie"):
         curada["pie"] = seleccion["pie"]
     total = sum(len(s["items"]) for s in secciones)
@@ -108,8 +137,10 @@ def main(argv=None):
         seleccion = json.load(fichero)
     with open(args.datos, encoding="utf-8") as fichero:
         datos = json.load(fichero)
+    from .precedentes import indice_desde
+    indice = indice_desde(os.path.dirname(os.path.abspath(args.datos)), datos)
     try:
-        curada, titulo = componer(seleccion, datos)
+        curada, titulo = componer(seleccion, datos, indice)
     except SeleccionInvalida as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 1
