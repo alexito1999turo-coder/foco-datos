@@ -91,9 +91,42 @@ class Placsp(unittest.TestCase):
         self.assertFalse(any("Versión antigua" in t for t in titulos))
         self.assertEqual(seleccion[0]["fecha_limite"], "2026-10-16")
         self.assertEqual(informe["PLACSP"]["ficheros"], 2)
-        self.assertEqual(informe["PLACSP"]["parada"], "límite de días alcanzado")
+        self.assertEqual(informe["PLACSP"]["parada"], "límite alcanzado")
         self.assertIn("https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/1003",
                       cerradas)
+
+    def test_relleno_continua_en_la_siguiente_ejecucion(self):
+        base = "https://contrataciondelestado.es/sindicacion/sindicacion_643/"
+        anterior = base + "licitacionesPerfilesContratanteCompleto3_20261012_210000.atom"
+        mas_antiguo = base + "licitacionesPerfilesContratanteCompleto3_20261001_000000.atom"
+        reloj = [0]
+        pedidas = []
+
+        def falso(url, *args, **kwargs):
+            reloj[0] += 100
+            pedidas.append(url)
+            if url == placsp.FEEDS["PLACSP"]:
+                return leer("placsp.atom")
+            if url == anterior:
+                return leer("placsp_anterior.atom")
+            return leer("placsp_anterior.atom").replace(b'rel="next"', b'rel="prev"')
+
+        _, informe, _ = placsp.recoger(dias=30, hoy=HOY, descargador=falso, limite_segundos=150,
+                                       reloj=lambda: reloj[0])
+        primero = informe["PLACSP"]
+        self.assertEqual(primero["parada"], "tiempo agotado")
+        self.assertEqual(primero["siguiente"], mas_antiguo)
+        self.assertTrue(primero["relleno_pendiente"])
+
+        reloj[0] = 0
+        pedidas.clear()
+        _, informe, _ = placsp.recoger(dias=3, hoy=HOY, descargador=falso, limite_segundos=1000,
+                                       reloj=lambda: reloj[0], estado_previo=informe)
+        segundo = informe["PLACSP"]
+        self.assertIn(mas_antiguo, pedidas)
+        self.assertIsNone(segundo["siguiente"])
+        self.assertFalse(segundo["relleno_pendiente"])
+        self.assertEqual(segundo["objetivo"], "2026-09-13T00:00")
 
     def test_para_si_se_agota_el_tiempo(self):
         momentos = iter(range(0, 10000, 100))

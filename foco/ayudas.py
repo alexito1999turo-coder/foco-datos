@@ -119,7 +119,7 @@ def evaluar_convocatoria(detalle, hoy):
     }
 
 
-def recoger_bdns(hoy=None, dias=7, max_detalles=80, max_paginas=8, descargador=descargar,
+def recoger_bdns(hoy=None, dias=7, max_detalles=150, max_paginas=8, descargador=descargar,
                  pausa=0.5, ya_vistas=()):
     """Busca convocatorias recibidas en los últimos `dias` días y devuelve las abiertas que sirven
     a empresas de eventos. `ya_vistas` evita pedir de nuevo el detalle de las que ya tenemos."""
@@ -136,6 +136,8 @@ def recoger_bdns(hoy=None, dias=7, max_detalles=80, max_paginas=8, descargador=d
                     continue
                 if EXCLUIR.search(normalizar(fila.get("descripcion"))):
                     continue
+                if not _es_del_sector(fila.get("descripcion")):
+                    continue
                 numero = fila.get("numeroConvocatoria")
                 if numero not in ya_vistas:
                     candidatas[numero] = fila
@@ -145,14 +147,21 @@ def recoger_bdns(hoy=None, dias=7, max_detalles=80, max_paginas=8, descargador=d
             if datos.get("last", True) or not fechas or min(fechas) < desde:
                 break
 
+    # Primero las más recientes: son las que tienen más probabilidad de seguir abiertas.
+    orden = sorted(candidatas, key=lambda n: candidatas[n].get("fechaRecepcion") or "", reverse=True)
     seleccion = []
-    for numero in list(candidatas)[:max_detalles]:
-        detalle = json.loads(descargador(_bdns_detalle_url(numero)))
+    evaluadas = 0
+    for numero in orden[:max_detalles]:
+        try:
+            detalle = json.loads(descargador(_bdns_detalle_url(numero)))
+        except (OSError, ValueError):
+            continue
+        evaluadas += 1
         ayuda = evaluar_convocatoria(detalle, hoy)
         if ayuda:
             seleccion.append(ayuda)
         time.sleep(pausa)
-    return seleccion, {"candidatas": len(candidatas)}
+    return seleccion, {"candidatas": len(candidatas), "evaluadas": evaluadas}
 
 
 def _items_boe(nodo, seccion=None, departamento=None):

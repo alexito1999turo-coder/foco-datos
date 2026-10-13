@@ -18,8 +18,9 @@ from . import ayudas, catalunya, placsp
 from .comun import es_de_eventos, normalizar
 
 CATALUNYA = "Generalitat de Catalunya"
-# Tiempo máximo por feed de PLACSP. Con dos feeds deja margen dentro de los 45 min del trabajo.
-SEGUNDOS_POR_FEED = 13 * 60
+# Tiempo máximo por feed de PLACSP. Con dos feeds deja margen dentro de los 60 min del trabajo.
+# Lo nuevo de un día se lee en pocos minutos; el resto del tiempo se dedica al relleno pendiente.
+SEGUNDOS_POR_FEED = 22 * 60
 
 
 def _completitud(lic):
@@ -82,8 +83,10 @@ def ejecutar(salida, dias=3, dias_ayudas=7, hoy=None, fuentes=None):
                  if l.get("fuente") == CATALUNYA and _sigue_abierta(l, hoy_iso)]
     ayudas_vigentes = {a["codigo"]: a for a in previo.get("ayudas", []) if _ayuda_vigente(a, hoy)}
 
+    estado_placsp = (previo.get("informe") or {}).get("placsp") or {}
     fuentes = fuentes or {
-        "placsp": lambda: placsp.recoger(dias=dias, hoy=hoy, limite_segundos=SEGUNDOS_POR_FEED),
+        "placsp": lambda: placsp.recoger(dias=dias, hoy=hoy, limite_segundos=SEGUNDOS_POR_FEED,
+                                         estado_previo=estado_placsp),
         "catalunya": lambda: catalunya.recoger(hoy=hoy),
         "bdns": lambda: ayudas.recoger_bdns(hoy=hoy, dias=dias_ayudas,
                                             ya_vistas=set(ayudas_vigentes)),
@@ -102,6 +105,9 @@ def ejecutar(salida, dias=3, dias_ayudas=7, hoy=None, fuentes=None):
             respuesta = funcion()
         except Exception as error:  # una fuente caída no detiene el resto
             resultado["errores"].append({"fuente": nombre, "error": repr(error)[:500]})
+            if nombre == "placsp" and estado_placsp:
+                # Se conserva dónde se quedó la lectura para continuar mañana.
+                resultado["informe"]["placsp"] = {**estado_placsp, "arrastrado": True}
             continue
         lista, informe = respuesta[0], respuesta[1]
         cerradas = respuesta[2] if len(respuesta) > 2 else []

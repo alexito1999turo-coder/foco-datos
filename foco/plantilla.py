@@ -9,6 +9,7 @@ import json
 from datetime import date
 from html import escape
 
+from .comun import normalizar
 from .edicion import dias_restantes, euros, fecha_corta
 
 DIAS_LARGOS = ("lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo")
@@ -19,6 +20,30 @@ MESES_LARGOS = ("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", 
 def fecha_larga(texto):
     dia = date.fromisoformat(texto[:10])
     return f"{DIAS_LARGOS[dia.weekday()]}, {dia.day} de {MESES_LARGOS[dia.month - 1]} de {dia.year}"
+
+
+# Catalunya publica el procedimiento en catalán; «Otros» no aporta nada al lector.
+PROCEDIMIENTO_ES = {
+    "obert": "Abierto",
+    "obert simplificat": "Abierto simplificado",
+    "obert simplificat abreujat": "Abierto simplificado abreviado",
+    "restringit": "Restringido",
+    "negociat sense publicitat": "Negociado sin publicidad",
+    "negociat amb publicitat": "Negociado con publicidad",
+    "licitacio amb negociacio": "Licitación con negociación",
+    "dialeg competitiu": "Diálogo competitivo",
+    "concurs de projectes": "Concurso de proyectos",
+    "associacio per a la innovacio": "Asociación para la innovación",
+    "basat en acord marc": "Basado en acuerdo marco",
+    "contracte menor": "Contrato menor",
+}
+
+
+def procedimiento_es(texto):
+    if not texto or texto.strip().lower() in ("otros", "altres"):
+        return None
+    clave = normalizar(texto).replace("·", "")
+    return PROCEDIMIENTO_ES.get(clave, texto)
 
 
 def _p(contenido):
@@ -57,8 +82,8 @@ def licitacion_html(item, hoy):
     datos = [f"<strong>Cierra:</strong> {escape(_cierre(item, hoy))}"]
     if item.get("presupuesto_sin_iva") is not None:
         datos.append(f"<strong>Presupuesto base:</strong> {escape(euros(item['presupuesto_sin_iva']))} sin IVA")
-    if item.get("procedimiento"):
-        datos.append(f"<strong>Procedimiento:</strong> {escape(item['procedimiento'])}")
+    if procedimiento_es(item.get("procedimiento")):
+        datos.append(f"<strong>Procedimiento:</strong> {escape(procedimiento_es(item['procedimiento']))}")
     if item.get("organo"):
         datos.append(f"<strong>Organismo:</strong> {escape(item['organo'])}")
     partes.append(_p("<br>".join(datos)))

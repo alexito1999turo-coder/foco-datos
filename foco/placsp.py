@@ -137,73 +137,127 @@ def parsear_feed(contenido):
     return licitaciones, siguiente
 
 
-def recoger(dias=3, hoy=None, max_ficheros=400, descargador=descargar, limite_segundos=None,
-            reloj=time.monotonic):
-    """Recorre los feeds hacia atrás `dias` días.
+def _leer_hacia_atras(url, limite, vistas, fuente, hoy_iso, descargador, max_ficheros,
+                     tiempo_restante, reloj):
+    """Lee ficheros desde `url` hacia atrás hasta que uno entero sea anterior a `limite`.
 
-    Devuelve (selección, informe, ids_cerradas): la selección son las licitaciones de eventos
-    en plazo; ids_cerradas son las que cambiaron a un estado distinto de «en plazo» (evaluación,
-    adjudicada, anulada...) y deben salir del listado acumulado.
-    `limite_segundos` es el tiempo máximo por feed: si se agota, se para y se guarda lo leído.
+    Devuelve un dict con ficheros, entradas, primera/ultima (fechas vistas), parada y siguiente
+    (el fichero anterior que queda por leer, o None).
+    """
+    inicio = reloj()
+    leidos = entradas = 0
+    primera = ultima = None
+    parada = "sin fichero anterior"
+    while url:
+        if leidos >= max_ficheros:
+            parada = "máximo de ficheros"
+            break
+        if tiempo_restante is not None and reloj() - inicio > tiempo_restante:
+            parada = "tiempo agotado"
+            break
+        licitaciones, url_anterior = parsear_feed(descargador(url))
+        leidos += 1
+        entradas += len(licitaciones)
+        mas_reciente = None
+        for lic in licitaciones:
+            momento = _fecha_iso(lic["actualizado"])
+            if momento is not None:
+                momento = momento.replace(tzinfo=None)
+                mas_reciente = momento if mas_reciente is None else max(mas_reciente, momento)
+                primera = momento if primera is None else max(primera, momento)
+                ultima = momento if ultima is None else min(ultima, momento)
+            clave = lic["id"] or lic["url"]
+            previa = vistas.get(clave)
+            if previa is not None and (lic["actualizado"] or "") <= previa[0]:
+                continue
+            guardar = None
+            if lic["estado"] != "PUB":
+                guardar = "cerrada"
+            elif lic["fecha_limite"] and lic["fecha_limite"] >= hoy_iso:
+                relevante, motivo = es_de_eventos(lic["titulo"], lic["cpv"])
+                if relevante:
+                    guardar = {**lic, "fuente": fuente, "motivo": motivo}
+            vistas[clave] = (lic["actualizado"] or "", guardar)
+        if leidos % 5 == 0:
+            print(f"[{fuente}] {leidos} ficheros, {entradas} entradas, hasta "
+                  f"{ultima.isoformat(timespec='minutes') if ultima else '?'} "
+                  f"({reloj() - inicio:.0f} s)", file=sys.stderr, flush=True)
+        url = url_anterior
+        # Los ficheros van de más nuevo a más antiguo: paramos cuando uno entero es anterior al límite.
+        if mas_reciente is not None and mas_reciente < limite:
+            parada = "límite alcanzado"
+            break
+    return {"ficheros": leidos, "entradas": entradas, "primera": primera, "ultima": ultima,
+            "parada": parada, "siguiente": url, "segundos": reloj() - inicio}
+
+
+def _iso(momento):
+    return momento.isoformat(timespec="minutes") if momento else None
+
+
+def recoger(dias=3, hoy=None, max_ficheros=400, descargador=descargar, limite_segundos=None,
+            reloj=time.monotonic, estado_previo=None):
+    """Lee los feeds de PLACSP y devuelve (selección, informe, ids_cerradas).
+
+    La selección son las licitaciones de eventos en plazo; ids_cerradas, las que pasaron a otro
+    estado (evaluación, adjudicada, anulada...) y deben salir del listado acumulado.
+
+    Cada feed se lee en dos fases dentro de `limite_segundos`:
+    1. Lo nuevo: desde el fichero más reciente hasta donde llegó la ejecución anterior.
+    2. El relleno: si aún no se cubren los días pedidos (`dias`, o un objetivo pendiente de una
+       carga anterior), se sigue hacia atrás desde el último fichero leído.
+    El informe guarda por feed: hasta, desde, siguiente y objetivo, que la próxima ejecución
+    recibe en `estado_previo` para continuar donde se quedó.
     """
     hoy = hoy or date.today()
     hoy_iso = hoy.isoformat()
-    limite = datetime.combine(hoy - timedelta(days=dias), datetime.min.time())
+    objetivo_dias = datetime.combine(hoy - timedelta(days=dias), datetime.min.time())
     # Para cada id solo vale su versión más reciente. Guardamos la fecha y, si interesa, la licitación.
     vistas = {}
     informe = {}
 
-    for fuente, url in FEEDS.items():
+    for fuente, url_inicial in FEEDS.items():
         inicio = reloj()
-        leidos = 0
-        entradas = 0
-        primera = ultima = None
-        motivo_parada = "sin fichero anterior"
-        while url and leidos < max_ficheros:
-            if limite_segundos is not None and reloj() - inicio > limite_segundos:
-                motivo_parada = "tiempo agotado"
-                break
-            licitaciones, url_anterior = parsear_feed(descargador(url))
-            leidos += 1
-            entradas += len(licitaciones)
-            mas_reciente = None
-            for lic in licitaciones:
-                momento = _fecha_iso(lic["actualizado"])
-                if momento is not None:
-                    momento = momento.replace(tzinfo=None)
-                    mas_reciente = momento if mas_reciente is None else max(mas_reciente, momento)
-                    primera = momento if primera is None else max(primera, momento)
-                    ultima = momento if ultima is None else min(ultima, momento)
-                clave = lic["id"] or lic["url"]
-                previa = vistas.get(clave)
-                if previa is not None and (lic["actualizado"] or "") <= previa[0]:
-                    continue
-                guardar = None
-                if lic["estado"] != "PUB":
-                    guardar = "cerrada"
-                elif lic["fecha_limite"] and lic["fecha_limite"] >= hoy_iso:
-                    relevante, motivo = es_de_eventos(lic["titulo"], lic["cpv"])
-                    if relevante:
-                        guardar = {**lic, "fuente": fuente, "motivo": motivo}
-                vistas[clave] = (lic["actualizado"] or "", guardar)
-            if leidos % 10 == 0:
-                print(f"[{fuente}] {leidos} ficheros, {entradas} entradas, hasta "
-                      f"{ultima.isoformat(timespec='minutes') if ultima else '?'} "
-                      f"({reloj() - inicio:.0f} s)", file=sys.stderr, flush=True)
-            # Los ficheros van de más nuevo a más antiguo: paramos cuando uno entero es anterior al límite.
-            if mas_reciente is not None and mas_reciente < limite:
-                motivo_parada = "límite de días alcanzado"
-                break
-            url = url_anterior
+        previo = (estado_previo or {}).get(fuente) or {}
+        hasta_previo = _fecha_iso(previo.get("hasta"))
+        desde_previo = _fecha_iso(previo.get("desde"))
+        objetivo = objetivo_dias
+        if _fecha_iso(previo.get("objetivo")):
+            objetivo = min(objetivo, _fecha_iso(previo["objetivo"]))
+        continuable = bool(hasta_previo and desde_previo and previo.get("siguiente"))
+
+        limite_nuevo = objetivo
+        if continuable:
+            limite_nuevo = max(objetivo, hasta_previo - timedelta(hours=12))
+        fase1 = _leer_hacia_atras(url_inicial, limite_nuevo, vistas, fuente, hoy_iso, descargador,
+                                  max_ficheros, limite_segundos, reloj)
+        hasta = fase1["primera"] or hasta_previo
+        if continuable and fase1["parada"] == "límite alcanzado" and limite_nuevo > objetivo:
+            # Lo nuevo empalma con lo ya cubierto: el relleno sigue desde donde se quedó.
+            desde, siguiente = desde_previo, previo["siguiente"]
         else:
-            if leidos >= max_ficheros:
-                motivo_parada = "máximo de ficheros"
+            desde, siguiente = fase1["ultima"], fase1["siguiente"]
+
+        fase2 = None
+        restante = None if limite_segundos is None else limite_segundos - (reloj() - inicio)
+        if (siguiente and desde and desde > objetivo
+                and fase1["parada"] != "tiempo agotado" and (restante is None or restante > 0)):
+            fase2 = _leer_hacia_atras(siguiente, objetivo, vistas, fuente, hoy_iso, descargador,
+                                      max_ficheros, restante, reloj)
+            if fase2["ultima"]:
+                desde = min(desde, fase2["ultima"])
+            siguiente = fase2["siguiente"]
+
+        parada = (fase2 or fase1)["parada"]
         informe[fuente] = {
-            "ficheros": leidos,
-            "entradas": entradas,
-            "desde": ultima.isoformat(timespec="minutes") if ultima else None,
-            "hasta": primera.isoformat(timespec="minutes") if primera else None,
-            "parada": motivo_parada,
+            "ficheros": fase1["ficheros"] + (fase2["ficheros"] if fase2 else 0),
+            "entradas": fase1["entradas"] + (fase2["entradas"] if fase2 else 0),
+            "desde": _iso(desde),
+            "hasta": _iso(hasta),
+            "siguiente": siguiente,
+            "objetivo": _iso(objetivo),
+            "relleno_pendiente": bool(siguiente and desde and desde > objetivo),
+            "parada": parada,
             "segundos": round(reloj() - inicio),
         }
 
