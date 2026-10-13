@@ -5,6 +5,8 @@ las actualizaciones más recientes y un enlace rel="next" al fichero anterior. L
 hacia atrás hasta cubrir los últimos días y nos quedamos con lo que sigue en plazo.
 """
 
+import sys
+import time
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta
 
@@ -135,24 +137,32 @@ def parsear_feed(contenido):
     return licitaciones, siguiente
 
 
-def recoger(dias=3, hoy=None, max_ficheros=400, descargador=descargar):
+def recoger(dias=3, hoy=None, max_ficheros=400, descargador=descargar, limite_segundos=None,
+            reloj=time.monotonic):
     """Recorre los feeds hacia atrás `dias` días.
 
     Devuelve (selección, informe, ids_cerradas): la selección son las licitaciones de eventos
     en plazo; ids_cerradas son las que cambiaron a un estado distinto de «en plazo» (evaluación,
     adjudicada, anulada...) y deben salir del listado acumulado.
+    `limite_segundos` es el tiempo máximo por feed: si se agota, se para y se guarda lo leído.
     """
     hoy = hoy or date.today()
+    hoy_iso = hoy.isoformat()
     limite = datetime.combine(hoy - timedelta(days=dias), datetime.min.time())
-    resultados = {}
+    # Para cada id solo vale su versión más reciente. Guardamos la fecha y, si interesa, la licitación.
+    vistas = {}
     informe = {}
 
     for fuente, url in FEEDS.items():
+        inicio = reloj()
         leidos = 0
         entradas = 0
         primera = ultima = None
         motivo_parada = "sin fichero anterior"
         while url and leidos < max_ficheros:
+            if limite_segundos is not None and reloj() - inicio > limite_segundos:
+                motivo_parada = "tiempo agotado"
+                break
             licitaciones, url_anterior = parsear_feed(descargador(url))
             leidos += 1
             entradas += len(licitaciones)
@@ -165,10 +175,21 @@ def recoger(dias=3, hoy=None, max_ficheros=400, descargador=descargar):
                     primera = momento if primera is None else max(primera, momento)
                     ultima = momento if ultima is None else min(ultima, momento)
                 clave = lic["id"] or lic["url"]
-                previa = resultados.get(clave)
-                if previa is None or (lic["actualizado"] or "") > (previa["actualizado"] or ""):
-                    lic["fuente"] = fuente
-                    resultados[clave] = lic
+                previa = vistas.get(clave)
+                if previa is not None and (lic["actualizado"] or "") <= previa[0]:
+                    continue
+                guardar = None
+                if lic["estado"] != "PUB":
+                    guardar = "cerrada"
+                elif lic["fecha_limite"] and lic["fecha_limite"] >= hoy_iso:
+                    relevante, motivo = es_de_eventos(lic["titulo"], lic["cpv"])
+                    if relevante:
+                        guardar = {**lic, "fuente": fuente, "motivo": motivo}
+                vistas[clave] = (lic["actualizado"] or "", guardar)
+            if leidos % 10 == 0:
+                print(f"[{fuente}] {leidos} ficheros, {entradas} entradas, hasta "
+                      f"{ultima.isoformat(timespec='minutes') if ultima else '?'} "
+                      f"({reloj() - inicio:.0f} s)", file=sys.stderr, flush=True)
             # Los ficheros van de más nuevo a más antiguo: paramos cuando uno entero es anterior al límite.
             if mas_reciente is not None and mas_reciente < limite:
                 motivo_parada = "límite de días alcanzado"
@@ -183,21 +204,10 @@ def recoger(dias=3, hoy=None, max_ficheros=400, descargador=descargar):
             "desde": ultima.isoformat(timespec="minutes") if ultima else None,
             "hasta": primera.isoformat(timespec="minutes") if primera else None,
             "parada": motivo_parada,
+            "segundos": round(reloj() - inicio),
         }
 
-    seleccion = []
-    cerradas = []
-    for clave, lic in resultados.items():
-        if lic["estado"] != "PUB":
-            cerradas.append(clave)
-            continue
-        if not lic["fecha_limite"] or lic["fecha_limite"] < hoy.isoformat():
-            continue
-        relevante, motivo = es_de_eventos(lic["titulo"], lic["cpv"])
-        if not relevante:
-            continue
-        lic["motivo"] = motivo
-        seleccion.append(lic)
-
+    seleccion = [guardar for _, guardar in vistas.values() if isinstance(guardar, dict)]
+    cerradas = [clave for clave, (_, guardar) in vistas.items() if guardar == "cerrada"]
     seleccion.sort(key=lambda l: (l["fecha_limite"], l["hora_limite"] or "23:59"))
     return seleccion, informe, cerradas

@@ -26,6 +26,10 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          # La rama al empezar el trabajo, no el commit del disparo: así recoge los datos
+          # que haya guardado una ejecución anterior que estuviera en cola.
+          ref: main
 
       - uses: actions/setup-python@v5
         with:

@@ -95,6 +95,14 @@ class Placsp(unittest.TestCase):
         self.assertIn("https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/1003",
                       cerradas)
 
+    def test_para_si_se_agota_el_tiempo(self):
+        momentos = iter(range(0, 10000, 100))
+        _, informe, _ = placsp.recoger(dias=30, hoy=HOY, limite_segundos=150,
+                                       descargador=lambda url, *a, **k: leer("placsp.atom"),
+                                       reloj=lambda: next(momentos))
+        self.assertEqual(informe["PLACSP"]["parada"], "tiempo agotado")
+        self.assertEqual(informe["PLACSP"]["ficheros"], 1)
+
 
 class Catalunya(unittest.TestCase):
     def test_recoger(self):
