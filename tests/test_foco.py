@@ -6,7 +6,7 @@ from datetime import date
 
 import zipfile
 
-from foco import ayudas, catalunya, componer, historico, placsp, precedentes, recoger
+from foco import ayudas, catalunya, componer, compradores, historico, placsp, precedentes, recoger
 from foco.comun import a_numero, es_de_eventos, normalizar
 from foco.edicion import agrupar, euros, fecha_corta
 from foco.plantilla import fecha_larga, precedente_texto, renderizar
@@ -456,6 +456,38 @@ class Precedentes(unittest.TestCase):
     def test_no_mezcla_contratos_distintos(self):
         self.assertIsNone(self.indice.precedente(
             {**self.motril, "titulo": "Iluminación navideña de las calles"}, HOY))
+
+
+class Compradores(unittest.TestCase):
+    def test_agrupa_por_organismo_sin_nombrar_personas(self):
+        def menor(n, organo, ganador, empresa, importe, fecha, titulo):
+            return {"id": f"m{n}", "organo": organo, "titulo": titulo, "provincia": "MURCIA",
+                    "municipio": "Murcia", "publicada": "2026-01-20",
+                    "resultados": [{"resultado": "adjudicado", "ganador": ganador,
+                                    "ganador_empresa": empresa, "importe_sin_iva": importe,
+                                    "fecha": fecha}]}
+        registros = [
+            menor(1, "Junta de Gobierno del Ayuntamiento de Murcia", "ORQUESTA SL", True, 9000.0,
+                  "2025-12-10", "Orquesta para la Nochevieja"),
+            menor(2, "Alcaldía del Ayuntamiento de Murcia", "persona física", False, 3000.0,
+                  "2025-12-15", "Sonido para el belén"),
+            menor(3, "Junta de Gobierno del Ayuntamiento de Murcia", "LUZ SL", True, 5000.0,
+                  "2026-06-01", "Iluminación de las fiestas de junio"),
+        ]
+        resumenes = compradores.agrupar(registros)
+        self.assertEqual(len(resumenes), 1)
+        murcia = resumenes[0]
+        self.assertEqual(murcia["nombre"], "Ayuntamiento de Murcia")
+        self.assertEqual(murcia["provincia"], "Murcia")
+        self.assertEqual(murcia["gasto"], 17000.0)
+        self.assertEqual(murcia["meses_fuertes"][0], 12)
+        self.assertEqual(murcia["proveedores"], ["ORQUESTA SL", "LUZ SL"])
+        self.assertNotIn("persona física", json.dumps(murcia))
+        proximos = compradores.para_estas_fechas(resumenes, 11)
+        self.assertEqual(proximos[0]["gasto_proximos"], 12000.0)
+        from foco.plantilla import comprador_html
+        html = comprador_html(murcia, HOY)
+        self.assertIn("sobre todo en diciembre y junio", html)
 
 
 if __name__ == "__main__":

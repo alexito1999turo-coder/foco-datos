@@ -33,8 +33,9 @@ Empresas pequeñas y medianas de eventos, espectáculos y producción técnica e
 3. **Más contratos abiertos**: el resto, primero las nuevas.
 4. **Lo que viene** (`proximas` en seleccion.json, hasta 5): de la lista `proximas`, lo que más interesa al sector y aniversario más cercano. Es lo que nos diferencia: avisa antes de que salga.
 5. **Se quedaron sin empresa** (`desiertos` en seleccion.json, hasta 4): de la lista `desiertos`, los de eventos más claros y con presupuesto que merezca la pena. Son una puerta abierta: el organismo puede adjudicarlos por negociado invitando a empresas.
-6. **Quién ganó** (`adjudicaciones` en seleccion.json, hasta 5): de la lista `adjudicaciones`, las más relevantes que no hayan salido ya en una edición anterior.
-7. Ayudas: van aparte en `ayudas` y salen al final.
+6. **Quién compra sin licitar** (`compradores` en seleccion.json, hasta 3, solo los lunes): de la lista `compradores`, organismos que más gastan en eventos por contrato menor en estas fechas. Varía la provincia de una semana a otra y no repitas los de semanas anteriores.
+7. **Quién ganó** (`adjudicaciones` en seleccion.json, hasta 5): de la lista `adjudicaciones`, las más relevantes que no hayan salido ya en una edición anterior.
+8. Ayudas: van aparte en `ayudas` y salen al final.
 
 Una sección vacía no se pone. El precedente de cada licitación y la «competencia habitual» de su tipo de contrato los añade `componer` solos; no hay que escribirlos.
 

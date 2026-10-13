@@ -267,6 +267,36 @@ def desierto_html(item, hoy):
     return "\n\n".join(partes)
 
 
+MESES_NOMBRE = ("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+                "septiembre", "octubre", "noviembre", "diciembre")
+
+
+def _lista(palabras):
+    palabras = [p for p in palabras if p]
+    if len(palabras) <= 1:
+        return "".join(palabras)
+    return ", ".join(palabras[:-1]) + " y " + palabras[-1]
+
+
+def comprador_html(item, hoy):
+    provincia = f" ({escape(item['provincia'])})" if item.get("provincia") else ""
+    partes = [_h(f"{escape(item['nombre'])}{provincia}", 3)]
+    periodo = f" ({escape(item['periodo'])})" if item.get("periodo") else ""
+    datos = [f"<strong>Gasto en eventos por contrato menor:</strong> {escape(euros(item['gasto']))} "
+             f"sin IVA en {item['contratos']} contratos{periodo}"]
+    if item.get("tipos"):
+        datos.append(f"<strong>Qué compra:</strong> {escape(_lista(item['tipos']))}")
+    if item.get("meses_fuertes"):
+        meses = [MESES_NOMBRE[m - 1] for m in item["meses_fuertes"]]
+        datos.append(f"<strong>Cuándo:</strong> sobre todo en {escape(_lista(meses))}")
+    if item.get("proveedores"):
+        datos.append(f"<strong>Proveedores habituales:</strong> {escape(_lista(item['proveedores']))}")
+    partes.append(_p("<br>".join(datos)))
+    if item.get("clave"):
+        partes.append(_p(escape(item["clave"])))
+    return "\n\n".join(partes)
+
+
 def renderizar(curada):
     hoy = date.fromisoformat(curada["fecha"])
     bloques = [_p(f"<strong>{escape(fecha_larga(curada['fecha']).capitalize())}</strong>")]
@@ -297,6 +327,14 @@ def renderizar(curada):
         for item in curada["desiertos"]:
             bloques.append(desierto_html(item, hoy))
             bloques.append(SEPARADOR)
+    if curada.get("compradores"):
+        bloques.append(_h(f"Quién compra sin licitar ({len(curada['compradores'])})"))
+        bloques.append(_p("Los contratos menores (hasta 15.000 € sin IVA en servicios) no se licitan: "
+                          "el organismo elige a quién se los encarga. Estos son los que más gastan en "
+                          "eventos en estas fechas. Preséntate antes de que lo necesiten."))
+        for item in curada["compradores"]:
+            bloques.append(comprador_html(item, hoy))
+            bloques.append(SEPARADOR)
     if curada.get("adjudicaciones"):
         bloques.append(_h(f"Quién ganó ({len(curada['adjudicaciones'])})"))
         for item in curada["adjudicaciones"]:
@@ -310,7 +348,8 @@ def renderizar(curada):
     pie = curada.get("pie") or (
         "Datos de la Plataforma de Contratación del Sector Público, la Plataforma de serveis de "
         "contractació pública de la Generalitat, el BOE y la Base de Datos Nacional de Subvenciones. "
-        "Los importes son el presupuesto base de licitación. Antes de ofertar, lee siempre el pliego: "
+        "En las licitaciones abiertas, el importe es el presupuesto base; en precedentes, "
+        "adjudicaciones y contratos menores, lo adjudicado. Antes de ofertar, lee siempre el pliego: "
         "manda el anuncio oficial."
     )
     bloques.append(_p(f"<small>{escape(pie)}</small>"))

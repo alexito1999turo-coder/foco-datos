@@ -12,6 +12,7 @@ import re
 from datetime import date, timedelta
 
 from .comun import normalizar
+from . import compradores
 from .precedentes import indice_desde, mes_y_anio
 
 NAVIDAD = re.compile(
@@ -121,11 +122,21 @@ def main(argv=None):
     secciones["adjudicaciones"] = [r for r in recientes if r.get("ganador")]
     secciones["desiertos"] = indice.desiertos((hoy - timedelta(days=14)).isoformat(),
                                               hoy.isoformat())
+    secciones["compradores"] = compradores.para_estas_fechas(
+        compradores.agrupar(compradores.cargar(carpeta)), hoy.month)[:40]
     with open(args.salida, "w", encoding="utf-8") as fichero:
         json.dump(secciones, fichero, ensure_ascii=False, indent=1)
     print(f"Histórico disponible: {len(indice)} licitaciones de eventos")
     for nombre, items in secciones.items():
         print(f"\n## {nombre} ({len(items)})")
+        if nombre == "compradores":
+            for item in items:
+                meses = ", ".join(compradores.nombre_mes(m) for m in item["meses_fuertes"])
+                print(f"- {item['nombre']} ({item.get('provincia') or '-'}) | "
+                      f"{euros(item['gasto'])} en {item['contratos']} contratos | estas fechas: "
+                      f"{euros(item['gasto_proximos'])} | {', '.join(item['tipos'])} | meses: {meses} | "
+                      f"proveedores: {', '.join(item['proveedores'][:2])} | id={item['id']}")
+            continue
         if nombre in ("proximas", "adjudicaciones", "desiertos"):
             for item in items[:40]:
                 print(f"- [{item.get('publicada')}] {(item.get('titulo') or '')[:200]} | "

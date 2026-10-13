@@ -17,7 +17,8 @@ seleccion.json:
   "ayudas": [{"codigo": "934700", "titulo": "...", "clave": "..."}],
   "proximas": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "..."}],
   "adjudicaciones": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "..."}],
-  "desiertos": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "..."}]
+  "desiertos": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "..."}],
+  "compradores": [{"id": "ayuntamiento de murcia", "clave": "..."}]
 }
 
 A cada licitación se le añade sola su precedente del año anterior, si existe (para quitarlo,
@@ -32,6 +33,7 @@ import os
 import sys
 from datetime import date
 
+from . import compradores as compradores_mod
 from .plantilla import DIAS_LARGOS, MESES_LARGOS, renderizar
 from .precedentes import resumen
 
@@ -58,7 +60,22 @@ def _historico(seleccion, indice, clave_lista, errores, hoy_iso):
     return elegidos
 
 
-def componer(seleccion, datos, indice=None):
+def _compradores(seleccion, resumenes, errores):
+    por_id = {r["id"]: r for r in resumenes or []}
+    elegidos = []
+    for elegido in seleccion.get("compradores", []):
+        resumen_comprador = por_id.get(elegido.get("id"))
+        if resumen_comprador is None:
+            errores.append(f"compradores: sin datos para {elegido.get('id')}")
+            continue
+        item = dict(resumen_comprador)
+        if elegido.get("clave"):
+            item["clave"] = elegido["clave"]
+        elegidos.append(item)
+    return elegidos
+
+
+def componer(seleccion, datos, indice=None, compradores=None):
     fecha = seleccion["fecha"]
     hoy = date.fromisoformat(fecha)
     licitaciones = {l["id"]: l for l in datos.get("licitaciones", [])}
@@ -115,6 +132,7 @@ def componer(seleccion, datos, indice=None):
     proximas = _historico(seleccion, indice, "proximas", errores, fecha)
     adjudicaciones = _historico(seleccion, indice, "adjudicaciones", errores, fecha)
     desiertos = _historico(seleccion, indice, "desiertos", errores, fecha)
+    lista_compradores = _compradores(seleccion, compradores, errores)
 
     if errores:
         raise SeleccionInvalida("; ".join(errores))
@@ -123,7 +141,7 @@ def componer(seleccion, datos, indice=None):
 
     curada = {"fecha": fecha, "intro": seleccion.get("intro"), "secciones": secciones,
               "ayudas": lista_ayudas, "proximas": proximas, "adjudicaciones": adjudicaciones,
-              "desiertos": desiertos}
+              "desiertos": desiertos, "compradores": lista_compradores}
     if seleccion.get("pie"):
         curada["pie"] = seleccion["pie"]
     total = sum(len(s["items"]) for s in secciones)
@@ -145,9 +163,12 @@ def main(argv=None):
     with open(args.datos, encoding="utf-8") as fichero:
         datos = json.load(fichero)
     from .precedentes import indice_desde
-    indice = indice_desde(os.path.dirname(os.path.abspath(args.datos)), datos)
+    carpeta = os.path.dirname(os.path.abspath(args.datos))
+    indice = indice_desde(carpeta, datos)
+    resumenes = compradores_mod.agrupar(compradores_mod.cargar(carpeta)) \
+        if seleccion.get("compradores") else []
     try:
-        curada, titulo = componer(seleccion, datos, indice)
+        curada, titulo = componer(seleccion, datos, indice, resumenes)
     except SeleccionInvalida as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 1
