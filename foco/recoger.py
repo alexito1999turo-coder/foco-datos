@@ -15,7 +15,7 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 
 from . import ayudas, catalunya, placsp
-from .comun import normalizar
+from .comun import es_de_eventos, normalizar
 
 CATALUNYA = "Generalitat de Catalunya"
 # Tiempo máximo por feed de PLACSP. Con dos feeds deja margen dentro de los 45 min del trabajo.
@@ -52,7 +52,14 @@ def _sigue_abierta(lic, hoy_iso):
     return (lic.get("fecha_limite") or "") >= hoy_iso
 
 
+def _sigue_interesando(lic):
+    """Si los filtros cambian, lo acumulado de días anteriores se vuelve a pasar por ellos."""
+    return es_de_eventos(lic.get("titulo"), lic.get("cpv") or [])[0]
+
+
 def _ayuda_vigente(ayuda, hoy):
+    if ayudas.EXCLUIR.search(normalizar(ayuda.get("titulo"))):
+        return False
     if ayuda.get("fin"):
         return ayuda["fin"] >= hoy.isoformat()
     if ayuda.get("fuente") == "BOE":
@@ -69,7 +76,8 @@ def ejecutar(salida, dias=3, dias_ayudas=7, hoy=None, fuentes=None):
     primera_vez.update({a.get("codigo"): a.get("primera_vez") for a in previo.get("ayudas", [])})
 
     acumuladas = {l["id"]: l for l in previo.get("licitaciones", [])
-                  if not l.get("fuente", "").startswith(CATALUNYA) and _sigue_abierta(l, hoy_iso)}
+                  if not l.get("fuente", "").startswith(CATALUNYA) and _sigue_abierta(l, hoy_iso)
+                  and _sigue_interesando(l)}
     catalanas = [l for l in previo.get("licitaciones", [])
                  if l.get("fuente") == CATALUNYA and _sigue_abierta(l, hoy_iso)]
     ayudas_vigentes = {a["codigo"]: a for a in previo.get("ayudas", []) if _ayuda_vigente(a, hoy)}
