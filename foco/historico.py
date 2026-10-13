@@ -38,6 +38,7 @@ ZIPS = {
 CABECERAS = {"User-Agent": "foco-datos/1.0 (+https://focolicitaciones.wordpress.com)"}
 CAMPOS = ("id", "expediente", "titulo", "organo", "municipio", "provincia", "nuts", "estado",
           "presupuesto_sin_iva", "valor_estimado", "procedimiento", "cpv", "fecha_limite",
+          "hora_limite", "lotes",
           "url", "publicada", "actualizado", "resultados")
 
 

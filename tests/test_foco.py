@@ -229,6 +229,23 @@ class Acumulacion(unittest.TestCase):
         self.assertEqual({a["codigo"] for a in resultado["ayudas"]}, {"x", "z"})
 
 
+class HistoricoEnElListado(unittest.TestCase):
+    def test_suma_abiertas_del_zip_mensual_salvo_cerradas_hoy(self):
+        abierta = {"id": "h1", "fuente": "PLACSP", "titulo": "Cabalgata de Reyes", "cpv": [],
+                   "organo": "Ayto", "expediente": "H1", "estado": "PUB",
+                   "fecha_limite": "2026-10-30"}
+        with tempfile.TemporaryDirectory() as carpeta:
+            os.makedirs(os.path.join(carpeta, "historico_eventos"))
+            with open(os.path.join(carpeta, "historico_eventos", "202609.json"), "w",
+                      encoding="utf-8") as fichero:
+                json.dump({"h1": abierta, "h2": {**abierta, "id": "h2", "expediente": "H2"},
+                           "h3": {**abierta, "id": "h3", "expediente": "H3",
+                                  "fecha_limite": "2026-10-01"}}, fichero)
+            fuentes = {"placsp": lambda: ([], {}, ["h2"], [])}
+            resultado = recoger.ejecutar(carpeta, hoy=HOY, fuentes=fuentes)
+        self.assertEqual([l["id"] for l in resultado["licitaciones"]], ["h1"])
+
+
 class EdicionCompleta(unittest.TestCase):
     def test_ejecutar_y_renderizar(self):
         lic_cat, _ = catalunya.recoger(hoy=HOY, descargador=lambda url: leer("catalunya.json"))

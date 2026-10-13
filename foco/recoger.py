@@ -63,6 +63,26 @@ def guardar_adjudicaciones(salida, nuevas, hoy_iso):
     return sorted(recien, key=lambda r: r.get("titulo") or "")
 
 
+def abiertas_del_historico(salida, hoy, meses=3):
+    """Licitaciones de eventos que siguen en plazo según los zips mensuales recientes. Sirven
+    para completar lo que la lectura diaria aún no ha alcanzado hacia atrás."""
+    abiertas = []
+    anio, mes = hoy.year, hoy.month
+    for _ in range(meses):
+        ruta = os.path.join(salida, "historico_eventos", f"{anio}{mes:02d}.json")
+        try:
+            with open(ruta, encoding="utf-8") as fichero:
+                registros = json.load(fichero)
+        except (OSError, ValueError):
+            registros = {}
+        for registro in registros.values():
+            if (registro.get("estado") == "PUB" and _sigue_abierta(registro, hoy.isoformat())
+                    and _sigue_interesando(registro)):
+                abiertas.append({**registro, "motivo": registro.get("motivo") or "histórico"})
+        anio, mes = (anio, mes - 1) if mes > 1 else (anio - 1, 12)
+    return abiertas
+
+
 def _cargar_previo(salida):
     try:
         with open(os.path.join(salida, "latest.json"), encoding="utf-8") as fichero:
@@ -123,6 +143,7 @@ def ejecutar(salida, dias=3, dias_ayudas=7, hoy=None, fuentes=None):
         "errores": [],
         "adjudicaciones_nuevas": [],
     }
+    cerradas_hoy = set()
     for nombre, funcion in fuentes.items():
         try:
             respuesta = funcion()
@@ -135,6 +156,7 @@ def ejecutar(salida, dias=3, dias_ayudas=7, hoy=None, fuentes=None):
         lista, informe = respuesta[0], respuesta[1]
         cerradas = respuesta[2] if len(respuesta) > 2 else []
         if nombre == "placsp":
+            cerradas_hoy.update(cerradas)
             for clave in cerradas:
                 acumuladas.pop(clave, None)
             for lic in lista:
@@ -149,6 +171,9 @@ def ejecutar(salida, dias=3, dias_ayudas=7, hoy=None, fuentes=None):
                 ayudas_vigentes[ayuda["codigo"]] = ayuda
         resultado["informe"][nombre] = {**informe, "seleccionadas": len(lista)}
 
+    for lic in abiertas_del_historico(salida, hoy):
+        if lic["id"] not in acumuladas and lic["id"] not in cerradas_hoy:
+            acumuladas[lic["id"]] = lic
     licitaciones = [l for l in list(acumuladas.values()) + catalanas if _sigue_abierta(l, hoy_iso)]
     for lic in licitaciones:
         lic["primera_vez"] = primera_vez.get(lic.get("id")) or hoy_iso
