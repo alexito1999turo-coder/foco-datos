@@ -73,6 +73,8 @@ def texto_precedente(previo):
     partes = [mes_y_anio(previo["publicada"])]
     if previo.get("ganador"):
         partes.append(f"ganó {previo['ganador']}" + (" (y otros)" if previo.get("varios_ganadores") else ""))
+    if previo.get("lotes_desiertos"):
+        partes.append(f"{previo['lotes_desiertos']} lote(s) desierto(s)")
     if previo.get("importe_sin_iva") is not None:
         partes.append(f"por {euros(previo['importe_sin_iva'])}")
     elif previo.get("presupuesto_sin_iva") is not None:
@@ -121,7 +123,7 @@ def main(argv=None):
     for nombre, items in secciones.items():
         print(f"\n## {nombre} ({len(items)})")
         if nombre in ("proximas", "adjudicaciones"):
-            for item in items[:80]:
+            for item in items[:40]:
                 print(f"- [{item.get('publicada')}] {(item.get('titulo') or '')[:200]} | "
                       f"{item.get('organo')} | {texto_precedente(item)} | id={item.get('id')}")
             continue

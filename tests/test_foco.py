@@ -9,7 +9,7 @@ import zipfile
 from foco import ayudas, catalunya, componer, historico, placsp, precedentes, recoger
 from foco.comun import a_numero, es_de_eventos, normalizar
 from foco.edicion import agrupar, euros, fecha_corta
-from foco.plantilla import fecha_larga, renderizar
+from foco.plantilla import fecha_larga, precedente_texto, renderizar
 
 FIXTURES = os.path.join(os.path.dirname(__file__), "fixtures")
 HOY = date(2026, 10, 13)
@@ -36,6 +36,11 @@ class FiltroEventos(unittest.TestCase):
     def test_no_confunde_palabras_parecidas(self):
         self.assertFalse(es_de_eventos("Plazas concertadas de residencia", ["85000000"])[0])
         self.assertFalse(es_de_eventos("Mantenimiento del alumbrado público", ["50232100"])[0])
+
+    def test_regalos_de_navidad_no_son_eventos(self):
+        self.assertFalse(es_de_eventos("Suministro de cestas de Navidad para el personal", [])[0])
+        self.assertFalse(es_de_eventos("Calendaris i postals de felicitació de Nadal", [])[0])
+        self.assertTrue(es_de_eventos("Alquiler de luces de Navidad", [])[0])
 
     def test_obras_se_descartan(self):
         self.assertFalse(es_de_eventos("Obras de reforma del teatro municipal", ["45212000"])[0])
@@ -397,6 +402,30 @@ class Precedentes(unittest.TestCase):
         self.assertEqual(proximas[0]["dias_para_aniversario"], 7)
         # Con la de este año ya publicada, deja de estar en «lo que viene».
         self.assertEqual(self.indice.proximas(date(2026, 10, 10)), [])
+
+    def test_lotes_desiertos_y_precios_unitarios(self):
+        registro = {"id": "x", "titulo": "PIN", "publicada": "2025-10-16",
+                    "presupuesto_sin_iva": 61791.39, "resultados": [
+                        {"resultado": "adjudicado", "ganador": "HAZI SL", "ganador_empresa": True,
+                         "importe_sin_iva": 35700.0, "ofertas": 1},
+                        {"resultado": "desierto"}]}
+        datos = precedentes.resumen(registro)
+        self.assertEqual(datos["lotes_desiertos"], 1)
+        self.assertNotIn("baja", datos)
+        self.assertNotIn("importe_sin_iva", datos)
+        self.assertEqual(precedente_texto(datos),
+                         "en oct 2025 lo ganó HAZI SL; 1 lote quedó desierto.")
+        unitario = precedentes.resumen({"id": "y", "titulo": "Cestas", "publicada": "2025-10-01",
+                                        "presupuesto_sin_iva": 68750.0, "resultados": [
+                                            {"resultado": "adjudicado", "ganador": "A SL",
+                                             "ganador_empresa": True, "importe_sin_iva": 100.0}]})
+        self.assertNotIn("importe_sin_iva", unitario)
+
+    def test_plurianuales_no_estan_en_lo_que_viene(self):
+        self.assertTrue(precedentes.cubre_esta_temporada(
+            "Alumbrado de Navidad 2025/2026 y 2026/2027", date(2026, 10, 13)))
+        self.assertFalse(precedentes.cubre_esta_temporada(
+            "Alumbrado de Navidad 2025-2026", date(2026, 10, 13)))
 
     def test_no_mezcla_contratos_distintos(self):
         self.assertIsNone(self.indice.precedente(

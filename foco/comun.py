@@ -107,6 +107,12 @@ PALABRAS_OBRA = (
 )
 
 
+# Llevan «Navidad» o «Reyes» pero no son trabajo para una empresa de eventos.
+NO_EVENTO = re.compile(
+    r"\b(cestas?|lotes?|cajas?|paquetes?) (de )?(navidad|nadal|navidenos?|nadalencs?)|"
+    r"\bpostales\b|\bfelicitaci|\btarjetas de navidad\b|\bjuguetes\b|\bjoguines\b")
+
+
 def cpv_limpio(codigo):
     """'92312000-1' -> '92312000'."""
     return re.sub(r"[^0-9]", "", str(codigo or "").split("-")[0])
@@ -123,6 +129,8 @@ def es_de_eventos(titulo, cpvs):
         if cpv.startswith(CPV_EVENTOS):
             return True, f"CPV {cpv}"
 
+    if NO_EVENTO.search(texto):
+        return False, "no es de eventos"
     es_obra = any(p in texto for p in PALABRAS_OBRA)
     for patron in PALABRAS_FUERTES:
         encontrado = patron.search(texto)

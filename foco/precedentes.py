@@ -16,7 +16,7 @@ import re
 from collections import Counter
 from datetime import date, timedelta
 
-from .comun import normalizar
+from .comun import es_de_eventos, normalizar
 
 VACIAS = set("""
 de del la las el los y e o u en a al para por con sin su sus un una unos unas que se lo
@@ -99,9 +99,13 @@ def mes_y_anio(texto):
 
 
 def resumen(registro):
-    """Lo que se cuenta de un precedente: cuándo, cuánto y, si lo hay, quién ganó."""
-    resultados = [r for r in registro.get("resultados") or []
-                  if r.get("resultado") in ("adjudicado", "formalizado")]
+    """Lo que se cuenta de un precedente: cuándo, cuánto y, si lo hay, quién ganó.
+
+    Con un solo resultado se dan importe, ofertas y baja. Con varios lotes, el ganador principal
+    y cuántos lotes quedaron desiertos; el importe solo si se adjudicaron todos, y sin baja. Un
+    importe por debajo del 10 % del presupuesto suele ser un precio unitario: no se muestra."""
+    todos = registro.get("resultados") or []
+    adjudicados = [r for r in todos if r.get("resultado") in ("adjudicado", "formalizado")]
     datos = {
         "id": registro.get("id"),
         "titulo": registro.get("titulo"),
@@ -110,24 +114,52 @@ def resumen(registro):
         "presupuesto_sin_iva": registro.get("presupuesto_sin_iva"),
         "url": registro.get("url"),
         "estado": registro.get("estado"),
-        "lotes_adjudicados": len(resultados),
+        "lotes_adjudicados": len(adjudicados),
+        "lotes_desiertos": sum(1 for r in todos if r.get("resultado") == "desierto"),
     }
-    if resultados:
-        ganadores = Counter(r.get("ganador") for r in resultados if r.get("ganador"))
-        datos["ganador"] = ganadores.most_common(1)[0][0] if ganadores else None
-        datos["varios_ganadores"] = len(ganadores) > 1
-        importes = [r.get("importe_sin_iva") for r in resultados]
-        if all(i is not None for i in importes):
+    if not adjudicados:
+        return datos
+    empresas = Counter(r["ganador"] for r in adjudicados
+                       if r.get("ganador") and r.get("ganador_empresa"))
+    if empresas:
+        datos["ganador"] = empresas.most_common(1)[0][0]
+        datos["varios_ganadores"] = len(empresas) > 1 or any(
+            r.get("ganador") == "persona física" for r in adjudicados)
+    elif any(r.get("ganador") for r in adjudicados):
+        datos["ganador"] = "persona física"
+    presupuesto = registro.get("presupuesto_sin_iva")
+    importes = [r.get("importe_sin_iva") for r in adjudicados]
+    if len(todos) > 1:
+        datos["por_lotes"] = True
+        if len(adjudicados) == len(todos) and all(i is not None for i in importes):
             datos["importe_sin_iva"] = round(sum(importes), 2)
-        ofertas = [r.get("ofertas") for r in resultados if r.get("ofertas") is not None]
-        if len(resultados) == 1 and ofertas:
-            datos["ofertas"] = ofertas[0]
-        presupuesto = registro.get("presupuesto_sin_iva")
-        if datos.get("importe_sin_iva") and presupuesto and presupuesto > 0:
+    else:
+        unico = adjudicados[0]
+        datos["importe_sin_iva"] = unico.get("importe_sin_iva")
+        datos["ofertas"] = unico.get("ofertas")
+        if datos["importe_sin_iva"] is not None and presupuesto:
             baja = 1 - datos["importe_sin_iva"] / presupuesto
-            if 0 <= baja < 0.9:
+            if 0 <= baja < 0.6:
                 datos["baja"] = round(baja * 100, 1)
-    return datos
+    if (datos.get("importe_sin_iva") is not None and presupuesto
+            and datos["importe_sin_iva"] < 0.1 * presupuesto):
+        datos.pop("importe_sin_iva")
+        datos.pop("baja", None)
+    return {k: v for k, v in datos.items() if v is not None}
+
+
+# Para ordenar «lo que viene»: lo que más claramente es trabajo de una empresa de eventos.
+DESTACADAS = OBJETO | set("""
+cabalgata navideno navidad reyes fiestas fiesta festival feria ferias carnaval nochevieja
+verbena patronales mayor
+""".split())
+
+
+def cubre_esta_temporada(titulo, hoy):
+    """Un contrato del año pasado que nombra el año que viene (p. ej. «2026 y 2027» visto en
+    2026) es plurianual: este año no se volverá a licitar."""
+    anios = [int(a) for a in re.findall(r"\b(20[2-4]\d)\b", titulo or "")]
+    return any(a >= hoy.year + 1 for a in anios)
 
 
 class Indice:
@@ -173,7 +205,7 @@ class Indice:
         candidatos.sort(key=lambda c: (bool(c[2].get("resultados")), c[0], c[1]), reverse=True)
         return resumen(candidatos[0][2])
 
-    def proximas(self, hoy, dias=30, umbral=0.45):
+    def proximas(self, hoy, dias=21, umbral=0.45):
         """Lo publicado el año pasado entre hoy y hoy+dias que este año aún no ha salido."""
         inicio = (hoy - timedelta(days=365)).isoformat()
         fin = (hoy - timedelta(days=365 - dias)).isoformat()
@@ -186,11 +218,24 @@ class Indice:
                     continue
                 if self._parecidos(registro, este_anio_desde, "9999", umbral):
                     continue  # ya ha salido este año
+                if registro.get("estado") == "ANUL":
+                    continue
+                if not es_de_eventos(registro.get("titulo"), registro.get("cpv") or [])[0]:
+                    continue
+                if cubre_esta_temporada(registro.get("titulo"), hoy):
+                    continue  # contrato plurianual: ya incluye la campaña de este año
                 datos = resumen(registro)
                 datos["dias_para_aniversario"] = (
                     date.fromisoformat(fecha) + timedelta(days=365) - hoy).days
+                destacadas = len(palabras(registro.get("titulo")) & DESTACADAS)
+                presupuesto = registro.get("presupuesto_sin_iva") or 0
+                datos["prioridad"] = (destacadas + (1 if presupuesto >= 30000 else 0)
+                                      + (1 if datos.get("ganador") else 0))
+                datos["municipio"] = registro.get("municipio")
+                datos["provincia"] = registro.get("provincia")
                 resultado.append(datos)
-        resultado.sort(key=lambda d: (d["publicada"], d.get("titulo") or ""))
+        resultado.sort(key=lambda d: (-d["prioridad"], d["dias_para_aniversario"],
+                                      d.get("titulo") or ""))
         return resultado
 
 

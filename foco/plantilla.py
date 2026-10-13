@@ -106,7 +106,12 @@ def precedente_texto(previo):
     if ganador:
         texto = f"en {cuando} lo ganó {ganador}"
         cifras = _cifras_adjudicacion(previo)
-        return f"{texto} {cifras}." if cifras else f"{texto}."
+        if cifras:
+            texto += f" {cifras}"
+        if previo.get("lotes_desiertos"):
+            n = previo["lotes_desiertos"]
+            texto += f"; {n} {'lote quedó desierto' if n == 1 else 'lotes quedaron desiertos'}"
+        return f"{texto}."
     if previo.get("presupuesto_sin_iva") is not None:
         return f"se licitó en {cuando} con {euros(previo['presupuesto_sin_iva'])} sin IVA."
     return None
