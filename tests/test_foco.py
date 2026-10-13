@@ -392,7 +392,7 @@ class Precedentes(unittest.TestCase):
         texto = renderizar({"fecha": "2026-10-13", "secciones": [{"titulo": "X", "items": [
             {**self.motril, "precedente": previo}]}]})
         self.assertIn("en oct 2025 lo ganó FIESTAS DEL SUR SL por 98.000,00 € sin IVA, "
-                      "con 4 ofertas y una baja del 18,3 %", texto)
+                      "con 4 ofertas y una rebaja del 18,3 %", texto)
 
     def test_proximas_omite_lo_que_ya_ha_salido(self):
         # El 10 de octubre de 2026 la cabalgata de Motril de 2025 (17 oct) aún no había salido.

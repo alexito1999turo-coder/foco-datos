@@ -84,7 +84,7 @@ def _ganador(dato):
 
 
 def _cifras_adjudicacion(dato):
-    """«por 98.000,00 € sin IVA, con 4 ofertas y una baja del 18,3 %»"""
+    """«por 98.000,00 € sin IVA, con 4 ofertas y una rebaja del 18,3 %»"""
     partes = []
     if dato.get("importe_sin_iva") is not None:
         partes.append(f"por {euros(dato['importe_sin_iva'])} sin IVA")
@@ -92,7 +92,8 @@ def _cifras_adjudicacion(dato):
     if dato.get("ofertas") is not None:
         extras.append(f"{dato['ofertas']} {'oferta' if dato['ofertas'] == 1 else 'ofertas'}")
     if dato.get("baja") is not None:
-        extras.append(f"una baja del {str(dato['baja']).replace('.', ',')} %")
+        extras.append("sin rebaja" if dato["baja"] < 0.05
+                      else f"una rebaja del {_porcentaje(dato['baja'])} %")
     if extras:
         partes.append("con " + " y ".join(extras))
     return ", ".join(partes)
@@ -230,7 +231,8 @@ def adjudicacion_html(item, hoy):
     if item.get("ofertas") is not None:
         extras.append(f"{item['ofertas']} {'oferta' if item['ofertas'] == 1 else 'ofertas'}")
     if item.get("baja") is not None:
-        extras.append(f"baja del {str(item['baja']).replace('.', ',')} %")
+        extras.append("sin rebaja" if item["baja"] < 0.05
+                      else f"rebaja del {_porcentaje(item['baja'])} %")
     if extras:
         datos.append(f"<strong>Competencia:</strong> {escape(', '.join(extras))}")
     if item.get("organo"):
