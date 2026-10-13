@@ -41,6 +41,13 @@ CAMPOS = ("id", "expediente", "titulo", "organo", "municipio", "provincia", "nut
           "url", "publicada", "actualizado", "resultados")
 
 
+def aviso(texto):
+    """Imprime y, dentro de GitHub Actions, deja una anotación legible desde la API."""
+    print(texto, flush=True)
+    if os.environ.get("GITHUB_ACTIONS"):
+        print(f"::notice title=foco::{texto}", flush=True)
+
+
 def probar(periodos, abrir=urllib.request.urlopen):
     for periodo in periodos:
         for clave, (_, plantilla) in ZIPS.items():
@@ -49,11 +56,11 @@ def probar(periodos, abrir=urllib.request.urlopen):
             try:
                 with abrir(peticion, timeout=60) as respuesta:
                     tamano = int(respuesta.headers.get("Content-Length") or 0)
-                    print(f"{periodo} {clave}: {respuesta.status} {tamano / 1e6:.0f} MB {url}")
+                    aviso(f"{periodo} {clave}: {respuesta.status} {tamano / 1e6:.0f} MB")
             except urllib.error.HTTPError as error:
-                print(f"{periodo} {clave}: {error.code} {url}")
+                aviso(f"{periodo} {clave}: HTTP {error.code}")
             except OSError as error:
-                print(f"{periodo} {clave}: error {error!r} {url}")
+                aviso(f"{periodo} {clave}: error {error!r}")
 
 
 def descargar_a_disco(url, destino, abrir=urllib.request.urlopen, trozo=1 << 20):
@@ -124,13 +131,14 @@ def cargar(periodo, feed, salida, abrir=urllib.request.urlopen):
     with tempfile.TemporaryDirectory() as carpeta:
         ruta = os.path.join(carpeta, "periodo.zip")
         print(f"Descargando {url}", file=sys.stderr, flush=True)
+        inicio = time.monotonic()
         tamano = descargar_a_disco(url, ruta, abrir=abrir)
-        print(f"  {tamano / 1e6:.0f} MB descargados", file=sys.stderr, flush=True)
+        aviso(f"{periodo} {feed}: {tamano / 1e6:.0f} MB en {time.monotonic() - inicio:.0f} s")
         eventos = leer_zip(ruta, fuente)
     destino = os.path.join(salida, f"{periodo}-{feed}.json")
     with open(destino, "w", encoding="utf-8") as fichero:
         json.dump(eventos, fichero, ensure_ascii=False)
-    print(f"{periodo} {feed}: {len(eventos)} licitaciones de eventos -> {destino}")
+    aviso(f"{periodo} {feed}: {len(eventos)} licitaciones de eventos")
     return eventos
 
 
@@ -157,7 +165,7 @@ def unir(carpetas, salida):
             existentes[clave] = fusionar(existentes.get(clave), registro)
         with open(ruta, "w", encoding="utf-8") as fichero:
             json.dump(existentes, fichero, ensure_ascii=False, indent=0, sort_keys=True)
-        print(f"{periodo}: {len(existentes)} licitaciones de eventos")
+        aviso(f"{periodo}: {len(existentes)} licitaciones de eventos en total")
 
 
 def main(argv=None):

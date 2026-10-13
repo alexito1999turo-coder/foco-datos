@@ -176,8 +176,15 @@ def main(argv=None):
     parser.add_argument("--dias-ayudas", type=int, default=7, help="días hacia atrás en la BDNS")
     args = parser.parse_args(argv)
     resultado = ejecutar(args.salida, dias=args.dias, dias_ayudas=args.dias_ayudas)
-    print(f"Licitaciones: {len(resultado['licitaciones'])} · Ayudas: {len(resultado['ayudas'])}")
+    resumen = (f"Licitaciones: {len(resultado['licitaciones'])} · Ayudas: {len(resultado['ayudas'])}"
+               f" · Adjudicaciones nuevas: {len(resultado['adjudicaciones_nuevas'])}")
+    print(resumen)
     print(json.dumps(resultado["informe"], ensure_ascii=False))
+    if os.environ.get("GITHUB_ACTIONS"):
+        # Las anotaciones se leen desde la API aunque los registros no estén accesibles.
+        print(f"::notice title=resumen::{resumen}")
+        for error in resultado["errores"]:
+            print(f"::warning title={error['fuente']}::{error['error'][:300]}")
     for error in resultado["errores"]:
         print(f"ERROR en {error['fuente']}: {error['error']}", file=sys.stderr)
     todas_fallan = len(resultado["errores"]) == 4
