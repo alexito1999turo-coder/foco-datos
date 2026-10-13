@@ -15,7 +15,7 @@ Empresas pequeñas y medianas de eventos, espectáculos y producción técnica e
 4. Elegir y escribir `seleccion.json` (formato en `foco/componer.py`).
 5. Montar: `python -m foco.componer seleccion.json --datos data/latest.json --salida edicion.html`. Imprime el `TITULO:` de la entrada. Si da error, corregir la selección; nunca saltarse la comprobación.
 6. Revisar `edicion.html`: que no aparezca `None`, que cada licitación tenga su enlace oficial y que los plazos sean futuros.
-7. Publicar con posts.create: `status` publish, `title` el TITULO, `content` el HTML tal cual, `excerpt` la intro. Comprobar `_content_warnings` y abrir el enlace devuelto.
+7. Publicar con posts.create: `status` publish, `title` el TITULO, `content` el HTML tal cual, `excerpt` la intro, `categories` [158269] (Ediciones) y `tags` [276957, 2366, 1641964, 132379, 19762] (licitaciones, eventos, contratación pública, subvenciones, espectáculos). Comprobar `_content_warnings` y abrir el enlace devuelto.
 
 ## Qué entra
 
