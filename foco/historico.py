@@ -49,18 +49,29 @@ def aviso(texto):
 
 
 def probar(periodos, abrir=urllib.request.urlopen):
+    """Pide el principio de cada zip (GET, no HEAD: el servidor corta las peticiones HEAD) y
+    comprueba que de verdad es un zip. Todo en una línea, porque GitHub solo guarda 10 avisos."""
+    lineas = []
     for periodo in periodos:
         for clave, (_, plantilla) in ZIPS.items():
             url = plantilla.format(periodo=periodo)
-            peticion = urllib.request.Request(url, method="HEAD", headers=CABECERAS)
+            peticion = urllib.request.Request(url, headers={**CABECERAS, "Range": "bytes=0-3"})
             try:
-                with abrir(peticion, timeout=60) as respuesta:
-                    tamano = int(respuesta.headers.get("Content-Length") or 0)
-                    aviso(f"{periodo} {clave}: {respuesta.status} {tamano / 1e6:.0f} MB")
+                with abrir(peticion, timeout=90) as respuesta:
+                    inicio = respuesta.read(4)
+                    rango = respuesta.headers.get("Content-Range") or ""
+                    total = rango.rsplit("/", 1)[-1] if "/" in rango else (
+                        respuesta.headers.get("Content-Length") or "?")
+                    tamano = f"{int(total) / 1e6:.0f}MB" if total.isdigit() else total
+                    tipo = "zip" if inicio == b"PK\x03\x04" else (
+                        respuesta.headers.get("Content-Type") or "?")
+                    lineas.append(f"{periodo}/{clave}={respuesta.status},{tipo},{tamano}")
             except urllib.error.HTTPError as error:
-                aviso(f"{periodo} {clave}: HTTP {error.code}")
+                lineas.append(f"{periodo}/{clave}=HTTP{error.code}")
             except OSError as error:
-                aviso(f"{periodo} {clave}: error {error!r}")
+                lineas.append(f"{periodo}/{clave}=error:{type(error).__name__}")
+    aviso(" | ".join(lineas))
+    return lineas
 
 
 def descargar_a_disco(url, destino, abrir=urllib.request.urlopen, trozo=1 << 20):
