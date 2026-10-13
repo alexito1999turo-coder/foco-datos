@@ -82,9 +82,12 @@ def main(argv=None):
         for item in items[:80]:
             marca = "NUEVA " if item.get("nueva") else ""
             titulo = (item.get("titulo") or "")[:220]
+            ident = item.get("id") or item.get("codigo")
+            lugar = " / ".join(x for x in (item.get("municipio"), item.get("provincia")) if x)
             print(f"- {marca}[{item.get('dias_restantes')}d · {item.get('cierra')}] {titulo} | "
-                  f"{item.get('organo')} | {item.get('presupuesto_texto') or item.get('presupuesto')} | "
-                  f"{item.get('motivo') or item.get('fuente')}")
+                  f"{item.get('organo')} | {lugar or '-'} | "
+                  f"{item.get('presupuesto_texto') or item.get('presupuesto')} | "
+                  f"{item.get('motivo') or item.get('fuente')} | id={ident}")
     if datos.get("errores"):
         print("\nErrores de recogida:", datos["errores"])
 

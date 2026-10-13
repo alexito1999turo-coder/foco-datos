@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from datetime import date
 
-from foco import ayudas, catalunya, placsp, recoger
+from foco import ayudas, catalunya, componer, placsp, recoger
 from foco.comun import a_numero, es_de_eventos, normalizar
 from foco.edicion import agrupar, euros, fecha_corta
 from foco.plantilla import fecha_larga, renderizar
@@ -224,6 +224,39 @@ class EdicionCompleta(unittest.TestCase):
         self.assertIn("quedan 8 días", html)
         self.assertIn("a?b=1&amp;c=2", html)
         self.assertNotIn("23:59 h", html)
+
+
+class Componer(unittest.TestCase):
+    DATOS = {
+        "licitaciones": [
+            {"id": "a", "titulo": "Original", "organo": "Ayto", "fecha_limite": "2026-10-20",
+             "hora_limite": "14:00", "presupuesto_sin_iva": 1000.0, "url": "https://x/a",
+             "expediente": "E1", "cpv": ["92312000"]},
+            {"id": "b", "titulo": "Cerrada", "fecha_limite": "2026-10-01"},
+        ],
+        "ayudas": [{"codigo": "9", "titulo": "Ayuda", "organo": "Xunta", "fin": "2026-11-10",
+                    "url": "https://y/9"}],
+    }
+
+    def test_toma_los_datos_del_json_y_lo_editorial_de_la_seleccion(self):
+        seleccion = {"fecha": "2026-10-13", "intro": "Hola.", "secciones": [
+            {"titulo": "Cierran pronto", "items": [
+                {"id": "a", "titulo": "Limpio", "clave": "Clave.", "presupuesto_sin_iva": 1}]}],
+            "ayudas": [{"codigo": "9", "clave": "Hasta 60 %."}]}
+        curada, titulo = componer.componer(seleccion, self.DATOS)
+        item = curada["secciones"][0]["items"][0]
+        self.assertEqual(item["titulo"], "Limpio")
+        self.assertEqual(item["presupuesto_sin_iva"], 1000.0)
+        self.assertEqual(item["url"], "https://x/a")
+        self.assertEqual(curada["ayudas"][0]["fin"], "2026-11-10")
+        self.assertEqual(titulo, "Foco · martes 13 de octubre: 1 contrato abierto y 1 ayuda")
+        self.assertIn("1.000,00 € sin IVA", renderizar(curada))
+
+    def test_rechaza_ids_desconocidos_y_cerrados(self):
+        for ident in ("zzz", "b"):
+            seleccion = {"fecha": "2026-10-13", "secciones": [{"titulo": "X", "items": [{"id": ident}]}]}
+            with self.assertRaises(componer.SeleccionInvalida):
+                componer.componer(seleccion, self.DATOS)
 
 
 if __name__ == "__main__":
