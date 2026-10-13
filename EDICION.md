@@ -32,10 +32,11 @@ Empresas pequeñas y medianas de eventos, espectáculos y producción técnica e
 2. **Navidad y Reyes** (hasta el 6 de enero): cabalgatas, luces, belenes, Nochevieja, programación navideña.
 3. **Más contratos abiertos**: el resto, primero las nuevas.
 4. **Lo que viene** (`proximas` en seleccion.json, hasta 5): de la lista `proximas`, lo que más interesa al sector y aniversario más cercano. Es lo que nos diferencia: avisa antes de que salga.
-5. **Quién ganó** (`adjudicaciones` en seleccion.json, hasta 5): de la lista `adjudicaciones`, las más relevantes que no hayan salido ya en una edición anterior.
-6. Ayudas: van aparte en `ayudas` y salen al final.
+5. **Se quedaron sin empresa** (`desiertos` en seleccion.json, hasta 4): de la lista `desiertos`, los de eventos más claros y con presupuesto que merezca la pena. Son una puerta abierta: el organismo puede adjudicarlos por negociado invitando a empresas.
+6. **Quién ganó** (`adjudicaciones` en seleccion.json, hasta 5): de la lista `adjudicaciones`, las más relevantes que no hayan salido ya en una edición anterior.
+7. Ayudas: van aparte en `ayudas` y salen al final.
 
-Una sección vacía no se pone. El precedente de cada licitación lo añade `componer` solo; no hay que escribirlo.
+Una sección vacía no se pone. El precedente de cada licitación y la «competencia habitual» de su tipo de contrato los añade `componer` solos; no hay que escribirlos.
 
 ## Cómo se escribe
 

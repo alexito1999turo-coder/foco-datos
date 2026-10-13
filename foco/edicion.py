@@ -74,7 +74,8 @@ def texto_precedente(previo):
     if previo.get("ganador"):
         partes.append(f"ganó {previo['ganador']}" + (" (y otros)" if previo.get("varios_ganadores") else ""))
     if previo.get("lotes_desiertos"):
-        partes.append(f"{previo['lotes_desiertos']} lote(s) desierto(s)")
+        partes.append("todo desierto" if not previo.get("lotes_adjudicados")
+                      else f"{previo['lotes_desiertos']} lote(s) desierto(s)")
     if previo.get("importe_sin_iva") is not None:
         partes.append(f"por {euros(previo['importe_sin_iva'])}")
     elif previo.get("presupuesto_sin_iva") is not None:
@@ -112,17 +113,20 @@ def main(argv=None):
     for nombre in ("cierra_7_dias", "navidad_reyes", "resto"):
         for item in secciones[nombre]:
             item["precedente"] = indice.precedente(item, hoy)
+            item["competencia"] = indice.competencia(item.get("titulo"))
     secciones["proximas"] = indice.proximas(hoy)
     from .precedentes import resumen
-    secciones["adjudicaciones"] = [
-        {**resumen(r), "municipio": r.get("municipio"), "provincia": r.get("provincia")}
-        for r in adjudicaciones_recientes(carpeta, hoy)]
+    recientes = [{**resumen(r), "municipio": r.get("municipio"), "provincia": r.get("provincia")}
+                 for r in adjudicaciones_recientes(carpeta, hoy)]
+    secciones["adjudicaciones"] = [r for r in recientes if r.get("ganador")]
+    secciones["desiertos"] = indice.desiertos((hoy - timedelta(days=14)).isoformat(),
+                                              hoy.isoformat())
     with open(args.salida, "w", encoding="utf-8") as fichero:
         json.dump(secciones, fichero, ensure_ascii=False, indent=1)
     print(f"Histórico disponible: {len(indice)} licitaciones de eventos")
     for nombre, items in secciones.items():
         print(f"\n## {nombre} ({len(items)})")
-        if nombre in ("proximas", "adjudicaciones"):
+        if nombre in ("proximas", "adjudicaciones", "desiertos"):
             for item in items[:40]:
                 print(f"- [{item.get('publicada')}] {(item.get('titulo') or '')[:200]} | "
                       f"{item.get('organo')} | {texto_precedente(item)} | id={item.get('id')}")
@@ -138,6 +142,10 @@ def main(argv=None):
                   f"{item.get('motivo') or item.get('fuente')} | id={ident}")
             if item.get("precedente"):
                 print(f"    ↳ precedente: {texto_precedente(item['precedente'])}")
+            if item.get("competencia"):
+                c = item["competencia"]
+                print(f"    ↳ competencia ({c['categoria']}, {c['contratos']}): {c['una_oferta']} % con "
+                      f"una sola oferta, rebaja mediana {c['mediana_baja']} %")
     if datos.get("errores"):
         print("\nErrores de recogida:", datos["errores"])
 

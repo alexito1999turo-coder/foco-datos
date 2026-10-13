@@ -34,6 +34,10 @@ ZIPS = {
     "agregadas": ("PLACSP (plataformas autonómicas)",
                   "https://contrataciondelestado.es/sindicacion/sindicacion_1044/"
                   "PlataformasAgregadasSinMenores_{periodo}.zip"),
+    # Contratos menores: no se licitan, pero dicen quién compra eventos, cuánto y a quién.
+    "menores": ("PLACSP (contratos menores)",
+                "https://contrataciondelsectorpublico.gob.es/sindicacion/sindicacion_1143/"
+                "contratosMenoresPerfilesContratantes_{periodo}.zip"),
 }
 CABECERAS = {"User-Agent": "foco-datos/1.0 (+https://focolicitaciones.wordpress.com)"}
 CAMPOS = ("id", "expediente", "titulo", "organo", "municipio", "provincia", "nuts", "estado",
@@ -154,20 +158,22 @@ def cargar(periodo, feed, salida, abrir=urllib.request.urlopen):
     return eventos
 
 
-def unir(carpetas, salida):
-    """Junta los parciales (periodo-feed.json) en un fichero por periodo."""
-    por_periodo = {}
+def unir(carpetas, salida, salida_menores=None):
+    """Junta los parciales (periodo-feed.json) en un fichero por periodo. Los contratos menores
+    van a su propia carpeta: no son licitaciones, sino compras ya hechas."""
+    grupos = {}
     for carpeta in carpetas:
         for ruta in sorted(glob.glob(os.path.join(carpeta, "**", "*.json"), recursive=True)):
-            periodo = os.path.basename(ruta).split("-", 1)[0]
+            periodo, _, feed = os.path.basename(ruta)[:-5].partition("-")
+            destino_carpeta = salida_menores if (feed == "menores" and salida_menores) else salida
             with open(ruta, encoding="utf-8") as fichero:
                 parcial = json.load(fichero)
-            destino = por_periodo.setdefault(periodo, {})
+            destino = grupos.setdefault((destino_carpeta, periodo), {})
             for clave, registro in parcial.items():
                 destino[clave] = fusionar(destino.get(clave), registro)
-    os.makedirs(salida, exist_ok=True)
-    for periodo, eventos in por_periodo.items():
-        ruta = os.path.join(salida, f"{periodo}.json")
+    for (carpeta, periodo), eventos in grupos.items():
+        os.makedirs(carpeta, exist_ok=True)
+        ruta = os.path.join(carpeta, f"{periodo}.json")
         try:
             with open(ruta, encoding="utf-8") as fichero:
                 existentes = json.load(fichero)
@@ -177,7 +183,7 @@ def unir(carpetas, salida):
             existentes[clave] = fusionar(existentes.get(clave), registro)
         with open(ruta, "w", encoding="utf-8") as fichero:
             json.dump(existentes, fichero, ensure_ascii=False, indent=0, sort_keys=True)
-        aviso(f"{periodo}: {len(existentes)} licitaciones de eventos en total")
+        aviso(f"{os.path.basename(carpeta)}/{periodo}: {len(existentes)} de eventos en total")
 
 
 def main(argv=None):
@@ -192,13 +198,14 @@ def main(argv=None):
     p_unir = sub.add_parser("unir")
     p_unir.add_argument("carpetas", nargs="+")
     p_unir.add_argument("--salida", default="data/historico_eventos")
+    p_unir.add_argument("--menores", default=None)
     args = parser.parse_args(argv)
     if args.orden == "probar":
         probar(args.periodos)
     elif args.orden == "cargar":
         cargar(args.periodo, args.feed, args.salida)
     else:
-        unir(args.carpetas, args.salida)
+        unir(args.carpetas, args.salida, args.menores)
     return 0
 
 

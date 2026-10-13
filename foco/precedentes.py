@@ -155,6 +155,42 @@ verbena patronales mayor
 """.split())
 
 
+# Tipos de contrato para medir la competencia habitual. El primero que encaja manda.
+CATEGORIAS = (
+    ("cabalgatas", r"cabalgata|cavalcad|carrozas|carrosses"),
+    ("alumbrado navideño", r"(alumbrado|iluminacion|ilumin|enllumenat|luces|llums|ornament)\w*.*"
+                           r"(navid|nadal)|(navid|nadal)\w*.*(alumbrado|ilumin|luces|llums|enllumenat|"
+                           r"ornament)"),
+    ("parques y pistas de Navidad", r"parque infantil de navidad|parc de nadal|parque de navidad|"
+                                    r"pista de (hielo|patinaje|gel)|\bpin\b"),
+    ("sonido e iluminación", r"sonido|sonoriza|\bso\b|equipos? de luz|il.luminacio escenica|"
+                             r"iluminacion escenica|audiovisual"),
+    ("escenarios y carpas", r"escenario|escenari|carpa|carpes|graderio|grades"),
+    ("pirotecnia", r"pirotecni|fuegos artificiales|focs d.artifici|castillo de fuegos"),
+    ("orquestas y actuaciones", r"orquesta|orquestra|actuacion|concierto|concert|espectacul|"
+                                r"artistas|animacion"),
+    ("mercados y ferias", r"mercado|mercadillo|mercat|casetas|feria|fira\b|fires\b"),
+    ("fiestas", r"fiestas|festes|festa major|festejos|verbena"),
+)
+_CATEGORIAS = tuple((nombre, re.compile(patron)) for nombre, patron in CATEGORIAS)
+
+
+def categoria(titulo):
+    texto = normalizar(titulo)
+    for nombre, patron in _CATEGORIAS:
+        if patron.search(texto):
+            return nombre
+    return None
+
+
+def _mediana(valores):
+    valores = sorted(valores)
+    if not valores:
+        return None
+    medio = len(valores) // 2
+    return valores[medio] if len(valores) % 2 else (valores[medio - 1] + valores[medio]) / 2
+
+
 def cubre_esta_temporada(titulo, hoy):
     """Un contrato del año pasado que nombra el año que viene (p. ej. «2026 y 2027» visto en
     2026) es plurianual: este año no se volverá a licitar."""
@@ -176,6 +212,60 @@ class Indice:
             organo = clave_organo(registro.get("organo"))
             entrada = (palabras(registro.get("titulo")) - palabras(organo), registro)
             self.por_organo.setdefault(organo, []).append(entrada)
+
+    def competencia(self, titulo, minimo=15):
+        """Competencia habitual en ese tipo de contrato, con los adjudicados de un solo lote."""
+        nombre = categoria(titulo)
+        if nombre is None:
+            return None
+        if not hasattr(self, "_estadisticas"):
+            self._estadisticas = {}
+            for lista in self.por_organo.values():
+                for _, registro in lista:
+                    tipo = categoria(registro.get("titulo"))
+                    if tipo is None:
+                        continue
+                    # Solo procedimientos abiertos: en un negociado o un contrato artístico
+                    # exclusivo la oferta única es lo normal y falsearía la media.
+                    if not normalizar(registro.get("procedimiento")).startswith(("abierto", "obert")):
+                        continue
+                    datos = resumen(registro)
+                    if datos.get("por_lotes") or datos.get("ofertas") is None:
+                        continue
+                    self._estadisticas.setdefault(tipo, []).append(
+                        (datos["ofertas"], datos.get("baja")))
+        muestras = self._estadisticas.get(nombre, [])
+        if len(muestras) < minimo:
+            return None
+        ofertas = [o for o, _ in muestras]
+        bajas = [b for _, b in muestras if b is not None]
+        return {
+            "categoria": nombre,
+            "contratos": len(muestras),
+            "mediana_ofertas": _mediana(ofertas),
+            "una_oferta": round(100 * sum(1 for o in ofertas if o == 1) / len(ofertas)),
+            "mediana_baja": round(_mediana(bajas), 1) if bajas else None,
+        }
+
+    def desiertos(self, desde, hasta):
+        """Contratos de eventos con algún lote desierto, vistos entre esas fechas."""
+        resultado = []
+        for lista in self.por_organo.values():
+            for _, registro in lista:
+                fecha = (registro.get("actualizado") or "")[:10]
+                if not (desde <= fecha <= hasta):
+                    continue
+                datos = resumen(registro)
+                if not datos.get("lotes_desiertos"):
+                    continue
+                if not es_de_eventos(registro.get("titulo"), registro.get("cpv") or [])[0]:
+                    continue
+                datos.update({"fecha": fecha, "municipio": registro.get("municipio"),
+                              "provincia": registro.get("provincia"),
+                              "todo_desierto": not datos.get("lotes_adjudicados")})
+                resultado.append(datos)
+        resultado.sort(key=lambda d: (d["fecha"], d.get("presupuesto_sin_iva") or 0), reverse=True)
+        return resultado
 
     def __len__(self):
         return sum(len(lista) for lista in self.por_organo.values())

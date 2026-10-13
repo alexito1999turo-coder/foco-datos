@@ -421,6 +421,32 @@ class Precedentes(unittest.TestCase):
                                              "ganador_empresa": True, "importe_sin_iva": 100.0}]})
         self.assertNotIn("importe_sin_iva", unitario)
 
+    def test_competencia_habitual_y_desiertos(self):
+        registros = []
+        for n in range(20):
+            registros.append({"id": f"c{n}", "titulo": f"Cabalgata de Reyes {n}",
+                              "organo": f"Ayuntamiento de Pueblo{n}", "procedimiento": "Abierto",
+                              "publicada": "2025-10-20", "actualizado": "2025-12-01",
+                              "presupuesto_sin_iva": 10000.0,
+                              "resultados": [{"resultado": "adjudicado", "ganador": "A SL",
+                                              "ganador_empresa": True, "ofertas": 1 if n < 15 else 3,
+                                              "importe_sin_iva": 9800.0}]})
+        registros.append({"id": "d1", "titulo": "Luces de Navidad", "organo": "Ayuntamiento de X",
+                          "actualizado": "2025-12-05", "publicada": "2025-11-01",
+                          "resultados": [{"resultado": "desierto"}]})
+        indice = precedentes.Indice(registros)
+        competencia = indice.competencia("Cabalgata de Reyes 2027")
+        self.assertEqual(competencia["contratos"], 20)
+        self.assertEqual(competencia["una_oferta"], 75)
+        self.assertEqual(competencia["mediana_baja"], 2.0)
+        from foco.plantilla import competencia_texto
+        self.assertEqual(competencia_texto(competencia),
+                         "De 20 contratos de cabalgatas por procedimiento abierto en el histórico de "
+                         "Foco, el 75 % recibió una sola oferta y la rebaja mediana fue del 2 %.")
+        desiertos = indice.desiertos("2025-12-01", "2025-12-31")
+        self.assertEqual([d["id"] for d in desiertos], ["d1"])
+        self.assertTrue(desiertos[0]["todo_desierto"])
+
     def test_plurianuales_no_estan_en_lo_que_viene(self):
         self.assertTrue(precedentes.cubre_esta_temporada(
             "Alumbrado de Navidad 2025/2026 y 2026/2027", date(2026, 10, 13)))

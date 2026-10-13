@@ -16,7 +16,8 @@ seleccion.json:
                             "etiquetas": ["Navidad"]}]}],
   "ayudas": [{"codigo": "934700", "titulo": "...", "clave": "..."}],
   "proximas": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "..."}],
-  "adjudicaciones": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "..."}]
+  "adjudicaciones": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "..."}],
+  "desiertos": [{"id": "...", "titulo": "...", "lugar": "...", "clave": "..."}]
 }
 
 A cada licitación se le añade sola su precedente del año anterior, si existe (para quitarlo,
@@ -88,6 +89,10 @@ def componer(seleccion, datos, indice=None):
                 previo = indice.precedente(original, hoy)
                 if previo:
                     item["precedente"] = previo
+            if indice is not None and elegido.get("competencia") is not False:
+                competencia = indice.competencia(original.get("titulo"))
+                if competencia:
+                    item["competencia"] = competencia
             items.append(item)
         if items:
             secciones.append({**{k: v for k, v in seccion.items() if k != "items"}, "items": items})
@@ -109,6 +114,7 @@ def componer(seleccion, datos, indice=None):
 
     proximas = _historico(seleccion, indice, "proximas", errores, fecha)
     adjudicaciones = _historico(seleccion, indice, "adjudicaciones", errores, fecha)
+    desiertos = _historico(seleccion, indice, "desiertos", errores, fecha)
 
     if errores:
         raise SeleccionInvalida("; ".join(errores))
@@ -116,7 +122,8 @@ def componer(seleccion, datos, indice=None):
         raise SeleccionInvalida("la selección está vacía")
 
     curada = {"fecha": fecha, "intro": seleccion.get("intro"), "secciones": secciones,
-              "ayudas": lista_ayudas, "proximas": proximas, "adjudicaciones": adjudicaciones}
+              "ayudas": lista_ayudas, "proximas": proximas, "adjudicaciones": adjudicaciones,
+              "desiertos": desiertos}
     if seleccion.get("pie"):
         curada["pie"] = seleccion["pie"]
     total = sum(len(s["items"]) for s in secciones)

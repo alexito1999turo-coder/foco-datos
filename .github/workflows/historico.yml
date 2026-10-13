@@ -9,6 +9,9 @@ on:
       periodos:
         description: 'Periodos en JSON, por ejemplo ["202510","202511"] o ["2025"]'
         default: '["202509"]'
+      feeds:
+        description: 'Feeds en JSON: estado, agregadas, menores'
+        default: '["estado","agregadas"]'
 
 permissions:
   contents: write
@@ -33,7 +36,7 @@ jobs:
       fail-fast: false
       matrix:
         periodo: ${{ fromJSON(github.event.inputs.periodos) }}
-        feed: [estado, agregadas]
+        feed: ${{ fromJSON(github.event.inputs.feeds || '["estado","agregadas"]') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -65,12 +68,12 @@ jobs:
         with:
           path: parcial
           pattern: parcial-*
-      - run: python -m foco.historico unir parcial --salida data/historico_eventos
+      - run: python -m foco.historico unir parcial --salida data/historico_eventos --menores data/menores_eventos
       - name: Guardar el histórico en el repositorio
         run: |
           git config user.name "foco-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/historico_eventos
+          git add data/historico_eventos data/menores_eventos
           if git diff --cached --quiet; then
             echo "Sin cambios"
           else

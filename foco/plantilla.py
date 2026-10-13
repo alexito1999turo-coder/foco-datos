@@ -117,6 +117,22 @@ def precedente_texto(previo):
     return None
 
 
+def _porcentaje(valor):
+    texto = f"{valor:.1f}".rstrip("0").rstrip(".")
+    return texto.replace(".", ",")
+
+
+def competencia_texto(competencia):
+    if not competencia:
+        return None
+    texto = (f"de {competencia['contratos']} contratos de {competencia['categoria']} por "
+             f"procedimiento abierto en el histórico de Foco, el {competencia['una_oferta']} % "
+             f"recibió una sola oferta")
+    if competencia.get("mediana_baja") is not None:
+        texto += f" y la rebaja mediana fue del {_porcentaje(competencia['mediana_baja'])} %"
+    return texto[0].upper() + texto[1:] + "."
+
+
 def licitacion_html(item, hoy):
     partes = []
     lugar = f" · {escape(item['lugar'])}" if item.get("lugar") else ""
@@ -140,6 +156,9 @@ def licitacion_html(item, hoy):
         if enlace:
             texto += f' <a href="{escape(enlace, quote=True)}">Ver el del año pasado</a>'
         partes.append(_p(f"<strong>Precedente:</strong> {texto}"))
+    competencia = competencia_texto(item.get("competencia"))
+    if competencia and not (item.get("precedente") or {}).get("ofertas"):
+        partes.append(_p(f"<strong>Competencia habitual:</strong> {escape(competencia)}"))
     if item.get("fecha_prudente"):
         partes.append(_p("<small>Fecha prudente: confirma la hora exacta en el anuncio.</small>"))
     codigos = []
@@ -224,6 +243,28 @@ def adjudicacion_html(item, hoy):
     return "\n\n".join(partes)
 
 
+def desierto_html(item, hoy):
+    lugar = f" · {escape(item['lugar'])}" if item.get("lugar") else ""
+    partes = [_h(f"{escape(item['titulo'])}{lugar}", 3)]
+    datos = []
+    if item.get("lotes_adjudicados"):
+        n = item.get("lotes_desiertos")
+        datos.append(f"<strong>Resultado:</strong> {n} {'lote quedó desierto' if n == 1 else 'lotes quedaron desiertos'}"
+                     f"; el resto se adjudicó")
+    else:
+        datos.append("<strong>Resultado:</strong> desierto, sin adjudicar")
+    if item.get("presupuesto_sin_iva") is not None:
+        datos.append(f"<strong>Presupuesto base:</strong> {escape(euros(item['presupuesto_sin_iva']))} sin IVA")
+    if item.get("organo"):
+        datos.append(f"<strong>Organismo:</strong> {escape(item['organo'])}")
+    partes.append(_p("<br>".join(datos)))
+    if item.get("clave"):
+        partes.append(_p(escape(item["clave"])))
+    if item.get("url"):
+        partes.append(_p(f'<a href="{escape(item["url"], quote=True)}">Ver expediente oficial</a>'))
+    return "\n\n".join(partes)
+
+
 def renderizar(curada):
     hoy = date.fromisoformat(curada["fecha"])
     bloques = [_p(f"<strong>{escape(fecha_larga(curada['fecha']).capitalize())}</strong>")]
@@ -244,6 +285,15 @@ def renderizar(curada):
                           "publicado. Buen momento para prepararse."))
         for item in curada["proximas"]:
             bloques.append(proxima_html(item, hoy))
+            bloques.append(SEPARADOR)
+    if curada.get("desiertos"):
+        bloques.append(_h(f"Se quedaron sin empresa ({len(curada['desiertos'])})"))
+        bloques.append(_p("Nadie se presentó o ninguna oferta valía. El organismo puede volver a "
+                          "licitarlos o, si no cambia las condiciones, adjudicarlos por procedimiento "
+                          "negociado invitando a empresas (artículo 168 de la Ley de Contratos). "
+                          "Si te encaja, preséntate al organismo."))
+        for item in curada["desiertos"]:
+            bloques.append(desierto_html(item, hoy))
             bloques.append(SEPARADOR)
     if curada.get("adjudicaciones"):
         bloques.append(_h(f"Quién ganó ({len(curada['adjudicaciones'])})"))
