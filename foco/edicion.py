@@ -46,7 +46,8 @@ def agrupar(datos, hoy):
         if restantes is None or restantes < 0:
             continue
         lic = {**lic, "dias_restantes": restantes, "cierra": fecha_corta(lic.get("fecha_limite")),
-               "presupuesto_texto": euros(lic.get("presupuesto_sin_iva"))}
+               "presupuesto_texto": euros(lic.get("presupuesto_sin_iva")),
+               "nueva": lic.get("primera_vez") == hoy.isoformat()}
         if restantes > 365:
             secciones["siempre_abiertas"].append(lic)
         elif restantes <= 7:
@@ -58,7 +59,8 @@ def agrupar(datos, hoy):
     ayudas = []
     for ayuda in datos.get("ayudas", []):
         restantes = dias_restantes(ayuda.get("fin"), hoy) if ayuda.get("fin") else None
-        ayudas.append({**ayuda, "dias_restantes": restantes, "cierra": fecha_corta(ayuda.get("fin"))})
+        ayudas.append({**ayuda, "dias_restantes": restantes, "cierra": fecha_corta(ayuda.get("fin")),
+                       "nueva": ayuda.get("primera_vez") == hoy.isoformat()})
     secciones["ayudas"] = ayudas
     return secciones
 
@@ -77,8 +79,10 @@ def main(argv=None):
         json.dump(secciones, fichero, ensure_ascii=False, indent=1)
     for nombre, items in secciones.items():
         print(f"\n## {nombre} ({len(items)})")
-        for item in items[:60]:
-            print(f"- [{item.get('dias_restantes')}d · {item.get('cierra')}] {item.get('titulo')} | "
+        for item in items[:80]:
+            marca = "NUEVA " if item.get("nueva") else ""
+            titulo = (item.get("titulo") or "")[:220]
+            print(f"- {marca}[{item.get('dias_restantes')}d · {item.get('cierra')}] {titulo} | "
                   f"{item.get('organo')} | {item.get('presupuesto_texto') or item.get('presupuesto')} | "
                   f"{item.get('motivo') or item.get('fuente')}")
     if datos.get("errores"):

@@ -21,13 +21,18 @@ BOE_SUMARIO = "https://www.boe.es/datosabiertos/api/boe/sumario/{}"
 TERMINOS_BDNS = (
     "festival", "espectaculos", "artes escenicas", "musica", "eventos", "ferias",
     "fiestas", "giras", "industrias culturales", "circo", "teatro", "danza",
-    "audiovisual", "actividades culturales", "turismo",
+    "actividades culturales", "xacobeo", "programacion cultural",
 )
 
 SECTOR = re.compile(
     r"\b(cultur|escenic|music|festival|espectacul|circo\b|circ\b|teatr|danza|dansa|evento|"
-    r"esdeveniment|feria|fira\b|fires\b|giras|gires|audiovisual|cinematograf|fiestas|festes|"
-    r"xacobeo|industrias creativ|turism)"
+    r"esdeveniment|feria|fira\b|fires\b|giras|gires|fiestas|festes|xacobeo|industrias creativ)"
+)
+
+# Convocatorias que no son para empresas que trabajan eventos: premios, concursos, becas, cine.
+EXCLUIR = re.compile(
+    r"\b(premios?|concurso|certamen|becas?|cortometrajes?|largometrajes?|rodajes?|"
+    r"escuelas? de musica|bandas? de musica|nominativa|convenio)\b"
 )
 
 BENEFICIARIOS_EMPRESA = ("pyme", "desarrollan actividad economica", "gran empresa", "autonom",
@@ -60,9 +65,9 @@ def _fecha(texto):
     return None
 
 
-def _bdns_busqueda_url(termino, tamano=50):
+def _bdns_busqueda_url(termino, tamano=50, pagina=0):
     return BDNS_BUSQUEDA + "?" + urllib.parse.urlencode({
-        "page": 0, "pageSize": tamano, "order": "fechaRecepcion",
+        "page": pagina, "pageSize": tamano, "order": "fechaRecepcion",
         "direccion": "desc", "descripcion": termino,
     })
 
@@ -80,6 +85,8 @@ def evaluar_convocatoria(detalle, hoy):
     if not admite_empresas(beneficiarios):
         return None
     titulo = detalle.get("descripcion") or ""
+    if EXCLUIR.search(normalizar(titulo)):
+        return None
     if not _es_del_sector(titulo + " " + (detalle.get("descripcionFinalidad") or "")):
         return None
 
@@ -112,20 +119,31 @@ def evaluar_convocatoria(detalle, hoy):
     }
 
 
-def recoger_bdns(hoy=None, dias=7, max_detalles=80, descargador=descargar, pausa=0.5):
+def recoger_bdns(hoy=None, dias=7, max_detalles=80, max_paginas=8, descargador=descargar,
+                 pausa=0.5, ya_vistas=()):
+    """Busca convocatorias recibidas en los últimos `dias` días y devuelve las abiertas que sirven
+    a empresas de eventos. `ya_vistas` evita pedir de nuevo el detalle de las que ya tenemos."""
     hoy = hoy or date.today()
     desde = hoy - timedelta(days=dias)
     candidatas = {}
     for termino in TERMINOS_BDNS:
-        datos = json.loads(descargador(_bdns_busqueda_url(termino)))
-        for fila in datos.get("content", []):
-            recibida = _fecha(fila.get("fechaRecepcion"))
-            if recibida is None or recibida < desde:
-                continue
-            if "nominativa" in normalizar(fila.get("descripcion")):
-                continue
-            candidatas[fila.get("numeroConvocatoria")] = fila
-        time.sleep(pausa)
+        for pagina in range(max_paginas):
+            datos = json.loads(descargador(_bdns_busqueda_url(termino, pagina=pagina)))
+            filas = datos.get("content", [])
+            for fila in filas:
+                recibida = _fecha(fila.get("fechaRecepcion"))
+                if recibida is None or recibida < desde:
+                    continue
+                if EXCLUIR.search(normalizar(fila.get("descripcion"))):
+                    continue
+                numero = fila.get("numeroConvocatoria")
+                if numero not in ya_vistas:
+                    candidatas[numero] = fila
+            time.sleep(pausa)
+            fechas = [_fecha(f.get("fechaRecepcion")) for f in filas]
+            fechas = [f for f in fechas if f]
+            if datos.get("last", True) or not fechas or min(fechas) < desde:
+                break
 
     seleccion = []
     for numero in list(candidatas)[:max_detalles]:

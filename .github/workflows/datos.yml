@@ -5,6 +5,13 @@ on:
     # 04:15 UTC = 06:15 en Madrid en verano y 05:15 en invierno, de lunes a viernes.
     - cron: "15 4 * * 1-5"
   workflow_dispatch:
+    inputs:
+      dias:
+        description: "Días hacia atrás en los feeds de la PLACSP"
+        default: "3"
+      dias_ayudas:
+        description: "Días hacia atrás en la BDNS"
+        default: "7"
 
 permissions:
   contents: write
@@ -16,7 +23,7 @@ concurrency:
 jobs:
   recoger:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -28,7 +35,10 @@ jobs:
         run: python -m unittest discover -s tests -t .
 
       - name: Recoger licitaciones y ayudas
-        run: python -m foco.recoger --salida data --dias 3
+        run: >
+          python -m foco.recoger --salida data
+          --dias "${{ github.event.inputs.dias || '3' }}"
+          --dias-ayudas "${{ github.event.inputs.dias_ayudas || '7' }}"
 
       - name: Guardar los datos en el repositorio
         run: |
@@ -39,5 +49,6 @@ jobs:
             echo "Sin cambios"
           else
             git commit -m "Datos del $(date -u +%F)"
+            git pull --rebase origin main
             git push
           fi

@@ -1,6 +1,10 @@
 """Punto de entrada: recoge todas las fuentes y guarda data/latest.json.
 
-Uso: python -m foco.recoger --salida data --dias 3
+Uso: python -m foco.recoger --salida data --dias 3 --dias-ayudas 7
+
+El listado es acumulativo: cada día se suman las licitaciones nuevas, se quitan las que
+cerraron plazo o cambiaron de estado y se conserva el resto. Así una licitación publicada
+hace dos semanas sigue en la edición mientras esté abierta.
 Una fuente que falla no tumba las demás; el error queda anotado en el JSON.
 """
 
@@ -8,10 +12,12 @@ import argparse
 import json
 import os
 import sys
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from . import ayudas, catalunya, placsp
 from .comun import normalizar
+
+CATALUNYA = "Generalitat de Catalunya"
 
 
 def _completitud(lic):
@@ -32,17 +38,50 @@ def quitar_duplicados(licitaciones):
                   key=lambda l: (l.get("fecha_limite") or "9999", l.get("hora_limite") or "23:59"))
 
 
-def ejecutar(salida, dias=3, hoy=None, fuentes=None):
+def _cargar_previo(salida):
+    try:
+        with open(os.path.join(salida, "latest.json"), encoding="utf-8") as fichero:
+            return json.load(fichero)
+    except (OSError, ValueError):
+        return {}
+
+
+def _sigue_abierta(lic, hoy_iso):
+    return (lic.get("fecha_limite") or "") >= hoy_iso
+
+
+def _ayuda_vigente(ayuda, hoy):
+    if ayuda.get("fin"):
+        return ayuda["fin"] >= hoy.isoformat()
+    if ayuda.get("fuente") == "BOE":
+        publicada = ayuda.get("fecha_publicacion") or "0000"
+        return publicada >= (hoy - timedelta(days=30)).isoformat()
+    return bool(ayuda.get("abierta_ahora"))
+
+
+def ejecutar(salida, dias=3, dias_ayudas=7, hoy=None, fuentes=None):
     hoy = hoy or date.today()
+    hoy_iso = hoy.isoformat()
+    previo = _cargar_previo(salida)
+    primera_vez = {l.get("id"): l.get("primera_vez") for l in previo.get("licitaciones", [])}
+    primera_vez.update({a.get("codigo"): a.get("primera_vez") for a in previo.get("ayudas", [])})
+
+    acumuladas = {l["id"]: l for l in previo.get("licitaciones", [])
+                  if not l.get("fuente", "").startswith(CATALUNYA) and _sigue_abierta(l, hoy_iso)}
+    catalanas = [l for l in previo.get("licitaciones", [])
+                 if l.get("fuente") == CATALUNYA and _sigue_abierta(l, hoy_iso)]
+    ayudas_vigentes = {a["codigo"]: a for a in previo.get("ayudas", []) if _ayuda_vigente(a, hoy)}
+
     fuentes = fuentes or {
         "placsp": lambda: placsp.recoger(dias=dias, hoy=hoy),
         "catalunya": lambda: catalunya.recoger(hoy=hoy),
-        "bdns": lambda: ayudas.recoger_bdns(hoy=hoy),
-        "boe": lambda: ayudas.recoger_boe(hoy=hoy, dias=dias),
+        "bdns": lambda: ayudas.recoger_bdns(hoy=hoy, dias=dias_ayudas,
+                                            ya_vistas=set(ayudas_vigentes)),
+        "boe": lambda: ayudas.recoger_boe(hoy=hoy, dias=min(dias, 7)),
     }
     resultado = {
         "generado": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "fecha": hoy.isoformat(),
+        "fecha": hoy_iso,
         "licitaciones": [],
         "ayudas": [],
         "informe": {},
@@ -50,21 +89,39 @@ def ejecutar(salida, dias=3, hoy=None, fuentes=None):
     }
     for nombre, funcion in fuentes.items():
         try:
-            lista, informe = funcion()
+            respuesta = funcion()
         except Exception as error:  # una fuente caída no detiene el resto
             resultado["errores"].append({"fuente": nombre, "error": repr(error)[:500]})
             continue
-        destino = "ayudas" if nombre in ("bdns", "boe") else "licitaciones"
-        resultado[destino].extend(lista)
+        lista, informe = respuesta[0], respuesta[1]
+        cerradas = respuesta[2] if len(respuesta) > 2 else []
+        if nombre == "placsp":
+            for clave in cerradas:
+                acumuladas.pop(clave, None)
+            for lic in lista:
+                acumuladas[lic["id"]] = lic
+        elif nombre == "catalunya":
+            catalanas = lista
+        else:
+            for ayuda in lista:
+                ayudas_vigentes[ayuda["codigo"]] = ayuda
         resultado["informe"][nombre] = {**informe, "seleccionadas": len(lista)}
 
-    resultado["licitaciones"] = quitar_duplicados(resultado["licitaciones"])
+    licitaciones = [l for l in list(acumuladas.values()) + catalanas if _sigue_abierta(l, hoy_iso)]
+    for lic in licitaciones:
+        lic["primera_vez"] = primera_vez.get(lic.get("id")) or hoy_iso
+    lista_ayudas = [a for a in ayudas_vigentes.values() if _ayuda_vigente(a, hoy)]
+    for ayuda in lista_ayudas:
+        ayuda["primera_vez"] = primera_vez.get(ayuda.get("codigo")) or hoy_iso
+
+    resultado["licitaciones"] = quitar_duplicados(licitaciones)
+    resultado["ayudas"] = sorted(lista_ayudas, key=lambda a: a.get("fin") or "9999")
 
     os.makedirs(os.path.join(salida, "historico"), exist_ok=True)
     texto = json.dumps(resultado, ensure_ascii=False, indent=1)
     with open(os.path.join(salida, "latest.json"), "w", encoding="utf-8") as fichero:
         fichero.write(texto)
-    with open(os.path.join(salida, "historico", f"{hoy.isoformat()}.json"), "w",
+    with open(os.path.join(salida, "historico", f"{hoy_iso}.json"), "w",
               encoding="utf-8") as fichero:
         fichero.write(texto)
     return resultado
@@ -73,10 +130,12 @@ def ejecutar(salida, dias=3, hoy=None, fuentes=None):
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Recoge licitaciones y ayudas de eventos.")
     parser.add_argument("--salida", default="data")
-    parser.add_argument("--dias", type=int, default=3)
+    parser.add_argument("--dias", type=int, default=3, help="días hacia atrás en los feeds de PLACSP")
+    parser.add_argument("--dias-ayudas", type=int, default=7, help="días hacia atrás en la BDNS")
     args = parser.parse_args(argv)
-    resultado = ejecutar(args.salida, dias=args.dias)
+    resultado = ejecutar(args.salida, dias=args.dias, dias_ayudas=args.dias_ayudas)
     print(f"Licitaciones: {len(resultado['licitaciones'])} · Ayudas: {len(resultado['ayudas'])}")
+    print(json.dumps(resultado["informe"], ensure_ascii=False))
     for error in resultado["errores"]:
         print(f"ERROR en {error['fuente']}: {error['error']}", file=sys.stderr)
     todas_fallan = len(resultado["errores"]) == 4

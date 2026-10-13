@@ -83,7 +83,7 @@ class Placsp(unittest.TestCase):
                 return ficheros[url]
             return leer("placsp_anterior.atom").replace(b'rel="next"', b'rel="prev"')
 
-        seleccion, informe = placsp.recoger(dias=3, hoy=HOY, descargador=falso)
+        seleccion, informe, cerradas = placsp.recoger(dias=3, hoy=HOY, descargador=falso)
         titulos = [l["titulo"] for l in seleccion]
         self.assertEqual(len(seleccion), 2)
         self.assertIn("Realización del programa Parque Infantil de Navidad 2026-2027", titulos)
@@ -91,6 +91,9 @@ class Placsp(unittest.TestCase):
         self.assertFalse(any("Versión antigua" in t for t in titulos))
         self.assertEqual(seleccion[0]["fecha_limite"], "2026-10-16")
         self.assertEqual(informe["PLACSP"]["ficheros"], 2)
+        self.assertEqual(informe["PLACSP"]["parada"], "límite de días alcanzado")
+        self.assertIn("https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/1003",
+                      cerradas)
 
 
 class Catalunya(unittest.TestCase):
@@ -120,6 +123,14 @@ class Ayudas(unittest.TestCase):
         self.assertIsNone(ayudas.evaluar_convocatoria(self.datos["detalle_entidades"], HOY))
         self.assertIsNone(ayudas.evaluar_convocatoria(self.datos["detalle_cerrada"], HOY))
 
+    def test_descarta_premios_y_cine(self):
+        concurso = {**self.datos["detalle_abierta"],
+                    "descripcion": "Concurso de fotografía del festival de jazz"}
+        cine = {**self.datos["detalle_abierta"],
+                "descripcion": "Subvenciones para la realización de cortometrajes"}
+        self.assertIsNone(ayudas.evaluar_convocatoria(concurso, HOY))
+        self.assertIsNone(ayudas.evaluar_convocatoria(cine, HOY))
+
     def test_recoger_bdns(self):
         def falso(url, *args, **kwargs):
             if "busqueda" in url:
@@ -140,6 +151,39 @@ class Ayudas(unittest.TestCase):
         self.assertEqual(len(seleccion), 1)
         self.assertEqual(seleccion[0]["organo"], "MINISTERIO DE CULTURA")
         self.assertTrue(seleccion[0]["url"].endswith("BOE-B-2026-32590.pdf"))
+
+
+class Acumulacion(unittest.TestCase):
+    def _lic(self, ident, fecha, fuente="PLACSP", titulo="Cabalgata de Reyes"):
+        return {"id": ident, "fuente": fuente, "titulo": titulo, "organo": "Ayto",
+                "expediente": ident, "fecha_limite": fecha, "estado": "PUB"}
+
+    def test_conserva_abiertas_quita_cerradas_y_caducadas(self):
+        with tempfile.TemporaryDirectory() as carpeta:
+            previo = {"licitaciones": [
+                {**self._lic("a", "2026-10-30"), "primera_vez": "2026-10-01"},
+                self._lic("b", "2026-10-20"),
+                self._lic("c", "2026-10-10"),
+                {**self._lic("cat1", "2026-10-25", fuente="Generalitat de Catalunya")},
+            ], "ayudas": [
+                {"codigo": "x", "fin": "2026-11-01", "primera_vez": "2026-10-05"},
+                {"codigo": "y", "fin": "2026-10-01"},
+            ]}
+            with open(os.path.join(carpeta, "latest.json"), "w", encoding="utf-8") as fichero:
+                json.dump(previo, fichero)
+            nueva = self._lic("d", "2026-11-02", titulo="Festival de música")
+            fuentes = {
+                "placsp": lambda: ([nueva], {}, ["b"]),
+                "catalunya": lambda: (_ for _ in ()).throw(OSError("caída")),
+                "bdns": lambda: ([{"codigo": "z", "fin": "2026-12-01"}], {}),
+            }
+            resultado = recoger.ejecutar(carpeta, hoy=HOY, fuentes=fuentes)
+        ids = {l["id"] for l in resultado["licitaciones"]}
+        self.assertEqual(ids, {"a", "d", "cat1"})
+        por_id = {l["id"]: l for l in resultado["licitaciones"]}
+        self.assertEqual(por_id["a"]["primera_vez"], "2026-10-01")
+        self.assertEqual(por_id["d"]["primera_vez"], "2026-10-13")
+        self.assertEqual({a["codigo"] for a in resultado["ayudas"]}, {"x", "z"})
 
 
 class EdicionCompleta(unittest.TestCase):
