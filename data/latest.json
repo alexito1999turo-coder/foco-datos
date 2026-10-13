@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-13T07:19:21+00:00",
+ "generado": "2026-10-13T07:56:41+00:00",
  "fecha": "2026-10-13",
  "licitaciones": [
   {
@@ -139,6 +139,67 @@
    "primera_vez": "2026-10-13"
   },
   {
+   "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558056",
+   "actualizado": "2026-09-25T16:04:27.642+02:00",
+   "estado": "PUB",
+   "expediente": "F260000594",
+   "titulo": "Servei de coordinació del programa Caixa d'Eines d'educació i cultura en el marc del Pla de Barris de Barcelona",
+   "organo": "Foment de Ciutat SA",
+   "municipio": null,
+   "provincia": null,
+   "nuts": "ES511",
+   "presupuesto_sin_iva": 225107.43,
+   "presupuesto_con_iva": null,
+   "valor_estimado": 560892.68,
+   "procedimiento": "Abierto",
+   "cpv": [
+    "92000000"
+   ],
+   "lotes": [],
+   "fecha_limite": "2026-10-13",
+   "hora_limite": "14:00",
+   "url": "https://contractaciopublica.cat/ca/detall-publicacio/96335b8b-a0dc-44a3-8ccc-ee5c04917242/300892227",
+   "fuente": "PLACSP (plataformas autonómicas)",
+   "motivo": "CPV 92000000",
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558196",
+   "actualizado": "2026-09-25T12:04:33.134+02:00",
+   "estado": "PUB",
+   "expediente": "LIC 36/2026",
+   "titulo": "Serveis de producció tècnica, execució i gestió de les activitats de lleure de Nadal.",
+   "organo": "Ajuntament del Masnou",
+   "municipio": null,
+   "provincia": null,
+   "nuts": "ES511",
+   "presupuesto_sin_iva": 40874.96,
+   "presupuesto_con_iva": null,
+   "valor_estimado": 98099.91,
+   "procedimiento": "Abierto",
+   "cpv": [
+    "92331210"
+   ],
+   "lotes": [
+    {
+     "lote": "1",
+     "nombre": "Tió gegant",
+     "presupuesto_sin_iva": null
+    },
+    {
+     "lote": "2",
+     "nombre": "Parc de Nadal",
+     "presupuesto_sin_iva": null
+    }
+   ],
+   "fecha_limite": "2026-10-13",
+   "hora_limite": "14:00",
+   "url": "https://contractaciopublica.cat/ca/detall-publicacio/1b84a461-320b-44c2-97cf-7c308d51714a/300891556",
+   "fuente": "PLACSP (plataformas autonómicas)",
+   "motivo": "CPV 92331210",
+   "primera_vez": "2026-10-13"
+  },
+  {
    "fuente": "Generalitat de Catalunya",
    "id": "cat:14824/2026:Ajuntament de Salou",
    "expediente": "14824/2026",
@@ -161,56 +222,6 @@
    "actualizado": "2026-10-07T09:54:00.000",
    "estado": "PUB",
    "motivo": "palabra «festa major»",
-   "primera_vez": "2026-10-13"
-  },
-  {
-   "fuente": "Generalitat de Catalunya",
-   "id": "cat:F260000594:Foment de Ciutat SA",
-   "expediente": "F260000594",
-   "titulo": "Servei de coordinació del programa Caixa d'Eines d'educació i cultura en el marc del Pla de Barris de Barcelona",
-   "organo": "Foment de Ciutat SA",
-   "municipio": null,
-   "provincia": "Barcelona",
-   "nuts": null,
-   "presupuesto_sin_iva": 225107.43,
-   "presupuesto_con_iva": 272379.99,
-   "valor_estimado": 560892.68,
-   "procedimiento": "Obert",
-   "cpv": [
-    "92000000"
-   ],
-   "lotes": [],
-   "fecha_limite": "2026-10-13",
-   "hora_limite": "14:00",
-   "url": "https://contractaciopublica.cat/ca/detall-publicacio/96335b8b-a0dc-44a3-8ccc-ee5c04917242/300892227",
-   "actualizado": "2026-09-25T14:02:00.000",
-   "estado": "PUB",
-   "motivo": "CPV 92000000",
-   "primera_vez": "2026-10-13"
-  },
-  {
-   "fuente": "Generalitat de Catalunya",
-   "id": "cat:LIC 36/2026:Ajuntament del Masnou",
-   "expediente": "LIC 36/2026",
-   "titulo": "Serveis de producció tècnica, execució i gestió de les activitats de lleure de Nadal.",
-   "organo": "Ajuntament del Masnou",
-   "municipio": null,
-   "provincia": "Masnou, el",
-   "nuts": null,
-   "presupuesto_sin_iva": 3346.22,
-   "presupuesto_con_iva": 4048.92,
-   "valor_estimado": 8030.93,
-   "procedimiento": "Obert",
-   "cpv": [
-    "92331210"
-   ],
-   "lotes": [],
-   "fecha_limite": "2026-10-13",
-   "hora_limite": "14:00",
-   "url": "https://contractaciopublica.cat/ca/detall-publicacio/1b84a461-320b-44c2-97cf-7c308d51714a/300891556",
-   "actualizado": "2026-09-25T11:02:00.000",
-   "estado": "PUB",
-   "motivo": "CPV 92331210",
    "primera_vez": "2026-10-13"
   },
   {
@@ -462,52 +473,56 @@
    "primera_vez": "2026-10-13"
   },
   {
-   "fuente": "Generalitat de Catalunya",
-   "id": "cat:2026/10488:Ajuntament de Calonge i Sant Antoni",
+   "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558138",
+   "actualizado": "2026-09-25T14:04:23.425+02:00",
+   "estado": "PUB",
    "expediente": "2026/10488",
    "titulo": "Contracte mixt del servei de gestió i coordinació del desenvolupament de l'activitat de campament reial i subministrament de la logística.",
    "organo": "Ajuntament de Calonge i Sant Antoni",
    "municipio": null,
-   "provincia": "Calonge i Sant Antoni",
-   "nuts": null,
+   "provincia": null,
+   "nuts": "ES512",
    "presupuesto_sin_iva": 57950.0,
-   "presupuesto_con_iva": 70119.5,
+   "presupuesto_con_iva": null,
    "valor_estimado": 115900.0,
-   "procedimiento": "Obert",
+   "procedimiento": "Abierto",
    "cpv": [
-    "92320000"
+    "51313000",
+    "92320000",
+    "71318100"
    ],
    "lotes": [],
    "fecha_limite": "2026-10-13",
    "hora_limite": "23:59",
    "url": "https://contractaciopublica.cat/ca/detall-publicacio/8cd347ff-42da-4a47-90be-1de022559302/300891355",
-   "actualizado": "2026-09-25T12:34:00.000",
-   "estado": "PUB",
-   "motivo": "CPV 92320000",
+   "fuente": "PLACSP (plataformas autonómicas)",
+   "motivo": "CPV 51313000",
    "primera_vez": "2026-10-13"
   },
   {
-   "fuente": "Generalitat de Catalunya",
-   "id": "cat:8872/2026:Ajuntament de Mont-roig del Camp",
+   "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558250",
+   "actualizado": "2026-09-25T10:03:04.856+02:00",
+   "estado": "PUB",
    "expediente": "8872/2026",
    "titulo": "L’objecte del contracte consisteix en el subministrament, en la modalitat d’arrendament, d’elements decoratius lluminosos de Nadal per a la via pública.",
    "organo": "Ajuntament de Mont-roig del Camp",
    "municipio": null,
-   "provincia": "Mont-roig del Camp",
-   "nuts": null,
+   "provincia": null,
+   "nuts": "ES514",
    "presupuesto_sin_iva": 147870.0,
-   "presupuesto_con_iva": 178922.7,
+   "presupuesto_con_iva": null,
    "valor_estimado": 197160.0,
-   "procedimiento": "Obert",
+   "procedimiento": "Abierto",
    "cpv": [
-    "31527200"
+    "31527200",
+    "39298910",
+    "39298900"
    ],
    "lotes": [],
    "fecha_limite": "2026-10-13",
    "hora_limite": "23:59",
    "url": "https://contractaciopublica.cat/ca/detall-publicacio/87e02eff-bde7-4ecb-9702-dd679694c92d/300890170",
-   "actualizado": "2026-09-25T09:12:00.000",
-   "estado": "PUB",
+   "fuente": "PLACSP (plataformas autonómicas)",
    "motivo": "palabra «nadal»",
    "primera_vez": "2026-10-13"
   },
@@ -699,9 +714,9 @@
    "municipio": null,
    "provincia": "Sitges",
    "nuts": null,
-   "presupuesto_sin_iva": 36600.0,
-   "presupuesto_con_iva": 44286.0,
-   "valor_estimado": 80520.0,
+   "presupuesto_sin_iva": 104400.0,
+   "presupuesto_con_iva": 126324.0,
+   "valor_estimado": 229680.0,
    "procedimiento": "Obert",
    "cpv": [
     "51313000"
@@ -1397,27 +1412,53 @@
    "primera_vez": "2026-10-13"
   },
   {
-   "fuente": "Generalitat de Catalunya",
-   "id": "cat:2026/0016508:Diputació de Barcelona",
+   "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558617",
+   "actualizado": "2026-09-23T14:03:47.046+02:00",
+   "estado": "PUB",
    "expediente": "2026/0016508",
    "titulo": "Contracte privat de serveis per gestionar, desenvolupar i coordinar el pla d’informació i acollida a les persones visitants del Parc Natural de Sant Llorenç del Munt i l’Obac, el Parc Natural del Montseny, els parcs del Garraf i Olèrdola, el Parc del Montnegre i el Corredor, i el Parc del Foix, mitjançant contractació socialment responsable i solidària, dividit en 5 lots",
    "organo": "Diputació de Barcelona",
    "municipio": null,
-   "provincia": "Barcelona",
-   "nuts": null,
-   "presupuesto_sin_iva": 672637.69,
-   "presupuesto_con_iva": 813891.6,
-   "valor_estimado": 1345275.38,
-   "procedimiento": "Obert",
+   "provincia": null,
+   "nuts": "ES511",
+   "presupuesto_sin_iva": 1476817.8,
+   "presupuesto_con_iva": null,
+   "valor_estimado": 2953635.6,
+   "procedimiento": "Abierto",
    "cpv": [
     "92000000"
    ],
-   "lotes": [],
+   "lotes": [
+    {
+     "lote": "1",
+     "nombre": "Pla d’Informació i Acollida a les persones visitants del Parc Natural de Sant Llorenç del Munt i l'Obac.",
+     "presupuesto_sin_iva": null
+    },
+    {
+     "lote": "2",
+     "nombre": "Pla d’Informació i Acollida a les persones visitants del Parc Natural del Montseny.",
+     "presupuesto_sin_iva": null
+    },
+    {
+     "lote": "3",
+     "nombre": "Pla d’Informació i Acollida a les persones visitants dels Parcs del Garraf i Olèrdola.",
+     "presupuesto_sin_iva": null
+    },
+    {
+     "lote": "4",
+     "nombre": "Pla d’Informació i Acollida a les persones visitants del Parc del Montnegre i el Corredor.",
+     "presupuesto_sin_iva": null
+    },
+    {
+     "lote": "5",
+     "nombre": "Pla d’Informació i Acollida a les persones visitants del Parc del Foix.",
+     "presupuesto_sin_iva": null
+    }
+   ],
    "fecha_limite": "2026-10-19",
    "hora_limite": "14:00",
    "url": "https://contractaciopublica.cat/ca/detall-publicacio/69c08c92-34dd-413d-8cb5-d62834a6d472/300889359",
-   "actualizado": "2026-09-23T12:12:00.000",
-   "estado": "PUB",
+   "fuente": "PLACSP (plataformas autonómicas)",
    "motivo": "CPV 92000000",
    "primera_vez": "2026-10-13"
   },
@@ -2655,6 +2696,31 @@
    "primera_vez": "2026-10-13"
   },
   {
+   "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20657481",
+   "actualizado": "2026-10-08T11:15:57.420+02:00",
+   "estado": "PUB",
+   "expediente": "1385/2026",
+   "titulo": "Suministro e instalación de iluminación decorativa para las fiestas navideñas 2026-2027 en el municipio de Tejeda",
+   "organo": "Junta de Gobierno del Ayuntamiento de Tejeda",
+   "municipio": "Tejeda",
+   "provincia": "Canarias",
+   "nuts": "ES70",
+   "presupuesto_sin_iva": 20803.73,
+   "presupuesto_con_iva": 22260.0,
+   "valor_estimado": 20803.73,
+   "procedimiento": "Abierto simplificado",
+   "cpv": [
+    "31527200"
+   ],
+   "lotes": [],
+   "fecha_limite": "2026-10-22",
+   "hora_limite": "23:59",
+   "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=BXDIPw35mdV%2BF6L2uCfUWg%3D%3D",
+   "fuente": "PLACSP",
+   "motivo": "palabra «navidenas»",
+   "primera_vez": "2026-10-13"
+  },
+  {
    "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20657266",
    "actualizado": "2026-10-08T13:20:54.989+02:00",
    "estado": "PUB",
@@ -3355,6 +3421,35 @@
    "primera_vez": "2026-10-13"
   },
   {
+   "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20657501",
+   "actualizado": "2026-10-08T11:04:50.460+02:00",
+   "estado": "PUB",
+   "expediente": "18/2026",
+   "titulo": "El objeto del contrato es el suministro e instalación, mantenimiento y desmontaje del alumbrado de la navidad y carnavales",
+   "organo": "Alcaldía del Ayuntamiento de Álora",
+   "municipio": "Álora (Málaga)",
+   "provincia": "Málaga",
+   "nuts": "ES617",
+   "presupuesto_sin_iva": 55716.0,
+   "presupuesto_con_iva": 67416.36,
+   "valor_estimado": 111432.0,
+   "procedimiento": "Abierto",
+   "cpv": [
+    "31200000",
+    "51100000",
+    "31600000",
+    "31500000",
+    "09300000"
+   ],
+   "lotes": [],
+   "fecha_limite": "2026-10-23",
+   "hora_limite": "23:59",
+   "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=YziW4kis3AWKeVWTb9Scog%3D%3D",
+   "fuente": "PLACSP",
+   "motivo": "palabra «navidad»",
+   "primera_vez": "2026-10-13"
+  },
+  {
    "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20670659",
    "actualizado": "2026-10-09T14:46:01.285+02:00",
    "estado": "PUB",
@@ -3554,6 +3649,49 @@
    "primera_vez": "2026-10-13"
   },
   {
+   "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558152",
+   "actualizado": "2026-09-25T13:30:12.599+02:00",
+   "estado": "PUB",
+   "expediente": "8071_EXP 26-27-03",
+   "titulo": "Contratación de clases de esquí, actividades de la tarde y guarda esquís",
+   "organo": "Representante legal NICDO",
+   "municipio": null,
+   "provincia": null,
+   "nuts": "ES220",
+   "presupuesto_sin_iva": 2523215.64,
+   "presupuesto_con_iva": null,
+   "valor_estimado": 3027858.77,
+   "procedimiento": "Abierto",
+   "cpv": [
+    "79992000",
+    "80415000",
+    "92000000"
+   ],
+   "lotes": [
+    {
+     "lote": "1",
+     "nombre": "Clases de esquí Isaba-Valle del Roncal y Ochagavía-Valle Salazar.",
+     "presupuesto_sin_iva": null
+    },
+    {
+     "lote": "2",
+     "nombre": "Actividades de tarde Isaba-Valle del Roncal y Ochagavía-Valle Salazar",
+     "presupuesto_sin_iva": null
+    },
+    {
+     "lote": "3",
+     "nombre": "Guarda esquí Isaba-Valle del Roncal.",
+     "presupuesto_sin_iva": null
+    }
+   ],
+   "fecha_limite": "2026-10-26",
+   "hora_limite": "10:00",
+   "url": "https://hacienda.navarra.es/sicpportal/mtoAnunciosModalidad.aspx?cod=26092510355084BC4A93",
+   "fuente": "PLACSP (plataformas autonómicas)",
+   "motivo": "CPV 92000000",
+   "primera_vez": "2026-10-13"
+  },
+  {
    "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20635841",
    "actualizado": "2026-10-06T09:10:53.433+02:00",
    "estado": "PUB",
@@ -3665,6 +3803,57 @@
    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=K04cHJyONuI%2FbjW6njtWLw%3D%3D",
    "fuente": "PLACSP",
    "motivo": "CPV 79952000",
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20657729",
+   "actualizado": "2026-10-08T09:08:46.268+02:00",
+   "estado": "PUB",
+   "expediente": "79/26",
+   "titulo": "Casa de San Nicolás",
+   "organo": "Junta de Gobierno Local del Ayuntamiento de Alicante",
+   "municipio": "Alicante",
+   "provincia": null,
+   "nuts": "ES521",
+   "presupuesto_sin_iva": 114131.9,
+   "presupuesto_con_iva": 138099.6,
+   "valor_estimado": 136958.3,
+   "procedimiento": "Abierto simplificado",
+   "cpv": [
+    "92331210",
+    "39151000"
+   ],
+   "lotes": [],
+   "fecha_limite": "2026-10-26",
+   "hora_limite": "13:00",
+   "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=GRkbMOAmdSlrhBlEHQFSKA%3D%3D",
+   "fuente": "PLACSP",
+   "motivo": "CPV 92331210",
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558032",
+   "actualizado": "2026-09-27T13:10:56.660+02:00",
+   "estado": "PUB",
+   "expediente": "16/2026",
+   "titulo": "Servicios para la infancia (ludoteca), para la adolescencia (gazteleku) y servicio de acompañamiento en el municipio de Elgoibar",
+   "organo": "Ayuntamiento de Elgoibar-Alcaldesa",
+   "municipio": null,
+   "provincia": null,
+   "nuts": "ES212",
+   "presupuesto_sin_iva": 475060.0,
+   "presupuesto_con_iva": null,
+   "valor_estimado": 1900240.0,
+   "procedimiento": "Abierto",
+   "cpv": [
+    "92000000"
+   ],
+   "lotes": [],
+   "fecha_limite": "2026-10-26",
+   "hora_limite": "13:00",
+   "url": "https://www.contratacion.euskadi.eus/webkpe00-kpeperfi/es/contenidos/anuncio_contratacion/expjaso743213/es_doc/index.html",
+   "fuente": "PLACSP (plataformas autonómicas)",
+   "motivo": "CPV 92000000",
    "primera_vez": "2026-10-13"
   },
   {
@@ -3808,6 +3997,32 @@
    "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=U58xfYgLLGLkY6rls5tG9A%3D%3D",
    "fuente": "PLACSP",
    "motivo": "CPV 92000000",
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558129",
+   "actualizado": "2026-09-25T14:04:41.748+02:00",
+   "estado": "PUB",
+   "expediente": "F260000592",
+   "titulo": "Obres per a remodelar la plaça Fotògrafs Català, al barri de Sant Pere, Santa Caterina i la Ribera amb el suport del Pla de Barris i Vil·les de Catalunya de la Generalitat de Catalunya",
+   "organo": "Foment de Ciutat SA",
+   "municipio": null,
+   "provincia": null,
+   "nuts": "ES511",
+   "presupuesto_sin_iva": 767642.46,
+   "presupuesto_con_iva": null,
+   "valor_estimado": 921170.49,
+   "procedimiento": "Abierto",
+   "cpv": [
+    "37535200",
+    "45233262"
+   ],
+   "lotes": [],
+   "fecha_limite": "2026-10-26",
+   "hora_limite": "14:00",
+   "url": "https://contractaciopublica.cat/ca/detall-publicacio/2c2b892b-d538-482c-8988-cb8c972224c8/300892105",
+   "fuente": "PLACSP (plataformas autonómicas)",
+   "motivo": "CPV 37535200",
    "primera_vez": "2026-10-13"
   },
   {
@@ -4908,6 +5123,31 @@
    "primera_vez": "2026-10-13"
   },
   {
+   "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20657490",
+   "actualizado": "2026-10-08T11:11:45.023+02:00",
+   "estado": "PUB",
+   "expediente": "04101/2026/145-SER",
+   "titulo": "Servicios de talleres infantiles y juveniles dentro de los actos programados con motivo de la feria de expojove 2026-2027",
+   "organo": "Concejalía Delegada de Contratación del Ajuntament de València",
+   "municipio": "València",
+   "provincia": "Valencia/València",
+   "nuts": "ES523",
+   "presupuesto_sin_iva": 49700.0,
+   "presupuesto_con_iva": 60137.0,
+   "valor_estimado": 49700.0,
+   "procedimiento": "Abierto simplificado",
+   "cpv": [
+    "92000000"
+   ],
+   "lotes": [],
+   "fecha_limite": "2026-10-26",
+   "hora_limite": "23:59",
+   "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=EdWhGadlANLECtSnloz%2BZQ%3D%3D",
+   "fuente": "PLACSP",
+   "motivo": "CPV 92000000",
+   "primera_vez": "2026-10-13"
+  },
+  {
    "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20606833",
    "actualizado": "2026-10-01T06:01:14.304+02:00",
    "estado": "PUB",
@@ -5281,6 +5521,97 @@
    "primera_vez": "2026-10-13"
   },
   {
+   "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20657659",
+   "actualizado": "2026-10-08T09:49:19.864+02:00",
+   "estado": "PUB",
+   "expediente": "CS173/ESTRUCT ESC PRINCIPAL/CARNAVAL 2027/28",
+   "titulo": "Servicios de construcción de escenario principal vinculados al Carnaval 2027 y 2028 de la ciudad de Las Palmas de Gran Canaria.",
+   "organo": "Consejo de Administración de Promoción de la Ciudad de Las Palmas de Gran Canaria S.A.",
+   "municipio": "Las Palmas de Gran Canaria",
+   "provincia": "Gran Canaria",
+   "nuts": "ES705",
+   "presupuesto_sin_iva": 628000.0,
+   "presupuesto_con_iva": 671960.0,
+   "valor_estimado": 628000.0,
+   "procedimiento": "Abierto",
+   "cpv": [
+    "79952000",
+    "51000000",
+    "39154000"
+   ],
+   "lotes": [],
+   "fecha_limite": "2026-11-05",
+   "hora_limite": "23:59",
+   "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=OMPdIniFzo3CfVQHDepjGQ%3D%3D",
+   "fuente": "PLACSP",
+   "motivo": "CPV 79952000",
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20657685",
+   "actualizado": "2026-10-08T09:37:54.302+02:00",
+   "estado": "PUB",
+   "expediente": "BCN-164/2026",
+   "titulo": "Renovación De Parques Infantiles En La Terminal T1 Y Terminal T2 Del Aeropuerto Josep Tarradellas Barcelona-El Prat",
+   "organo": "Aena. Dirección del Aeropuerto de Josep Tarradellas Barcelona-El Prat",
+   "municipio": "El Prat de LLobregat",
+   "provincia": "Barcelona",
+   "nuts": "ES511",
+   "presupuesto_sin_iva": 165000.0,
+   "presupuesto_con_iva": 199650.0,
+   "valor_estimado": 165000.0,
+   "procedimiento": "Normas internas",
+   "cpv": [
+    "37535200"
+   ],
+   "lotes": [
+    {
+     "lote": "1",
+     "nombre": "Renovación De Parques Infantiles En La Terminal T1 Y Terminal T2 Del Aeropuerto Josep Tarradellas Barcelona-El Prat.Lote - 1",
+     "presupuesto_sin_iva": 145000.0
+    },
+    {
+     "lote": "2",
+     "nombre": "Renovación De Parques Infantiles En La Terminal T1 Y Terminal T2 Del Aeropuerto Josep Tarradellas Barcelona-El Prat.Lote - 2",
+     "presupuesto_sin_iva": 20000.0
+    }
+   ],
+   "fecha_limite": "2026-11-06",
+   "hora_limite": "12:00",
+   "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=4rApZoAR5Fd%2FP7lJ7Fu0SA%3D%3D",
+   "fuente": "PLACSP",
+   "motivo": "CPV 37535200",
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20657579",
+   "actualizado": "2026-10-08T10:15:10.243+02:00",
+   "estado": "PUB",
+   "expediente": "15746/2026",
+   "titulo": "Contrato Mixto para el Suministro, Arrendamiento, Montaje, Desmontaje e Instalación del Alumbrado decorativo para la Navidad 2026-2027 de Ronda y sus pedanías.",
+   "organo": "Alcaldía del Ayuntamiento de Ronda",
+   "municipio": "Ronda",
+   "provincia": "Málaga",
+   "nuts": "ES617",
+   "presupuesto_sin_iva": 298155.0,
+   "presupuesto_con_iva": 360767.55,
+   "valor_estimado": 298155.0,
+   "procedimiento": "Abierto",
+   "cpv": [
+    "42992000",
+    "65310000",
+    "45317000",
+    "65320000"
+   ],
+   "lotes": [],
+   "fecha_limite": "2026-11-06",
+   "hora_limite": "23:59",
+   "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=bmc7dXBhz%2BGOUi78BmzhOQ%3D%3D",
+   "fuente": "PLACSP",
+   "motivo": "palabra «navidad»",
+   "primera_vez": "2026-10-13"
+  },
+  {
    "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20606821",
    "actualizado": "2026-10-01T09:11:20.507+02:00",
    "estado": "PUB",
@@ -5328,6 +5659,35 @@
    "url": "https://www.contratacion.euskadi.eus/webkpe00-kpeperfi/es/contenidos/anuncio_contratacion/expjaso744493/es_doc/index.html",
    "fuente": "PLACSP (plataformas autonómicas)",
    "motivo": "CPV 32321200",
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20657507",
+   "actualizado": "2026-10-08T11:01:05.741+02:00",
+   "estado": "PUB",
+   "expediente": "2026/1614V",
+   "titulo": "Creación de contenidos, publicidad y gestión de los canales de comunicación municipales",
+   "organo": "Consejo Rector del Instituto Municipal de Comunicación de Marratxi (ICOM)",
+   "municipio": "Sa Cabaneta (Marratxi)",
+   "provincia": "Mallorca",
+   "nuts": "ES532",
+   "presupuesto_sin_iva": 533134.99,
+   "presupuesto_con_iva": 645093.34,
+   "valor_estimado": 1066269.97,
+   "procedimiento": "Abierto",
+   "cpv": [
+    "92210000",
+    "79416000",
+    "92400000",
+    "92312211",
+    "79341400"
+   ],
+   "lotes": [],
+   "fecha_limite": "2026-11-09",
+   "hora_limite": "14:00",
+   "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=5rjkX3EwDo4S7pcxhTeWOg%3D%3D",
+   "fuente": "PLACSP",
+   "motivo": "CPV 92312211",
    "primera_vez": "2026-10-13"
   },
   {
@@ -6243,9 +6603,189 @@
    "estado": "PUB",
    "motivo": "palabra «atraccions»",
    "primera_vez": "2026-10-13"
+  },
+  {
+   "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20621432",
+   "actualizado": "2026-10-08T11:07:47.615+02:00",
+   "estado": "PUB",
+   "expediente": "SDA0022026",
+   "titulo": "Sistema Dinámico de Adquisición de material de oficina, impresión, mobiliario, señalética, equipamiento tecnológico, infraestructura TIC, audiovisual y servicios asociados para la Universidad de Alicante.",
+   "organo": "Rectorado de la Universidad de Alicante",
+   "municipio": "San Vicente Raspeig (Alicante)",
+   "provincia": "Alicante/Alacant",
+   "nuts": "ES521",
+   "presupuesto_sin_iva": 0.0,
+   "presupuesto_con_iva": 0.0,
+   "valor_estimado": 84000000.0,
+   "procedimiento": "Restringido",
+   "cpv": [
+    "30190000",
+    "34928471",
+    "30200000",
+    "79810000",
+    "32321200",
+    "30199000",
+    "32500000",
+    "39000000"
+   ],
+   "lotes": [
+    {
+     "lote": "1",
+     "nombre": "32500000-Equipo y material para telecomunicaciones.",
+     "presupuesto_sin_iva": 0.0
+    },
+    {
+     "lote": "2",
+     "nombre": "32321200-Equipo audiovisual.",
+     "presupuesto_sin_iva": 0.0
+    },
+    {
+     "lote": "3",
+     "nombre": "34928471-Materiales de señalización.",
+     "presupuesto_sin_iva": 0.0
+    },
+    {
+     "lote": "4",
+     "nombre": "79810000-Servicios de impresión.",
+     "presupuesto_sin_iva": 0.0
+    },
+    {
+     "lote": "5",
+     "nombre": "30199000-Artículos de papelería y otros artículos.",
+     "presupuesto_sin_iva": 0.0
+    },
+    {
+     "lote": "6",
+     "nombre": "30200000-Equipo y material informático.",
+     "presupuesto_sin_iva": 0.0
+    },
+    {
+     "lote": "7",
+     "nombre": "39000000-Mobiliario (incluido el de oficina), complementos de mobiliario, aparatos electrodomésticos (excluida la iluminación) y productos de limpieza.",
+     "presupuesto_sin_iva": 0.0
+    }
+   ],
+   "fecha_limite": "2036-12-31",
+   "hora_limite": "23:59",
+   "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2BYh30vyxFZCqb7rCcv76BA%3D%3D",
+   "fuente": "PLACSP",
+   "motivo": "CPV 32321200",
+   "primera_vez": "2026-10-13"
   }
  ],
  "ayudas": [
+  {
+   "fuente": "BDNS",
+   "codigo": "930615",
+   "titulo": "Resolución de 18 de septiembre de 2026,  del Director del Instituto de Fomento de la Región de Murcia, por delegación, de convocatoria de ayudas a la participación en ferias, eventos y misiones comerciales. Feria GreenTech Americas Querétaro 2027.",
+   "organo": "REGIÓN DE MURCIA / INSTITUTO DE FOMENTO DE LA REGIÓN DE MURCIA (INFO)",
+   "ambito": "AUTONOMICA",
+   "regiones": [
+    "ES620 - Murcia"
+   ],
+   "beneficiarios": [
+    "PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+   ],
+   "presupuesto": 76766.6,
+   "inicio": null,
+   "fin": "2026-10-19",
+   "texto_inicio": "Desde el día siguiente a la publicación en el BORM.",
+   "texto_fin": null,
+   "abierta_ahora": false,
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/930615",
+   "boletin": "https://www.borm.es/services/anuncio/ano/2026/numero/4555/pdf",
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "fuente": "BDNS",
+   "codigo": "933028",
+   "titulo": "Extracto de la Resolución de 30/09/2026, del Director del Instituto de Fomento de la Región de Murcia, por delegación, de convocatoria de ayudas a la participación en ferias, eventos y misiones comerciales. Misión Comercial a R. Dominicana y C. Rica.",
+   "organo": "REGIÓN DE MURCIA / INSTITUTO DE FOMENTO DE LA REGIÓN DE MURCIA (INFO)",
+   "ambito": "AUTONOMICA",
+   "regiones": [
+    "ES620 - Murcia"
+   ],
+   "beneficiarios": [
+    "PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+   ],
+   "presupuesto": 54833.33,
+   "inicio": null,
+   "fin": "2026-10-20",
+   "texto_inicio": "Desde el día siguiente a la publicación en el BORM.",
+   "texto_fin": null,
+   "abierta_ahora": false,
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/933028",
+   "boletin": "https://www.borm.es/services/anuncio/ano/2026/numero/4829/pdf",
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "fuente": "BDNS",
+   "codigo": "928140",
+   "titulo": "`CONVOCATORIA PÚBLICA PARA LA CONCESIÓN DE SUBVENCIONES PARA EL   DESARROLLO DE PROYECTOS DE TEATRO EN INSTITUTOS DE EDUCACIÓN   SECUNDARIA. CURSO 2026/2027`",
+   "organo": "PARLA / AYUNTAMIENTO DE PARLA",
+   "ambito": "LOCAL",
+   "regiones": [
+    "ES30 - COMUNIDAD DE MADRID"
+   ],
+   "beneficiarios": [
+    "PERSONAS FÍSICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA",
+    "PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+   ],
+   "presupuesto": 6000,
+   "inicio": "2026-10-08",
+   "fin": "2026-10-28",
+   "texto_inicio": null,
+   "texto_fin": null,
+   "abierta_ahora": false,
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/928140",
+   "boletin": null,
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "fuente": "BDNS",
+   "codigo": "932394",
+   "titulo": "2026 KO BIRA KULTURALAK DEIALDIA. CONVOCATORIA GIRAS CULTURALES 2026",
+   "organo": "PAÍS VASCO / PRESIDENCIA DE GOBIERNO",
+   "ambito": "AUTONOMICA",
+   "regiones": [
+    "ES21 - PAIS VASCO"
+   ],
+   "beneficiarios": [
+    "PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+   ],
+   "presupuesto": 70000,
+   "inicio": "2026-09-30",
+   "fin": "2026-10-30",
+   "texto_inicio": "Hasiera/Inicio",
+   "texto_fin": "Amaiera/Fin",
+   "abierta_ahora": false,
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/932394",
+   "boletin": "https://www.euskadi.eus/web01-bopv/eu/p43aBOPVWebWar/VerParalelo.do?R01HPortal=web01&R01HPage=bopv&R01HLang=eu&ed2026004030",
+   "primera_vez": "2026-10-13"
+  },
+  {
+   "fuente": "BDNS",
+   "codigo": "930638",
+   "titulo": "Resolución de 18 de septiembre de 2026, del Director del Instituto de Fomento de la Región de Murcia, por delegación, de convocatoria de ayudas a la participación en ferias, eventos y misiones comerciales. Feria Sweets and Snacks 2027.",
+   "organo": "REGIÓN DE MURCIA / INSTITUTO DE FOMENTO DE LA REGIÓN DE MURCIA (INFO)",
+   "ambito": "AUTONOMICA",
+   "regiones": [
+    "ES620 - Murcia"
+   ],
+   "beneficiarios": [
+    "PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"
+   ],
+   "presupuesto": 78960,
+   "inicio": null,
+   "fin": "2026-10-30",
+   "texto_inicio": "Desde el día siguiente a la publicación en el BORM.",
+   "texto_fin": null,
+   "abierta_ahora": false,
+   "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/930638",
+   "boletin": "https://www.borm.es/services/anuncio/ano/2026/numero/4579/pdf",
+   "primera_vez": "2026-10-13"
+  },
   {
    "fuente": "BOE",
    "codigo": "BOE-B-2026-32589",
@@ -6259,30 +6799,37 @@
  "informe": {
   "placsp": {
    "PLACSP": {
-    "ficheros": 9,
-    "entradas": 4473,
-    "desde": "2026-10-08T11:20",
+    "ficheros": 11,
+    "entradas": 5472,
+    "desde": "2026-10-08T08:46",
     "hasta": "2026-10-12T20:00",
+    "siguiente": "https://contrataciondelestado.es/sindicacion/sindicacion_643/licitacionesPerfilesContratanteCompleto3_20261008_204637_5.atom",
+    "objetivo": "2026-09-03T00:00",
+    "relleno_pendiente": true,
     "parada": "tiempo agotado",
-    "segundos": 792
+    "segundos": 1364
    },
    "PLACSP (plataformas autonómicas)": {
-    "ficheros": 25,
-    "entradas": 11466,
-    "desde": "2026-09-28T01:00",
+    "ficheros": 34,
+    "entradas": 15729,
+    "desde": "2026-09-21T10:41",
     "hasta": "2026-10-13T01:00",
+    "siguiente": "https://contrataciondelestado.es/sindicacion/sindicacion_1044/PlataformasAgregadasSinMenores_20260927_030102_3.atom",
+    "objetivo": "2026-09-03T00:00",
+    "relleno_pendiente": true,
     "parada": "tiempo agotado",
-    "segundos": 801
+    "segundos": 1339
    },
-   "seleccionadas": 172
+   "seleccionadas": 189
   },
   "catalunya": {
-   "filas": 2233,
+   "filas": 2257,
    "seleccionadas": 77
   },
   "bdns": {
-   "candidatas": 681,
-   "seleccionadas": 0
+   "candidatas": 218,
+   "evaluadas": 150,
+   "seleccionadas": 5
   },
   "boe": {
    "dias_revisados": 6,
