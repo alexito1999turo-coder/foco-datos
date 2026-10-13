@@ -1,0 +1,42 @@
+{
+ "busqueda": {"content": [
+  {"numeroConvocatoria": "934700", "descripcion": "Ayudas a la organización de festivales y ciclos de música en vivo 2027", "fechaRecepcion": "2026-10-10", "nivel1": "AUTONOMICA"},
+  {"numeroConvocatoria": "934643", "descripcion": "Subvención nominativa a la banda de música municipal", "fechaRecepcion": "2026-10-09", "nivel1": "LOCAL"},
+  {"numeroConvocatoria": "800001", "descripcion": "Ayudas a festivales 2025", "fechaRecepcion": "2025-03-01", "nivel1": "ESTATAL"}
+ ]},
+ "detalle_abierta": {
+  "codigoBDNS": "934700",
+  "organo": {"nivel1": "AUTONOMICA", "nivel2": "GALICIA", "nivel3": "AGENCIA GALLEGA DE LAS INDUSTRIAS CULTURALES"},
+  "tipoConvocatoria": "Concurrencia competitiva - canónica",
+  "presupuestoTotal": 400000,
+  "descripcion": "Ayudas a la organización de festivales y ciclos de música en vivo 2027",
+  "tiposBeneficiarios": [{"descripcion": "PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"}],
+  "regiones": [{"descripcion": "ES11 - GALICIA"}],
+  "descripcionFinalidad": "Cultura",
+  "abierto": true,
+  "fechaInicioSolicitud": "2026-10-11",
+  "fechaFinSolicitud": "2026-11-10",
+  "textInicio": "Día siguiente a la publicación en el DOG",
+  "textFin": "Un mes",
+  "anuncios": [{"url": "https://www.xunta.gal/dog/Publicados/2026/20261010/Anuncio_ejemplo.html"}]
+ },
+ "detalle_entidades": {
+  "codigoBDNS": "934701",
+  "organo": {"nivel1": "LOCAL", "nivel2": "AYUNTAMIENTO X"},
+  "tipoConvocatoria": "Concurrencia competitiva - canónica",
+  "descripcion": "Subvenciones a asociaciones culturales para fiestas",
+  "tiposBeneficiarios": [{"descripcion": "PERSONAS JURÍDICAS QUE NO DESARROLLAN ACTIVIDAD ECONÓMICA"}],
+  "abierto": true,
+  "fechaFinSolicitud": "2026-11-01"
+ },
+ "detalle_cerrada": {
+  "codigoBDNS": "891690",
+  "organo": {"nivel1": "AUTONOMICA", "nivel2": "COMUNIDAD DE MADRID"},
+  "tipoConvocatoria": "Concurrencia competitiva - canónica",
+  "descripcion": "AYUDAS A EMPRESAS PRIVADAS PARA REALIZAR PROYECTOS DE MÚSICA EN 2026",
+  "tiposBeneficiarios": [{"descripcion": "PYME Y PERSONAS FÍSICAS QUE DESARROLLAN ACTIVIDAD ECONÓMICA"}],
+  "abierto": false,
+  "fechaInicioSolicitud": "2026-03-19",
+  "fechaFinSolicitud": "2026-04-10"
+ }
+}

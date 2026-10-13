@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:cac="urn:dgpe:names:draft:codice:schema:xsd:CommonAggregateComponents-2"
+      xmlns:cbc="urn:dgpe:names:draft:codice:schema:xsd:CommonBasicComponents-2"
+      xmlns:cac-place-ext="urn:dgpe:names:draft:codice-place-ext:schema:xsd:CommonAggregateComponents-2"
+      xmlns:cbc-place-ext="urn:dgpe:names:draft:codice-place-ext:schema:xsd:CommonBasicComponents-2"
+      xmlns:at="http://purl.org/atompub/tombstones/1.0">
+  <author><name>Plataforma de Contratación del Sector Público</name></author>
+  <id>https://contrataciondelestado.es/sindicacion/licitacionesPerfilesContratanteCompleto3.atom</id>
+  <link href="https://contrataciondelestado.es/sindicacion/sindicacion_643/licitacionesPerfilesContratanteCompleto3.atom" rel="self"/>
+  <link href="https://contrataciondelestado.es/sindicacion/sindicacion_643/licitacionesPerfilesContratanteCompleto3_20261012_210000.atom" rel="next"/>
+  <title>Licitaciones publicadas en la Plataforma de Contratación del Sector Público</title>
+  <updated>2026-10-13T06:00:00.000+02:00</updated>
+  <at:deleted-entry ref="https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/999" when="2026-10-12T10:00:00.000+02:00"/>
+  <entry>
+    <id>https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/1001</id>
+    <link href="https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&amp;idEvl=AAA%3D%3D"/>
+    <summary type="text">Id licitación: CON_PR/ABR/2026000054; Órgano: Ayuntamiento de Motril; Estado: PUB</summary>
+    <title>Servicios artísticos de la Cabalgata de Reyes de Motril</title>
+    <updated>2026-10-12T19:30:00.000+02:00</updated>
+    <cac-place-ext:ContractFolderStatus>
+      <cbc:ContractFolderID>CON_PR/ABR/CONTRATACION2026000054</cbc:ContractFolderID>
+      <cbc-place-ext:ContractFolderStatusCode listURI="https://contrataciondelestado.es/codice/cl/2.04/SyndicationContractFolderStatusCode-2.04.gc">PUB</cbc-place-ext:ContractFolderStatusCode>
+      <cac-place-ext:LocatedContractingParty>
+        <cac:Party>
+          <cac:PartyName><cbc:Name>Alcaldia del Ayuntamiento de Motril</cbc:Name></cac:PartyName>
+          <cac:PostalAddress><cbc:CityName>Motril</cbc:CityName></cac:PostalAddress>
+        </cac:Party>
+      </cac-place-ext:LocatedContractingParty>
+      <cac:ProcurementProject>
+        <cbc:Name>Servicios artísticos y auxiliares de la Cabalgata de Reyes de Motril</cbc:Name>
+        <cbc:TypeCode>2</cbc:TypeCode>
+        <cac:BudgetAmount>
+          <cbc:EstimatedOverallContractAmount currencyID="EUR">532824</cbc:EstimatedOverallContractAmount>
+          <cbc:TotalAmount currencyID="EUR">161179.26</cbc:TotalAmount>
+          <cbc:TaxExclusiveAmount currencyID="EUR">133206</cbc:TaxExclusiveAmount>
+        </cac:BudgetAmount>
+        <cac:RequiredCommodityClassification>
+          <cbc:ItemClassificationCode listURI="https://contrataciondelestado.es/codice/cl/1.04/CPV2007-1.04.gc">92312000</cbc:ItemClassificationCode>
+        </cac:RequiredCommodityClassification>
+        <cac:RealizedLocation>
+          <cbc:CountrySubentity>Granada</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>ES614</cbc:CountrySubentityCode>
+        </cac:RealizedLocation>
+      </cac:ProcurementProject>
+      <cac:TenderingProcess>
+        <cbc:ProcedureCode>1</cbc:ProcedureCode>
+        <cac:TenderSubmissionDeadlinePeriod>
+          <cbc:EndDate>2026-10-26</cbc:EndDate>
+          <cbc:EndTime>23:59:00</cbc:EndTime>
+        </cac:TenderSubmissionDeadlinePeriod>
+      </cac:TenderingProcess>
+    </cac-place-ext:ContractFolderStatus>
+  </entry>
+  <entry>
+    <id>https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/1002</id>
+    <link href="https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&amp;idEvl=BBB%3D%3D"/>
+    <title>Servicio de limpieza de dependencias municipales</title>
+    <updated>2026-10-12T18:00:00.000+02:00</updated>
+    <cac-place-ext:ContractFolderStatus>
+      <cbc:ContractFolderID>LIM-2026-1</cbc:ContractFolderID>
+      <cbc-place-ext:ContractFolderStatusCode>PUB</cbc-place-ext:ContractFolderStatusCode>
+      <cac:ProcurementProject>
+        <cbc:Name>Servicio de limpieza de dependencias municipales</cbc:Name>
+        <cac:RequiredCommodityClassification><cbc:ItemClassificationCode>90910000</cbc:ItemClassificationCode></cac:RequiredCommodityClassification>
+      </cac:ProcurementProject>
+      <cac:TenderingProcess>
+        <cbc:ProcedureCode>9</cbc:ProcedureCode>
+        <cac:TenderSubmissionDeadlinePeriod><cbc:EndDate>2026-10-30</cbc:EndDate></cac:TenderSubmissionDeadlinePeriod>
+      </cac:TenderingProcess>
+    </cac-place-ext:ContractFolderStatus>
+  </entry>
+  <entry>
+    <id>https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/1003</id>
+    <link href="https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&amp;idEvl=CCC%3D%3D"/>
+    <title>Sonido e iluminación para las fiestas de verano</title>
+    <updated>2026-10-12T17:00:00.000+02:00</updated>
+    <cac-place-ext:ContractFolderStatus>
+      <cbc:ContractFolderID>Festejos 21/2026</cbc:ContractFolderID>
+      <cbc-place-ext:ContractFolderStatusCode>EV</cbc-place-ext:ContractFolderStatusCode>
+      <cac:ProcurementProject>
+        <cbc:Name>Sonido e iluminación para las fiestas de verano</cbc:Name>
+        <cac:RequiredCommodityClassification><cbc:ItemClassificationCode>32342410</cbc:ItemClassificationCode></cac:RequiredCommodityClassification>
+      </cac:ProcurementProject>
+      <cac:TenderingProcess>
+        <cac:TenderSubmissionDeadlinePeriod><cbc:EndDate>2026-11-13</cbc:EndDate><cbc:EndTime>12:00:00</cbc:EndTime></cac:TenderSubmissionDeadlinePeriod>
+      </cac:TenderingProcess>
+    </cac-place-ext:ContractFolderStatus>
+  </entry>
+  <entry>
+    <id>https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/1004</id>
+    <link href="https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&amp;idEvl=DDD%3D%3D"/>
+    <title>Parque Infantil de Navidad 2026-2027</title>
+    <updated>2026-10-11T09:00:00.000+02:00</updated>
+    <cac-place-ext:ContractFolderStatus>
+      <cbc:ContractFolderID>29/2026-07054</cbc:ContractFolderID>
+      <cbc-place-ext:ContractFolderStatusCode>PUB</cbc-place-ext:ContractFolderStatusCode>
+      <cac-place-ext:LocatedContractingParty>
+        <cac:Party><cac:PartyName><cbc:Name>Ayuntamiento de Santurtzi</cbc:Name></cac:PartyName></cac:Party>
+      </cac-place-ext:LocatedContractingParty>
+      <cac:ProcurementProject>
+        <cbc:Name>Realización del programa Parque Infantil de Navidad 2026-2027</cbc:Name>
+        <cac:BudgetAmount><cbc:TaxExclusiveAmount currencyID="EUR">62282.85</cbc:TaxExclusiveAmount></cac:BudgetAmount>
+        <cac:RequiredCommodityClassification><cbc:ItemClassificationCode>44212320</cbc:ItemClassificationCode></cac:RequiredCommodityClassification>
+      </cac:ProcurementProject>
+      <cac:ProcurementProjectLot>
+        <cbc:ID>1</cbc:ID>
+        <cac:ProcurementProject>
+          <cbc:Name>Suministro de una carpa</cbc:Name>
+          <cac:BudgetAmount><cbc:TaxExclusiveAmount currencyID="EUR">26300</cbc:TaxExclusiveAmount></cac:BudgetAmount>
+          <cac:RequiredCommodityClassification><cbc:ItemClassificationCode>44212320</cbc:ItemClassificationCode></cac:RequiredCommodityClassification>
+        </cac:ProcurementProject>
+      </cac:ProcurementProjectLot>
+      <cac:ProcurementProjectLot>
+        <cbc:ID>2</cbc:ID>
+        <cac:ProcurementProject>
+          <cbc:Name>Realización de las actividades</cbc:Name>
+          <cac:BudgetAmount><cbc:TaxExclusiveAmount currencyID="EUR">35982.85</cbc:TaxExclusiveAmount></cac:BudgetAmount>
+          <cac:RequiredCommodityClassification><cbc:ItemClassificationCode>92331210</cbc:ItemClassificationCode></cac:RequiredCommodityClassification>
+        </cac:ProcurementProject>
+      </cac:ProcurementProjectLot>
+      <cac:TenderingProcess>
+        <cbc:ProcedureCode>1</cbc:ProcedureCode>
+        <cac:TenderSubmissionDeadlinePeriod><cbc:EndDate>2026-10-16+02:00</cbc:EndDate><cbc:EndTime>13:00:00+02:00</cbc:EndTime></cac:TenderSubmissionDeadlinePeriod>
+      </cac:TenderingProcess>
+    </cac-place-ext:ContractFolderStatus>
+  </entry>
+</feed>
