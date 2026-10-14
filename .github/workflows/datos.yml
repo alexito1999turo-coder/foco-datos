@@ -2,8 +2,10 @@ name: Recogida diaria de datos
 
 on:
   schedule:
-    # 04:15 UTC = 06:15 en Madrid en verano y 05:15 en invierno, de lunes a viernes.
-    - cron: "15 4 * * 1-5"
+    # Tres intentos de madrugada (UTC): GitHub puede retrasar horas una ejecución programada
+    # (el 14 de octubre la de las 04:15 empezó a las 09:28). Basta con que una llegue antes de
+    # las 7:45 de Madrid; las demás solo refrescan.
+    - cron: "15 0,2,4 * * 1-5"
   workflow_dispatch:
     inputs:
       dias:

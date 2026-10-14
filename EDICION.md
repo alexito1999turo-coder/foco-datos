@@ -9,7 +9,7 @@ Empresas pequeñas y medianas de eventos, espectáculos y producción técnica e
 
 ## Pasos
 
-1. `git pull` y comprobar que `data/latest.json` tiene `"fecha"` de hoy. Si no, la recogida aún no ha terminado: esperar y reintentar. Sin datos de hoy no se publica.
+1. `git pull` y comprobar que `data/latest.json` tiene `"fecha"` de hoy. Si no, la recogida aún no ha terminado: esperar y reintentar (hasta 3 veces, 9 minutos entre cada una). Si sigue sin llegar pero `"generado"` es de hace menos de 36 horas, se publica con esos datos: `foco.edicion` con la fecha de hoy ya descarta lo que ha cerrado. Se avisa en el informe. Con datos más viejos, no se publica.
 2. Candidatos: `python -m foco.edicion data/latest.json --fecha AAAA-MM-DD > candidatos.txt`. Cada línea trae días restantes, título, organismo, lugar, presupuesto, motivo del filtro e `id=`. Debajo, si existe, el precedente del año pasado (`↳ precedente: ...`). Al final, dos listas más: `proximas` (lo que salió el año pasado por estas fechas y este año aún no) y `adjudicaciones` (lo adjudicado en los últimos 7 días).
 3. Leer la última edición publicada (posts.list, la más reciente) para no repetir las mismas licitaciones salvo como recordatorio en «Cierran esta semana».
 4. Elegir y escribir `seleccion.json` (formato en `foco/componer.py`).
