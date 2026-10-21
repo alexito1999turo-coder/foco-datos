@@ -75,6 +75,798 @@
 "valor_estimado": 15060.91,
 "vista": "2026-10-20"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/15816237": {
+"actualizado": "2026-10-20T13:46:36.211+02:00",
+"cpv": [
+"85100000"
+],
+"estado": "RES",
+"expediente": "CONTR 2024 0000541746",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/15816237",
+"motivo": "palabra «concierto»",
+"municipio": null,
+"nuts": "ES618",
+"organo": "Consejería de Sanidad, Presidencia y Emergencias Secretaría General Técnica de Sanidad y Consumo (En Transición)",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 23880314.88,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2025-06-05",
+"resultados": [
+{
+"fecha": null,
+"ganador": "CPM ATENCION TEMPRANA, SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 347097.6,
+"lote": "1",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "FUNDACION PRODE",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 231398.4,
+"lote": "10",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": "11",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 0,
+"pyme": false,
+"resultado": "desierto"
+},
+{
+"fecha": null,
+"ganador": "CENTRO DE ATENCION TEMPRANA Y EDUCACION ESPECIAL GIRASOL SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 202473.6,
+"lote": "12",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "CENTRO DE ATENCION TEMPRANA Y EDUCACION ESPECIAL GIRASOL SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 202473.6,
+"lote": "13",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ASOCIACION SEVILLANA DE PARARLISIS CEREBRAL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 433872.0,
+"lote": "14",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ASOCIACION SEVILLANA DE PARARLISIS CEREBRAL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 433872.0,
+"lote": "15",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "CENTRO DE ATENCION TEMPRANA Y EDUCACION ESPECIAL GIRASOL SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 399162.24,
+"lote": "16",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "CENTRO DE ATENCION TEMPRANA Y EDUCACION ESPECIAL GIRASOL SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 399162.24,
+"lote": "17",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "HOSPITAL SAN JUAN DE DIOS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 399162.24,
+"lote": "18",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "NEUROEDUKA ARAHAL SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 173548.8,
+"lote": "19",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "CPM ATENCION TEMPRANA, SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 347097.6,
+"lote": "2",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "Policlínica Nuestra Señora de los Remedios MCR, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 173548.8,
+"lote": "20",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ASCO PADRES Y MADRES DE PERSONAS CON DISCAPACIDAD INTELECTURAL Y SENSORIAL LA RAIZ",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 318172.8,
+"lote": "21",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ASCO PADRES Y MADRES DE PERSONAS CON DISCAPACIDAD INTELECTURAL Y SENSORIAL LA RAIZ",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 318172.8,
+"lote": "22",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "SUPERCAIT, SOCIEDAD COOPERATIVA ANDALUZA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 318172.8,
+"lote": "23",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": "24",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "desierto"
+},
+{
+"fecha": null,
+"ganador": "FUNDACION TAS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 433872.0,
+"lote": "25",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "FUNDACION TAS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 231398.4,
+"lote": "26",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "TEMASE TERAPIAS INTEGRADAS SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 173548.8,
+"lote": "27",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 3,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "TEMASE TERAPIAS INTEGRADAS SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 376022.4,
+"lote": "28",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "TEMASE TERAPIAS INTEGRADAS SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 376022.4,
+"lote": "29",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "NEUROINTEGRA SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 347097.6,
+"lote": "3",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "FUNDACION TAS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 289248.0,
+"lote": "30",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "FUNDACION TAS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 289248.0,
+"lote": "31",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "FUNDACION TAS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 318172.8,
+"lote": "32",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ASOCIACION SAN TEODOMIRO (ASTEDIS)",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 549571.2,
+"lote": "33",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ASOC VISUEÑA DE AYUDA A LA INTEGRACION",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 428087.04,
+"lote": "34",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ASOC VISUEÑA DE AYUDA A LA INTEGRACION",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 428087.04,
+"lote": "35",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "FUNDACION AK GUERRERO",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 520646.4,
+"lote": "36",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 5,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "INSTITUTO HISPALENSE DE PEDIATRIA SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 520646.4,
+"lote": "37",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 5,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "CENTRO DE ESTIMULACION PRECOZ CRISTO DEL BUEN FIN",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 555356.16,
+"lote": "38",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "CENTRO DE ESTIMULACION PRECOZ CRISTO DEL BUEN FIN",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 555356.16,
+"lote": "39",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "NEUROINTEGRA SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 520646.4,
+"lote": "4",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": "40",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "desierto"
+},
+{
+"fecha": null,
+"ganador": "ASOC PROV DE FAMILIAS Y AMIGOS DE PERSONAS SORDAS A.S.P.A.S.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 404947.2,
+"lote": "41",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ASOC PROV DE FAMILIAS Y AMIGOS DE PERSONAS SORDAS A.S.P.A.S.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 404947.2,
+"lote": "42",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "FUNDACION AK GUERRERO",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 462796.8,
+"lote": "43",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "FUNDACION AK GUERRERO",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 462796.8,
+"lote": "44",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 3,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": "45",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 5,
+"pyme": false,
+"resultado": "desierto"
+},
+{
+"fecha": null,
+"ganador": "VITAL, GABINETE MULTIDISCIPLINAR SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 491721.6,
+"lote": "46",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "HOSPITAL SAN JUAN DE DIOS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 578496.0,
+"lote": "47",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 3,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "HOSPITAL SAN JUAN DE DIOS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 578496.0,
+"lote": "48",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 3,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ASOCIACIÓN SETA PARA LA INTERVENCIÓN TEMPRANA DEL AUTISMO Y OTROS TRASTORNOS GENERALIZADOS EN EL DESARROLLO",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 578496.0,
+"lote": "49",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 3,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "NEUROINTEGRA SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 520646.4,
+"lote": "5",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ASOC ASPANRI-ASPANRIDOWN PARA LA INCLUSION SOCIAL DE LAS PERSONAS CON DISCAPACIDAD INTELECTUAL Y SINDROME DOWN",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 578496.0,
+"lote": "50",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 5,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "HOSPITAL SAN JUAN DE DIOS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 578496.0,
+"lote": "51",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "HOSPITAL SAN JUAN DE DIOS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 578496.0,
+"lote": "52",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 3,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "FUNDACION AK GUERRERO",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 347097.6,
+"lote": "53",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "HOSPITAL SAN JUAN DE DIOS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 404947.2,
+"lote": "54",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": "55",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "desierto"
+},
+{
+"fecha": null,
+"ganador": "CENTRO MATICES SDAD COOP AND DE INT SOC",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 404947.2,
+"lote": "56",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "HOSPITAL SAN JUAN DE DIOS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 520646.4,
+"lote": "57",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 3,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "HOSPITAL SAN JUAN DE DIOS",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 404947.2,
+"lote": "58",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "AUTISMO SEVILLA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 520646.4,
+"lote": "59",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "LEGODUO SOCIEDAD LIMITADA PROFESIONAL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 578496.0,
+"lote": "6",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": "7",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "desierto"
+},
+{
+"fecha": null,
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": null,
+"importe_sin_iva": 376022.4,
+"lote": "8",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": "9",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 0,
+"pyme": false,
+"resultado": "desierto"
+}
+],
+"titulo": "108/24 concierto social servicio atención temprana en sevilla",
+"url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=732403",
+"valor_estimado": 52536692.74,
+"vista": "2026-10-21"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/16811045": {
 "actualizado": "2026-10-19T12:06:25.105+02:00",
 "cpv": [
@@ -543,6 +1335,44 @@
 "valor_estimado": 209584.74,
 "vista": "2026-10-16"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19407470": {
+"actualizado": "2026-10-20T14:05:32.315+02:00",
+"cpv": [
+"92311000"
+],
+"estado": "RES",
+"expediente": "SG/SB-03/26 - X2026000272",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19407470",
+"motivo": "CPV 92311000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Vilassar de Mar",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 21000.0,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-04-08",
+"resultados": [
+{
+"fecha": null,
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "desierto"
+}
+],
+"titulo": "L’objecte del present contracte és dissenyar i construir tres nous gegants per a Vilassar de Mar segons unes prescripcions tècniques elaborades a l’efecte. Els nous elements figuratius representaran oficis històrics del municipi (pagesos, pescadors i mestres d'aixa).",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/c1694f2a-9bd8-43f6-9338-ad16dc698099/300913551",
+"valor_estimado": 21000.0,
+"vista": "2026-10-21"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19591704": {
 "actualizado": "2026-10-13T16:05:35.806+02:00",
 "cpv": [
@@ -992,6 +1822,44 @@
 "valor_estimado": 80000.0,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19817745": {
+"actualizado": "2026-10-20T16:04:17.220+02:00",
+"cpv": [
+"79952000"
+],
+"estado": "ADJ",
+"expediente": "001_26002299",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19817745",
+"motivo": "CPV 79952000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Barcelona",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 59900.0,
+"procedimiento": "Otros",
+"provincia": null,
+"publicada": "2026-06-04",
+"resultados": [
+{
+"fecha": null,
+"ganador": "FIRA CCIB, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 59890.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Serveis d'organització d'esdeveniment (logístics, tècnics, audiovisuals i de càtering així com el subministrament de materials i muntatge i desmuntatge de l'acte), necessaris per a dur a terme lacelebració de la Diada de la Guàrdia Urbana de Barcelona 2026, de conformitat amb el plec de prescripcions tècniques i amb mesures de contractació pública sostenible",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/e39cb6e5-2e40-4a04-bbba-08d7217448db/300913456",
+"valor_estimado": 59900.0,
+"vista": "2026-10-21"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19824660": {
 "actualizado": "2026-10-14T11:12:00.473+02:00",
 "cpv": [
@@ -1031,7 +1899,7 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19830536": {
-"actualizado": "2026-10-15T15:11:49.264+02:00",
+"actualizado": "2026-10-20T11:13:00.723+02:00",
 "cpv": [
 "79950000"
 ],
@@ -1055,7 +1923,7 @@
 "ganador_empresa": true,
 "importe_con_iva": null,
 "importe_sin_iva": 25800.0,
-"lote": "653293",
+"lote": "654699",
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 2,
@@ -1068,7 +1936,7 @@
 "ganador_empresa": true,
 "importe_con_iva": null,
 "importe_sin_iva": 79080.0,
-"lote": "653294",
+"lote": "654700",
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 3,
@@ -1081,7 +1949,7 @@
 "ganador_empresa": true,
 "importe_con_iva": null,
 "importe_sin_iva": 65475.0,
-"lote": "653295",
+"lote": "654701",
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 3,
@@ -1094,7 +1962,7 @@
 "ganador_empresa": true,
 "importe_con_iva": null,
 "importe_sin_iva": 39920.0,
-"lote": "653296",
+"lote": "654702",
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 3,
@@ -1107,7 +1975,7 @@
 "ganador_empresa": true,
 "importe_con_iva": null,
 "importe_sin_iva": 15000.0,
-"lote": "653297",
+"lote": "654703",
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 3,
@@ -1120,7 +1988,7 @@
 "ganador_empresa": true,
 "importe_con_iva": null,
 "importe_sin_iva": 34000.0,
-"lote": "653298",
+"lote": "654704",
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 3,
@@ -1342,6 +2210,44 @@
 "valor_estimado": 7152813.5,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19858340": {
+"actualizado": "2026-10-20T15:42:50.552+02:00",
+"cpv": [
+"79950000"
+],
+"estado": "RES",
+"expediente": "CONTR 2026 0000158056",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19858340",
+"motivo": "CPV 79950000",
+"municipio": null,
+"nuts": "ES618",
+"organo": "Consejería de Inclusión Social, Juventud, Familias e Igualdad. Secretaría General Técnica (En Transición)",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 163359.18,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-07-07",
+"resultados": [
+{
+"fecha": null,
+"ganador": "SIGLO XXII LEGAL SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 129000.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 7,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "organización congreso internacional violencia de género",
+"url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=974542",
+"valor_estimado": 326718.36,
+"vista": "2026-10-21"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19865962": {
 "actualizado": "2026-10-15T14:41:42.844+02:00",
 "cpv": [
@@ -1445,6 +2351,44 @@
 "url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=976610",
 "valor_estimado": 55516.25,
 "vista": "2026-10-14"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19876096": {
+"actualizado": "2026-10-20T16:04:52.936+02:00",
+"cpv": [
+"92312100"
+],
+"estado": "RES",
+"expediente": "1570/2026",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19876096",
+"motivo": "CPV 92312100",
+"municipio": null,
+"nuts": "ES514",
+"organo": "Ajuntament del Morell",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 147200.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-06-15",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Associació cultural Embruix",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 147200.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "Contracte privat mitjançant procediment negociat amb Embruix pel subministrament dels elements del seguici local i la realització d'actes populars",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/87799acb-a185-4b3d-b705-eb216255dfc0/300913953",
+"valor_estimado": 147200.0,
+"vista": "2026-10-21"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19882840": {
 "actualizado": "2026-10-14T20:01:40.468+02:00",
@@ -2273,7 +3217,7 @@
 "vista": "2026-10-14"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20092470": {
-"actualizado": "2026-10-16T11:11:35.375+02:00",
+"actualizado": "2026-10-20T11:12:59.676+02:00",
 "cpv": [
 "51111100"
 ],
@@ -2429,6 +3373,44 @@
 "valor_estimado": 68850.0,
 "vista": "2026-10-14"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132513": {
+"actualizado": "2026-10-20T14:05:08.633+02:00",
+"cpv": [
+"79952000"
+],
+"estado": "ADJ",
+"expediente": "001_26002998",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132513",
+"motivo": "CPV 79952000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Barcelona",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 36836.04,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-07-20",
+"resultados": [
+{
+"fecha": null,
+"ganador": "L'Espectacleria SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 36800.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contracte per a l'execució del servei de suport tècnic, la dinamització artística i el suport a les entitats de la Cavalcada de Reis de Sant Andreu de Palomar i de la Sagrera de l'any 2027 a l'Ajuntament de Barcelona, Districte de Sant Andreu",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/a7144285-a752-4fc6-87d8-89c0c45734ac/300913429",
+"valor_estimado": 73729.67,
+"vista": "2026-10-21"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132725": {
 "actualizado": "2026-10-15T16:05:12.917+02:00",
 "cpv": [
@@ -2556,6 +3538,82 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/ce3828e9-c606-4b2e-858c-0be9ec82b551/300909141",
 "valor_estimado": 80000.0,
 "vista": "2026-10-16"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132890": {
+"actualizado": "2026-10-20T14:06:11.762+02:00",
+"cpv": [
+"92311000"
+],
+"estado": "RES",
+"expediente": "SG/SB-03/26 - X2026000272 BIS",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132890",
+"motivo": "CPV 92311000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Vilassar de Mar",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 21000.0,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-07-13",
+"resultados": [
+{
+"fecha": null,
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": null,
+"importe_sin_iva": 19900.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "L’objecte del present contracte és dissenyar i construir tres nous gegants per a Vilassar de Mar segons unes\nprescripcions tècniques elaborades a l’efecte. Els nous elements figuratius representaran oficis històrics del\nmunicipi (pagesos, pescadors i mestres d'aixa).",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/8af3ae96-d8b4-4c58-9c88-2ab7eb07fa6d/300913719",
+"valor_estimado": 21000.0,
+"vista": "2026-10-21"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132916": {
+"actualizado": "2026-10-20T10:06:39.140+02:00",
+"cpv": [
+"92000000"
+],
+"estado": "ADJ",
+"expediente": "2025000202",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132916",
+"motivo": "CPV 92000000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Sant Llorenç Savall",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 61631.02,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-07-13",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Plus9sport S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 56195.16,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "L’actuació prevista té com a objectiu l’execució de la prestació del servei de coordinació i dinamització de les activitats culturals, socials, educatives, esportives i de lleure de l’equipament de la Casa de Cultura 1 d’octubre de Sant Llorenç Savall, d’acord amb les especificacions tècniques recollides el plec de prescripcions tècniques.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/fd4b2106-3144-4024-ae43-4268c7530fa2/300913109",
+"valor_estimado": 61631.02,
+"vista": "2026-10-21"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20133200": {
 "actualizado": "2026-10-15T12:09:09.135+02:00",
@@ -3096,11 +4154,11 @@
 "vista": "2026-10-19"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20251579": {
-"actualizado": "2026-10-16T10:04:39.489+02:00",
+"actualizado": "2026-10-20T10:06:25.677+02:00",
 "cpv": [
 "92000000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "CONTR/2026/0000000297",
 "fuente": "PLACSP (plataformas autonómicas)",
 "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20251579",
@@ -3125,11 +4183,11 @@
 "oferta_minima": null,
 "ofertas": 2,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Servei de gestió del parc lúdic de l’estació de muntanya de Vallter (Ref. POS121/26)",
-"url": "https://contractaciopublica.cat/ca/detall-publicacio/ede8eb32-8cae-4d7b-8e49-1c51067cf141/300910337",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/ede8eb32-8cae-4d7b-8e49-1c51067cf141/300913080",
 "valor_estimado": 87780.0,
 "vista": "2026-10-19"
 },
@@ -4028,6 +5086,45 @@
 "valor_estimado": 25000.0,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20508647": {
+"actualizado": "2026-10-20T16:04:04.785+02:00",
+"cpv": [
+"92312100",
+"79953000"
+],
+"estado": "RES",
+"expediente": "SG/2026/50",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20508647",
+"motivo": "CPV 92312100",
+"municipio": null,
+"nuts": "ES51",
+"organo": "Ajuntament de Tona",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 35250.0,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-08-31",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Ironic Art Productions S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 35249.99,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "L’objecte del present contracte és la prestació dels serveis de direcció artística i producció tècnica per a la conceptualització, planificació, organització, coordinació i execució integral anual del festival artístic Una Tona de Màgia, promogut per l'Ajuntament de Tona.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/4c167715-0a00-48d6-9281-34776d929a57/300911376",
+"valor_estimado": 47500.0,
+"vista": "2026-10-21"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20508727": {
 "actualizado": "2026-10-14T10:05:14.276+02:00",
 "cpv": [
@@ -4187,14 +5284,14 @@
 "vista": "2026-10-20"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20541003": {
-"actualizado": "2026-10-15T16:05:12.360+02:00",
+"actualizado": "2026-10-20T12:06:33.220+02:00",
 "cpv": [
-"39100000",
 "31527260",
-"44211100",
-"39172000"
+"39100000",
+"39172000",
+"44211100"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "4054-2026",
 "fuente": "PLACSP (plataformas autonómicas)",
 "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20541003",
@@ -4219,11 +5316,11 @@
 "oferta_minima": null,
 "ofertas": 2,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "El transport, subministrament i instal·lació de material divers, en règim de lloguer per a dur a terme la Fira de Nadal de Santa Cristina d'Aro",
-"url": "https://contractaciopublica.cat/ca/detall-publicacio/c858d3c8-1d3d-44fa-8542-52e439924da2/300909965",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/c858d3c8-1d3d-44fa-8542-52e439924da2/300913271",
 "valor_estimado": 88024.0,
 "vista": "2026-10-16"
 },
@@ -4264,6 +5361,44 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/8e745556-3304-4ac7-a81b-3bfeffb1ced3/300910386",
 "valor_estimado": 32097.75,
 "vista": "2026-10-19"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558059": {
+"actualizado": "2026-10-20T14:09:12.706+02:00",
+"cpv": [
+"31527200"
+],
+"estado": "ADJ",
+"expediente": "4329-2026",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558059",
+"motivo": "palabra «nadal»",
+"municipio": null,
+"nuts": "ES512",
+"organo": "Ajuntament de Santa Cristina d'Aro",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 35751.0,
+"procedimiento": "Otros",
+"provincia": null,
+"publicada": "2026-09-25",
+"resultados": [
+{
+"fecha": null,
+"ganador": "XIMENEZ NORESTE, S.L",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 35751.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "L’objecte és la contractació del subministrament, la instal·lació, desinstal·lació i manteniment mitjançant règim de lloguer i compra, de l’enllumenat de Nadal del municipi de Santa Cristina d’Aro.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/c9473642-fac7-406a-b4f3-ac26e1266db3/300913893",
+"valor_estimado": 35751.0,
+"vista": "2026-10-21"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558302": {
 "actualizado": "2026-10-14T12:41:40.931+02:00",
@@ -6215,11 +7350,11 @@
 "vista": "2026-10-20"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20719509": {
-"actualizado": "2026-10-19T12:10:55.691+02:00",
+"actualizado": "2026-10-20T12:08:32.937+02:00",
 "cpv": [
 "92312000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "TNC-2026-130",
 "fuente": "PLACSP (plataformas autonómicas)",
 "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20719509",
@@ -6244,11 +7379,11 @@
 "oferta_minima": null,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Contractació de la coproducció de l'espectacle \"450 volts\"",
-"url": "https://contractaciopublica.cat/ca/detall-publicacio/367c323f-e25e-4eab-8bff-5ef39fa800cb/300912119",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/367c323f-e25e-4eab-8bff-5ef39fa800cb/300913311",
 "valor_estimado": 120000.0,
 "vista": "2026-10-20"
 },
@@ -6367,6 +7502,272 @@
 "url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=1015045",
 "valor_estimado": 247933.88,
 "vista": "2026-10-20"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733836": {
+"actualizado": "2026-10-20T18:02:23.237+02:00",
+"cpv": [
+"92312000"
+],
+"estado": "RES",
+"expediente": "2026/23",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733836",
+"motivo": "CPV 92312000",
+"municipio": null,
+"nuts": "ES51",
+"organo": "Manresana d'Equipaments Escènics, SL",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 18000.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-09-16",
+"resultados": [
+{
+"fecha": null,
+"ganador": "ÈXITS ESPECTACLES S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 18000.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "Exhibició de l’espectacle Els amics de les arts \nL’espectacle es presentarà a la Sala Gran del Teatre Kursaal de Manresa, dins la temporada de gener a juny de 2027, amb el següent calendari:\n\n•\t04 de juny de 2027 a les 20:00h",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/be33ecd6-29a2-47f3-9263-5c6987e0b6cd/300914144",
+"valor_estimado": 18000.0,
+"vista": "2026-10-21"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733837": {
+"actualizado": "2026-10-20T18:02:18.791+02:00",
+"cpv": [
+"32321200"
+],
+"estado": "RES",
+"expediente": "CBEA2026-001 ICN2",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733837",
+"motivo": "CPV 32321200",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Fundació Institut Català de Nanociència i Nanotecnologia (ICN2)",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 14900.0,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-08-20",
+"resultados": [
+{
+"fecha": null,
+"ganador": "MARTIN & CADENAS INGENIEROS SLU",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 14860.36,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "Contractació basada del subministrament, instal·lació, configuració i posada en marxa, sota la modalitat de \"PROJECTE CLAU EN MÀ\", dels equips audiovisuals i de col·laboració per a la renovació tecnològica de dues sales de reunions de l'ICN2, en el marc de l’Acord Marc E23/46 del CSUC.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/798c4e18-f75b-4fec-8961-fb1c24989fc4/300914139",
+"valor_estimado": 14900.0,
+"vista": "2026-10-21"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733868": {
+"actualizado": "2026-10-20T16:04:12.975+02:00",
+"cpv": [
+"32321200"
+],
+"estado": "ADJ",
+"expediente": "DER02/CSUC2346/L4",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733868",
+"motivo": "CPV 32321200",
+"municipio": null,
+"nuts": "ES51",
+"organo": "Fundació per a la Universitat Oberta de Catalunya",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 14000.0,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-10-05",
+"resultados": [
+{
+"fecha": null,
+"ganador": "TowerTBA",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 14000.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Subministrament d’equips de realitat virtual, augmentada i stagecraftper la UOC",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/71f6d525-dea0-4e2d-bbe9-4dc39dc96099/300913339",
+"valor_estimado": 14000.0,
+"vista": "2026-10-21"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733914": {
+"actualizado": "2026-10-20T14:05:03.408+02:00",
+"cpv": [
+"92312200"
+],
+"estado": "ADJ",
+"expediente": "12/2026",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733914",
+"motivo": "CPV 92312200",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Teatre Lliure-Teatre Públic de Barcelona",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 35400.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-20",
+"resultados": [
+{
+"fecha": null,
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": null,
+"importe_sin_iva": 35400.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Serveis professionals de dramatúrgia i direcció d’escena de l’OBRA teatral “UN DRAMA ROMÀNTIC” amb subjecció estricta als plecs de clàusules administratives particulars i de prescripcions tècniques aprovats",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/50a9c861-b313-473b-a4f1-198e31cfc45c/300913419",
+"valor_estimado": 35400.0,
+"vista": "2026-10-21"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733915": {
+"actualizado": "2026-10-20T14:05:00.774+02:00",
+"cpv": [
+"92312110"
+],
+"estado": "ADJ",
+"expediente": "15/2026",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733915",
+"motivo": "CPV 92312110",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Teatre Lliure-Teatre Públic de Barcelona",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 25008.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-20",
+"resultados": [
+{
+"fecha": null,
+"ganador": "INDIGEST, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 25008.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servei d’exhibició de l’espectacle “GÈNESIS” amb subjecció estricta als plecs aprovats de clàusules administratives particulars i de prescripcions tècniques",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/e5686777-fd3f-4755-ae6a-aa0414d14db9/300913401",
+"valor_estimado": 25008.0,
+"vista": "2026-10-21"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733942": {
+"actualizado": "2026-10-20T12:08:42.867+02:00",
+"cpv": [
+"92312000"
+],
+"estado": "ADJ",
+"expediente": "2026/24",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733942",
+"motivo": "CPV 92312000",
+"municipio": null,
+"nuts": "ES51",
+"organo": "Manresana d'Equipaments Escènics, SL",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 23800.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-13",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Fundació Teatre Lliure – Teatre públic de Barcelona",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 23800.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Exhibició de l’espectacle Contra antígona\nL’espectacle es presentarà a la Sala Gran del Teatre Kursaal de Manresa, dins la temporada de setembre a desembre de 2026, amb el següent calendari:\n\n•\tActuació del dia 12 de desembre de 2026 a les 20:00 hores\n•\tActuació del dia 13 de desembre de 2026 a les 12:00 hores",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/a38e269f-2667-4583-9787-f26881640d73/300913346",
+"valor_estimado": 23800.0,
+"vista": "2026-10-21"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733991": {
+"actualizado": "2026-10-20T10:05:53.736+02:00",
+"cpv": [
+"92312240"
+],
+"estado": "RES",
+"expediente": "2025/15-R104",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20733991",
+"motivo": "CPV 92312240",
+"municipio": null,
+"nuts": "ES514",
+"organo": "Ajuntament de Tarragona",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 120000.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-01-15",
+"resultados": [
+{
+"fecha": null,
+"ganador": "ABRIL PRODUCCIONES, SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 120000.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "L'objecte és la contractació de les artistes caps de cartell del V Festival TETA, Lia Kali i Vanesa Martin per als concerts del 29 i 30 de maig de 2026, i com a prestacions complementàries del principal: a) Complementàries de caràcter artístic: l’adjudicatari oferirà les actuacions que complementin aquest cartell, d’acord amb els requeriments de l’apartat de preproducció del plec tècnic, i contractarà a les artistes acceptades per l’Ajuntament a la negociació, b) Complementàries de caràcter tècnic: totes les necessàries per satisfer les necessitats de preproducció i postproducció de les actuacions, descrites al plec tècnic.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/95f33bc1-d3ca-47fe-a2a1-ee054bab1cc1/300913003",
+"valor_estimado": 120000.0,
+"vista": "2026-10-21"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/11540223": {
 "actualizado": "2026-09-30T13:30:18.754+02:00",
