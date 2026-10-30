@@ -1160,6 +1160,45 @@
 "valor_estimado": 92727.28,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/17624476": {
+"actualizado": "2026-10-29T14:41:55.914+01:00",
+"cpv": [
+"85312000",
+"85311000"
+],
+"estado": "ADJ",
+"expediente": "CA-20/2022D",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/17624476",
+"motivo": "palabra «concierto»",
+"municipio": null,
+"nuts": "ES617",
+"organo": "Agencia de Servicios Sociales y Dependencia de Andalucía",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 1293893.84,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2025-07-24",
+"resultados": [
+{
+"fecha": null,
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": null,
+"importe_sin_iva": 1293893.84,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "incremento de plazas (en 21) del concierto social discapacidad para la atención residencial, centro de día y centro de dia ocupacional en la ccaa de andalucía",
+"url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=833194",
+"valor_estimado": 1293893.84,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/17931752": {
 "actualizado": "2026-10-22T13:12:35.323+02:00",
 "cpv": [
@@ -1199,10 +1238,10 @@
 "vista": "2026-10-23"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/17989423": {
-"actualizado": "2026-10-26T15:41:31.288+01:00",
+"actualizado": "2026-10-29T11:42:05.650+01:00",
 "cpv": [
-"85311100",
-"92000000"
+"92000000",
+"85311100"
 ],
 "estado": "RES",
 "expediente": "CONTR 2025 0000380887",
@@ -1728,6 +1767,85 @@
 "valor_estimado": 1700000.0,
 "vista": "2026-10-23"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/18439213": {
+"actualizado": "2026-10-29T12:11:10.310+01:00",
+"cpv": [
+"32237000",
+"32342300",
+"32236000"
+],
+"estado": "RES",
+"expediente": "109-2025",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/18439213",
+"motivo": "CPV 32342300",
+"municipio": null,
+"nuts": "ES300",
+"organo": "Canal de Isabel II, S.A.",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 5615410.42,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2025-11-20",
+"resultados": [
+{
+"fecha": null,
+"ganador": "ZENON DIGITAL RADIO, S.L.U.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 3664385.0,
+"lote": "1",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "CEOTRONICS, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 978750.0,
+"lote": "2",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ANFER RADIOCOMUNICACIONES, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 83754.65,
+"lote": "3",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 3,
+"pyme": false,
+"resultado": "formalizado"
+},
+{
+"fecha": null,
+"ganador": "ZENON DIGITAL RADIO, S.L.U.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 86657.1,
+"lote": "4",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "Suministro de terminales TETRA y accesorios para la red TETRA de emergencias de la Comunidad de Madrid",
+"url": "https://contratos-publicos.comunidad.madrid/contrato-publico/suministro-terminales-tetra-accesorios-red-tetra-emergencias-comunidad-madrid",
+"valor_estimado": 5615410.42,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/18543955": {
 "actualizado": "2026-10-15T12:57:03.135+02:00",
 "cpv": [
@@ -1922,6 +2040,48 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/04c106a8-c99c-4fb2-a012-98aea868e90d/300918208",
 "valor_estimado": 4260471.2,
 "vista": "2026-10-26"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19239792": {
+"actualizado": "2026-10-29T14:08:38.972+01:00",
+"cpv": [
+"71356200",
+"92370000",
+"71318100",
+"32342410",
+"51313000"
+],
+"estado": "ADJ",
+"expediente": "CO2026000006",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19239792",
+"motivo": "CPV 92370000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Montcada i Reixac",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 138147.89,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-03-13",
+"resultados": [
+{
+"fecha": null,
+"ganador": "MEDIA MUSIC IMPORT SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 138147.89,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 7,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Prestació del servei de lloguer d’equips de so i llum i d’assistència tècnica en la sonorització i il•luminació dels actes en espais oberts que realitzi l’Ajuntament i/o les entitats de Montcada i Reixac a les quals dona suport, d’acord amb les necessitats de cada activitat.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/5465f2b2-810d-4140-b5ea-a741c9a07196/300923477",
+"valor_estimado": 303925.36,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19261828": {
 "actualizado": "2026-10-13T10:06:43.894+02:00",
@@ -2457,6 +2617,45 @@
 "valor_estimado": 346479.44,
 "vista": "2026-10-14"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19622513": {
+"actualizado": "2026-10-29T14:03:34.285+01:00",
+"cpv": [
+"79822500",
+"79823000"
+],
+"estado": "ADJ",
+"expediente": "N774260003",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19622513",
+"motivo": "palabra «nadal»",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Barberà del Vallès",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 78040.0,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-05-05",
+"resultados": [
+{
+"fecha": null,
+"ganador": "IMPREMTA PAGÈS, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 5040.0,
+"lote": "2",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 6,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contractació dels serveis de maquetació, impressió i distribució del butlletí d'informació local BDV, el calendari de sobretaula, la postal de nadal i les corones dels Reis d’Orient de l’Ajuntament de Barberà del Vallès que, junt amb\nla seva codificació, figura a l'apartat A) del quadre de característiques annex (Annex 1).\n\nLa present actuació comprèn àmbits diferenciats que hauran de ser executats per separat, motiu pel qual es preveu que l'objecte d'aquest contracte es divideixi en els següents 4 lots:\n- Lot 1. Impressió del butlletí municipal..\n- Lot 2. Adaptació, impressió i manipulat de la postal de Nadal.\n- Lot 3. Disseny, impressió i manipulat del calendari de sobretaula.\n- Lot 4. Disseny, impressió i troquelat corones Reis d’Orient.\n\nA la licitació i execució del contracte regiran, a més de la normativa legal aplicable, el Plec de clàusules administratives particulars i el Plec de prescripcions tècniques (PPT) (Annex 2).",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/13c20ec3-5e29-47fe-921f-6738f4a6dafb/300923117",
+"valor_estimado": 132668.0,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19631224": {
 "actualizado": "2026-10-28T16:04:34.104+01:00",
 "cpv": [
@@ -2710,6 +2909,45 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/b8bbb95c-bb55-493c-96f0-b917574ec4b4/300910638",
 "valor_estimado": 400000.0,
 "vista": "2026-10-20"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19718841": {
+"actualizado": "2026-10-29T14:41:54.533+01:00",
+"cpv": [
+"85311000",
+"85312000"
+],
+"estado": "ADJ",
+"expediente": "CA-20/2022E",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19718841",
+"motivo": "palabra «concierto»",
+"municipio": null,
+"nuts": "ES61",
+"organo": "Agencia de Servicios Sociales y Dependencia de Andalucía",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 6134627.48,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-05-29",
+"resultados": [
+{
+"fecha": null,
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": null,
+"importe_sin_iva": 6134627.48,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 28,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "reestructuración y el incremento de plazas al concierto social para la prestación del servicio de atención residencial y centro de día para personas con discapacidad en situación de dependencia",
+"url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=948948",
+"valor_estimado": 6134627.48,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19718923": {
 "actualizado": "2026-10-21T16:11:33.119+02:00",
@@ -3664,7 +3902,7 @@
 "vista": "2026-10-23"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19850445": {
-"actualizado": "2026-10-14T14:42:10.066+02:00",
+"actualizado": "2026-10-29T15:41:42.955+01:00",
 "cpv": [
 "85311300"
 ],
@@ -3998,11 +4236,11 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19889821": {
-"actualizado": "2026-10-26T13:11:49.823+01:00",
+"actualizado": "2026-10-29T17:11:40.896+01:00",
 "cpv": [
 "79956000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "B077-2026-00004",
 "fuente": "PLACSP (plataformas autonómicas)",
 "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19889821",
@@ -4022,7 +4260,7 @@
 "ganador_empresa": null,
 "importe_con_iva": null,
 "importe_sin_iva": null,
-"lote": "655795",
+"lote": "657494",
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 0,
@@ -4035,12 +4273,12 @@
 "ganador_empresa": true,
 "importe_con_iva": null,
 "importe_sin_iva": 0.0,
-"lote": "655796",
+"lote": "657495",
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 },
 {
 "fecha": null,
@@ -4048,7 +4286,7 @@
 "ganador_empresa": null,
 "importe_con_iva": null,
 "importe_sin_iva": null,
-"lote": "655797",
+"lote": "657496",
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 0,
@@ -4061,12 +4299,12 @@
 "ganador_empresa": true,
 "importe_con_iva": null,
 "importe_sin_iva": 0.0,
-"lote": "655798",
+"lote": "657497",
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Suministro en régimen de alquiler de medios técnicos y auxiliares para eventos festivos de Plentzia",
@@ -4111,6 +4349,44 @@
 "url": "https://www.contratacion.euskadi.eus/webkpe00-kpeperfi/es/contenidos/anuncio_contratacion/expjaso721259/es_doc/index.html",
 "valor_estimado": 321754.85,
 "vista": "2026-10-19"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19904334": {
+"actualizado": "2026-10-29T16:04:40.848+01:00",
+"cpv": [
+"79952000"
+],
+"estado": "ADJ",
+"expediente": "CP-2026-09",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19904334",
+"motivo": "CPV 79952000",
+"municipio": null,
+"nuts": "ES51",
+"organo": "Institut Català d'Oncologia (ICO)",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 99000.0,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-06-19",
+"resultados": [
+{
+"fecha": null,
+"ganador": "BOTH PEOPLE & COMMS, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 90000.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 11,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Serveis de conceptualització, disseny, producció i coordinació de l’acte “Celebració ICO 30 anys\".",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/bfeb74e0-f740-48d8-944e-d10318f2ab19/300923820",
+"valor_estimado": 99000.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19914392": {
 "actualizado": "2026-10-14T12:08:45.189+02:00",
@@ -4163,6 +4439,44 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/067d6008-56b8-4e81-a884-c85fc6425089/300907821",
 "valor_estimado": 241500.0,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19921537": {
+"actualizado": "2026-10-29T10:04:42.784+01:00",
+"cpv": [
+"79950000"
+],
+"estado": "ADJ",
+"expediente": "2026-CONSE-RE-03",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19921537",
+"motivo": "CPV 79950000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Santa Coloma de Gramenet",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 104000.0,
+"procedimiento": "Restringido",
+"provincia": null,
+"publicada": "2026-10-01",
+"resultados": [
+{
+"fecha": null,
+"ganador": "DESARROLLOS ARTÍSTICOS SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 0.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servei d’organització, realització, coordinació i gestió del Mercat Medieval de Santa Coloma de Gramenet, en les dates, lloc, condicions i amb l’abast determinats en el plec de prescripcions tècniques. La gestió del servei es durà a terme mitjançant una concessió de serveis, d’acord ambl’article 15 de la Llei9/2017, de 8 de novembre, de Contractes del Sector públic (LCSP) que comportarà la transferència al concessionari del risc operacional, incloent el risc de demanda, i el risc de no recuperació de les inversions realitzades, si n’hi haguessin. Complementàriament és objecte del contracte la promoció del medi ambient i la igualtat de gènere.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/57fca88c-87a7-4933-9f7b-425aefedc9b5/300922655",
+"valor_estimado": 104000.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19921573": {
 "actualizado": "2026-10-26T11:11:49.473+01:00",
@@ -4355,6 +4669,70 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/b67467d2-bdf4-4fd7-a77a-cf59481f1a1a/300921549",
 "valor_estimado": 191969.22,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19935309": {
+"actualizado": "2026-10-29T12:05:09.514+01:00",
+"cpv": [
+"34991000"
+],
+"estado": "RES",
+"expediente": "1291/2026",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19935309",
+"motivo": "palabra «navidad»",
+"municipio": null,
+"nuts": "ES514",
+"organo": "Ajuntament de la Pobla de Mafumet",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 1487117.55,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-06-25",
+"resultados": [
+{
+"fecha": null,
+"ganador": "XIMENEZ NORESTE, S.L",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 251840.0,
+"lote": "1",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+},
+{
+"fecha": null,
+"ganador": "XIMENEZ NORESTE, S.L",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 802040.0,
+"lote": "2",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+},
+{
+"fecha": null,
+"ganador": "XIMENEZ NORESTE, S.L",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 388600.0,
+"lote": "3",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Es objeto del presente contrato el suministro de ornamentación luminosa en Navidad de los años 2026 a 2030, en régimen de alquiler sin opción de compra, por diversos espacios y equipamientos públicos, incluidos todos los elementos luminosos, materiales, traslado de éstos a La Pobla de Mafumet y su instalación en los términos y requisitos contenidos en el Pliego de prendaciones técnicas para 2026-2030 (en adelante, PPT).",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/5df1870e-5277-4144-bdb2-7d98a93494c3/300922935",
+"valor_estimado": 1487117.55,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19942652": {
 "actualizado": "2026-10-13T14:06:49.677+02:00",
@@ -4739,12 +5117,51 @@
 "valor_estimado": 226600.0,
 "vista": "2026-10-19"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19976060": {
+"actualizado": "2026-10-29T15:11:20.663+01:00",
+"cpv": [
+"31527200",
+"31527260"
+],
+"estado": "RES",
+"expediente": "PcPG/2026/828523",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19976060",
+"motivo": "palabra «nadal»",
+"municipio": null,
+"nuts": "ES111",
+"organo": "Concello de Ribeira",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 228484.29,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-07-02",
+"resultados": [
+{
+"fecha": null,
+"ganador": "ILUMINACIONES SANTIAGUESAS SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 217800.0,
+"lote": "0",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "Suministro para la iluminación decorativa de Nadal 2 anualidades: 2026/2027 y 2027/2028",
+"url": "https://www.contratosdegalicia.gal/licitacion?N=828523",
+"valor_estimado": 755320.0,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19976089": {
-"actualizado": "2026-10-28T14:03:16.612+01:00",
+"actualizado": "2026-10-29T10:08:15.786+01:00",
 "cpv": [
 "44200000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "SUB_OBE_2026_0010",
 "fuente": "PLACSP (plataformas autonómicas)",
 "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/19976089",
@@ -4795,7 +5212,7 @@
 "oferta_minima": null,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 },
 {
 "fecha": null,
@@ -4812,7 +5229,7 @@
 }
 ],
 "titulo": "L’objecte del contracte és el subministrament (mitjançant lloguer) dels escenaris i altres infraestructures necessàries per dur a terme les activitats organitzades per la regidoria de Festes de l’Ajuntament de Lleida amb motiu de les Festes de la Tardor de 2026 (que tenen lloc al mes de setembre), i la Festa Major de 2027 (que té lloc al mes de maig).",
-"url": "https://contractaciopublica.cat/ca/detall-publicacio/43c1d2bc-43ce-4d91-8165-37d08736b919/300921905",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/43c1d2bc-43ce-4d91-8165-37d08736b919/300922889",
 "valor_estimado": 214240.0,
 "vista": "2026-10-26"
 },
@@ -5174,6 +5591,45 @@
 "url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=980082",
 "valor_estimado": 74127.75,
 "vista": "2026-10-14"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20081517": {
+"actualizado": "2026-10-29T10:04:16.326+01:00",
+"cpv": [
+"31527200",
+"31522000"
+],
+"estado": "RES",
+"expediente": "CON.EXP 2026000059",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20081517",
+"motivo": "palabra «nadal»",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Manresa",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 285470.45,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-07-17",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Icnolux Noreste, SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 280446.71,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "L’objecte del contracte és el subministrament, mitjançant lloguer sense opció de compra, la instal·lació, el manteniment i el desmuntatge de l’enllumenat decoratiu de Nadal de Manresa per la campanya de Nadal del 2026/2027 i 2027/2028 en les ubicacions recollides al punt 3 del Plec de Prescripcions Tècniques. El contractista haurà de dur a terme totes aquelles actuacions complementaries que siguin necessàries per al correcte desenvolupament i compliment de l’objecte del contracte, d’acord amb aquest plec i amb el Plec de Prescripcions Tècniques. L'objecte es troba regulat al Plec de Prescripcions Tècniques i a la clàusula 1a del Plec de Clàusules Administratives.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/bf8dfd29-069f-463f-b82b-32fe6df096cb/300922618",
+"valor_estimado": 645732.65,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20081577": {
 "actualizado": "2026-10-19T13:11:47.113+02:00",
@@ -5599,6 +6055,152 @@
 "valor_estimado": 111074.38,
 "vista": "2026-10-26"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20122971": {
+"actualizado": "2026-10-29T16:03:12.775+01:00",
+"cpv": [
+"45422100",
+"48952000",
+"35111300",
+"31300000",
+"39154100",
+"45255400",
+"71318100",
+"51100000",
+"39150000",
+"44411000",
+"45421144",
+"39522120",
+"39522100",
+"45223800",
+"35111320",
+"51313000",
+"31200000",
+"31500000"
+],
+"estado": "ADJ",
+"expediente": "49/2026/eCONT",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20122971",
+"motivo": "CPV 51313000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Vilanova i la Geltrú",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 183306.68,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-07-24",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Envelats Elias, SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 30166.0,
+"lote": "1",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+},
+{
+"fecha": null,
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": "2",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "desierto"
+},
+{
+"fecha": null,
+"ganador": "Carpes Egara",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 7590.0,
+"lote": "3",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+},
+{
+"fecha": null,
+"ganador": "SERRADORA CAMPAMÀ, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 4510.0,
+"lote": "4",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+},
+{
+"fecha": null,
+"ganador": "INFRALECT,S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 55240.4,
+"lote": "5",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+},
+{
+"fecha": null,
+"ganador": "XLR SOUND SOLUTIONS SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 18850.0,
+"lote": "6",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "adjudicado"
+},
+{
+"fecha": null,
+"ganador": "SICO FIRE, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 1157.0,
+"lote": "7",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+},
+{
+"fecha": null,
+"ganador": "oh desaigues",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 2233.32,
+"lote": "8",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contratación, por parte del Ayuntamiento de Vilanova i la Geltrú, de los suministros, montaje, desmontaje y, si procede, mantenimiento de varias infraestructuras con sus servicios asociados, necesarios para el desarrollo y celebración de la Fira de Novembre",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/fd4730d5-04a3-4c97-8a48-305e978ac7cf/300923624",
+"valor_estimado": 733226.72,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20126861": {
 "actualizado": "2026-10-28T15:11:42.860+01:00",
 "cpv": [
@@ -5636,6 +6238,44 @@
 "url": "https://www.contratacion.euskadi.eus/webkpe00-kpeperfi/es/contenidos/anuncio_contratacion/expjaso732062/es_doc/index.html",
 "valor_estimado": 354159.42,
 "vista": "2026-10-29"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132210": {
+"actualizado": "2026-10-29T18:02:24.092+01:00",
+"cpv": [
+"31527200"
+],
+"estado": "ADJ",
+"expediente": "X2026001845",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132210",
+"motivo": "palabra «nadalenc»",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Palafolls",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 20661.16,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-07-22",
+"resultados": [
+{
+"fecha": null,
+"ganador": "XIMENEZ NORESTE, S.L",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 19628.1,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contractació del subministrament, en modalitat de lloguer, de l’enllumenat ornamental nadalenc del municipi de Palafolls, de conformitat amb allò establert al Plec de clàusules administratives particulars i les especificacions tècniques determinades al Plec de prescripcions tècniques particulars que l’acompanya.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/686ef76b-22b0-4130-a29e-84a917c8c27c/300923914",
+"valor_estimado": 99173.56,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132304": {
 "actualizado": "2026-10-28T10:03:29.537+01:00",
@@ -5714,6 +6354,44 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/2fb5e503-0daf-422f-b702-ef37446bc1e0/300905885",
 "valor_estimado": 68850.0,
 "vista": "2026-10-14"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132415": {
+"actualizado": "2026-10-29T16:03:49.536+01:00",
+"cpv": [
+"79952100"
+],
+"estado": "ADJ",
+"expediente": "001_26002703",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132415",
+"motivo": "CPV 79952100",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Barcelona",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 45486.0,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-07-22",
+"resultados": [
+{
+"fecha": null,
+"ganador": "SHAKESPEARE & FRIENDS SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 37568.59,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "la coordinació, la producció i l'assistència tècnica dels actes de calendari festiu del districte de les Corts, amb mesures socials de contractació pública sostenible",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/195315a9-edab-4838-9806-3e7039acc8dc/300923744",
+"valor_estimado": 136458.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132435": {
 "actualizado": "2026-10-26T12:02:21.195+01:00",
@@ -5829,6 +6507,44 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/5f5af65e-dc29-4772-8523-28d4706dd72d/300918861",
 "valor_estimado": 453420.0,
 "vista": "2026-10-27"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132722": {
+"actualizado": "2026-10-29T18:01:34.455+01:00",
+"cpv": [
+"79710000"
+],
+"estado": "RES",
+"expediente": "006_26001612",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132722",
+"motivo": "palabra «festes de»",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Institut de Cultura de Barcelona",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 78136.39,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-07-15",
+"resultados": [
+{
+"fecha": null,
+"ganador": "BMS ELIT SEGUR, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 77057.6,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "Servei de vigilància i seguretat, sense arma per als Actes Tradicionals les Festes de la Mercè de Barcelona 2026 organitzades per l'Institut de Cultura de Barcelona (ICUB), del 10 de setembre de 2026 fins al 9 d'octubre de 2026.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/38c1ce99-4283-4856-9913-57e5920f9ad5/300923605",
+"valor_estimado": 85950.03,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20132725": {
 "actualizado": "2026-10-15T16:05:12.917+02:00",
@@ -6254,6 +6970,44 @@
 "valor_estimado": 405000.0,
 "vista": "2026-10-16"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20133234": {
+"actualizado": "2026-10-29T16:04:25.298+01:00",
+"cpv": [
+"79710000"
+],
+"estado": "RES",
+"expediente": "006_26001610",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20133234",
+"motivo": "palabra «festes de»",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Institut de Cultura de Barcelona",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 79972.0,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-07-13",
+"resultados": [
+{
+"fecha": null,
+"ganador": "BMS ELIT SEGUR, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 78898.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "Servei de vigilància i seguretat, sense arma per als actes d'Arts de Carrer de les Festes de la Mercè de Barcelona 2026 organitzades per l'Institut de Cultura de Barcelona (ICUB), del 10 de setembre de 2026 fins al 9 d'octubre de 2026.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/8b6efb9d-44b7-431f-ba30-ecda6b796f74/300923592",
+"valor_estimado": 87969.2,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20133319": {
 "actualizado": "2026-10-26T14:06:08.748+01:00",
 "cpv": [
@@ -6416,6 +7170,101 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/b57f6fec-985b-4ec6-8cd1-53140b76c121/300908933",
 "valor_estimado": 224971.2,
 "vista": "2026-10-16"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20133622": {
+"actualizado": "2026-10-29T20:01:10.263+01:00",
+"cpv": [
+"79970000",
+"79822000",
+"92312211",
+"79800000",
+"92400000"
+],
+"estado": "ADJ",
+"expediente": "CONT-000009-2025",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20133622",
+"motivo": "CPV 92312211",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Gelida",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 22000.0,
+"procedimiento": "Otros",
+"provincia": null,
+"publicada": "2026-05-12",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Estudi de Comunicació Intus S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 5600.0,
+"lote": "1",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 6,
+"pyme": false,
+"resultado": "adjudicado"
+},
+{
+"fecha": null,
+"ganador": "Impremta Pagès, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 7812.0,
+"lote": "2",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 6,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "L’objecte d’aquesta licitació és la prestació del serveis de redacció,\ndisseny, maquetació i impressió del butlletí oficial de l’Ajuntament de Gelida.\nL’Ajuntament no disposa de cap contracte en vigor pel que fa al subministrament i servei\nde redacció, disseny, maquetació i impressió del butlletí oficial. Així és voluntat de\nl’Ajuntament regularitzar la contractació de dit servei, tot millorant l’eficiència i la qualitat\nd’aquest, amb la licitació d’un contracte per tal de potenciar i adaptar els serveis de de\nredacció, disseny, maquetació i impressió del butlletí municipal a les necessitats actuals\ndel municipi.\nEls treballs a realitzar queden detallats en el plec de prescripcions tècniques (PPTP), i\ns’afegiran les que hagi ofert l’adjudicatari a la seva proposta de licitació, sempre d’acord\namb la legislació que sigui d’aplicació. En el mencionat PPTP s’hi exposen, també, les\ncondicions i les especificacions de les principals prestacions a realitzar.\nEl present contracte es pot qualificar de contracte administratiu mixt de serveis i\nsubministrament, d'acord amb la definició de l’article 18 i 25.1 de la Llei 9/2017, de 8 de\nnovembre, de Contractes del Sector Públic, per la que es transposen a l’ordenament\njurídic espanyol les Directives del Parlament Europeu i del Consell 2014/23/UE i\n2014/24/UE, de 26 de febrer de 2014 (en endavant LCSP).\nL’expedient de contractació serà objecte de tramitació ordinària, de conformitat amb els\narticles 116 i 117 de la LCSP.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/c6b16531-67f0-4fd6-bdd0-c40039cb1e0e/300899344",
+"valor_estimado": 48400.0,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20133686": {
+"actualizado": "2026-10-29T12:03:42.867+01:00",
+"cpv": [
+"31520000",
+"71318100",
+"31527200"
+],
+"estado": "ADJ",
+"expediente": "2026_742",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20133686",
+"motivo": "palabra «nadal»",
+"municipio": null,
+"nuts": "ES51",
+"organo": "Ajuntament d'Avinyonet del Penedès",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 61000.0,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-07-22",
+"resultados": [
+{
+"fecha": null,
+"ganador": "XIMENEZ NORESTE, S.L",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 59780.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 3,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "És el contracte mixt de subministrament de llums de nadal i la seva instal·lació i posada en funcionament.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/f083a0e1-6f65-4d11-bd65-31db9fcb0632/300922663",
+"valor_estimado": 91500.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20147487": {
 "actualizado": "2026-10-15T12:05:26.494+02:00",
@@ -6908,6 +7757,46 @@
 "valor_estimado": 55829.33,
 "vista": "2026-10-20"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20251746": {
+"actualizado": "2026-10-29T16:04:22.750+01:00",
+"cpv": [
+"45316100",
+"50232000",
+"31527260"
+],
+"estado": "ADJ",
+"expediente": "6303/2026",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20251746",
+"motivo": "palabra «nadalenc»",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Ajuntament de Pineda de Mar",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 155820.0,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-08-04",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Group Innion Lighting s.l.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 155800.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "L’objecte del contracte és l’arrendament de l’enllumenat nadalenc i de la decoració nadalenca, a la via pública, campanya 2026-2027. Inclou el subministrament, el muntatge i desmuntatge i el suport tècnic.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/8393921a-d78e-4ef3-b4a6-846c85219156/300911138",
+"valor_estimado": 560952.0,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20257503": {
 "actualizado": "2026-10-19T12:05:53.066+02:00",
 "cpv": [
@@ -7270,6 +8159,47 @@
 "valor_estimado": 249614.2,
 "vista": "2026-10-26"
 },
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20272266": {
+"actualizado": "2026-10-29T14:03:40.436+01:00",
+"cpv": [
+"18530000",
+"79960000",
+"92111200",
+"92331100"
+],
+"estado": "RES",
+"expediente": "064-26",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20272266",
+"motivo": "CPV 92331100",
+"municipio": null,
+"nuts": "ES300",
+"organo": "Reactivació Badalona, SA.",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 215950.0,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-08-07",
+"resultados": [
+{
+"fecha": null,
+"ganador": "TANDEM PROJECTS, SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 215950.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "Disseny, producció, construcció, muntatge, manteniment, desmuntatge, producció dels continguts audiovisuals, comunicació i programa d’activitats de l’estand firal de Badalona a la fira internacional de Turisme” que se celebra a Madrid per a l’edició de 2027.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/0027bb49-f82b-482f-9d5a-8fb335e24d57/300923131",
+"valor_estimado": 215950.0,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20279058": {
 "actualizado": "2026-10-22T15:12:06.596+02:00",
 "cpv": [
@@ -7602,6 +8532,44 @@
 "url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=983126",
 "valor_estimado": 28100.99,
 "vista": "2026-10-28"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20313591": {
+"actualizado": "2026-10-29T14:07:21.672+01:00",
+"cpv": [
+"79952000"
+],
+"estado": "RES",
+"expediente": "006_26002040",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20313591",
+"motivo": "CPV 79952000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Institut de Cultura de Barcelona",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 88231.81,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-08-18",
+"resultados": [
+{
+"fecha": null,
+"ganador": "IN OUT CTRL SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 74116.73,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 4,
+"pyme": false,
+"resultado": "formalizado"
+}
+],
+"titulo": "Servei d'auxiliars per al suport operatiu i l'atenció dels espais inclosos en la programació de les Festes de la Mercè 2026.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/eea267cd-d7b2-4a19-855d-e39750256dc2/300921173",
+"valor_estimado": 88231.81,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20313635": {
 "actualizado": "2026-10-13T09:11:13.866+02:00",
@@ -8810,11 +9778,11 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20529209": {
-"actualizado": "2026-10-26T12:06:17.326+01:00",
+"actualizado": "2026-10-29T12:07:24.034+01:00",
 "cpv": [
 "92312100"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "077_26000017",
 "fuente": "PLACSP (plataformas autonómicas)",
 "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20529209",
@@ -8839,11 +9807,11 @@
 "oferta_minima": null,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "L'objecte del contracte és l'exhibició de diversos espectacles del festival SÂLMON 2026, en el marc de la temporada 26-27 del Mercat de les Flors.",
-"url": "https://contractaciopublica.cat/ca/detall-publicacio/0f5a9114-8477-494e-b32a-9c95ef761a16/300918866",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/0f5a9114-8477-494e-b32a-9c95ef761a16/300922979",
 "valor_estimado": 22000.0,
 "vista": "2026-10-27"
 },
@@ -9115,6 +10083,44 @@
 "url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=1008186",
 "valor_estimado": 35086.3,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558337": {
+"actualizado": "2026-10-29T13:12:02.448+01:00",
+"cpv": [
+"34991000"
+],
+"estado": "ADJ",
+"expediente": "066/26",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558337",
+"motivo": "palabra «navidad»",
+"municipio": null,
+"nuts": "ES212",
+"organo": "Sociedad Fomento de San Sebastián, S.A.-Presidente",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 80621.05,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-09-24",
+"resultados": [
+{
+"fecha": null,
+"ganador": "TEUSA TÉCNICAS DE RESTAURACIÓN, S.A.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 73030.87,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contratación de los servicios de instalación, montaje, mantenimiento y desmontaje de elementos de iluminación, propiedad de Fomento de San Sebastián en el exterior del emblemático edificio Hotel María Cristina para la Campaña de Navidad 2026-2027",
+"url": "https://www.contratacion.euskadi.eus/webkpe00-kpeperfi/es/contenidos/anuncio_contratacion/expjaso743771/es_doc/index.html",
+"valor_estimado": 80621.05,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20558385": {
 "actualizado": "2026-10-27T12:41:20.873+01:00",
@@ -9583,6 +10589,45 @@
 "url": "https://www.contratacion.euskadi.eus/webkpe00-kpeperfi/es/contenidos/anuncio_contratacion/expjaso744577/es_doc/index.html",
 "valor_estimado": 33000.0,
 "vista": "2026-10-27"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20615497": {
+"actualizado": "2026-10-29T18:41:23.236+01:00",
+"cpv": [
+"79950000",
+"79952000"
+],
+"estado": "ADJ",
+"expediente": "CONTR 2026 0000283539",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20615497",
+"motivo": "CPV 79950000",
+"municipio": null,
+"nuts": "ES611",
+"organo": "Consejería de Desarrollo Educativo y Formación Profesional. Secretaría General Técnica (En Transición)",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 59833.2,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-10-02",
+"resultados": [
+{
+"fecha": null,
+"ganador": "MICROLIBRE PRODUCCIONES SL",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 53191.71,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 6,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "planificación, organización y desarrollo iv jornadas proa+",
+"url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=1013601",
+"valor_estimado": 59833.2,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20626009": {
 "actualizado": "2026-10-26T15:12:08.444+01:00",
@@ -10077,6 +11122,44 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/2364ad08-698d-452a-b658-63e365b6b7ec/300907948",
 "valor_estimado": 60000.0,
 "vista": "2026-10-14"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20669643": {
+"actualizado": "2026-10-29T14:04:24.498+01:00",
+"cpv": [
+"44400000"
+],
+"estado": "ADJ",
+"expediente": "TNC-2026-145",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20669643",
+"motivo": "palabra «espectacle»",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Teatre Nacional de Catalunya, SA (TNC)",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 24600.0,
+"procedimiento": "Otros",
+"provincia": null,
+"publicada": "2026-10-09",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Taller d'escenografia Castells, sl",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 24600.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contractació del subministrament d’un terra per a l’espectacle “L’Hostal de les tres camèlies” del Teatre Nacional de Catalunya, SA",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/30d27f06-8f1d-4092-9eb5-53331986b850/300923259",
+"valor_estimado": 24600.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20673710": {
 "actualizado": "2026-10-21T18:04:10.251+02:00",
@@ -13176,11 +14259,11 @@
 "vista": "2026-10-28"
 },
 "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20792084": {
-"actualizado": "2026-10-27T20:00:46.139+01:00",
+"actualizado": "2026-10-29T18:01:45.957+01:00",
 "cpv": [
 "92311000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "CU-2026-1847",
 "fuente": "PLACSP (plataformas autonómicas)",
 "id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20792084",
@@ -13205,11 +14288,11 @@
 "oferta_minima": null,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Adquisició de quatre obres de l'artista Carles Mensa datades entre 1960 i 1980",
-"url": "https://contractaciopublica.cat/ca/detall-publicacio/0449fc87-17db-44e0-9b84-bd9e6cacc83a/300921096",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/0449fc87-17db-44e0-9b84-bd9e6cacc83a/300923682",
 "valor_estimado": 43000.0,
 "vista": "2026-10-28"
 },
@@ -13821,6 +14904,312 @@
 "url": "https://contractaciopublica.cat/ca/detall-publicacio/ab0b64e4-b1f1-4741-928f-cd3552ccfcf4/300921180",
 "valor_estimado": 40000.0,
 "vista": "2026-10-29"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20805492": {
+"actualizado": "2026-10-30T02:00:01.460+01:00",
+"cpv": [
+"92311000"
+],
+"estado": "ADJ",
+"expediente": "CU-2026-1852",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20805492",
+"motivo": "CPV 92311000",
+"municipio": null,
+"nuts": "ES51",
+"organo": "Departament de Cultura",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 23500.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-30",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Agrícola Rovira Carbonell, SLU (Galeria PALMADOTZE)",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 23500.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Adquisició de l'obra \"El bosc (Three hands)\", 2025, de l'artista Susanna Inglada, per formar part de la Col·lecció Nacional d'Art Contemporani",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/718513f7-5813-45cf-a5fe-2446696db950/300923957",
+"valor_estimado": 23500.0,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20805494": {
+"actualizado": "2026-10-29T22:00:32.212+01:00",
+"cpv": [
+"92311000"
+],
+"estado": "ADJ",
+"expediente": "CU-2026-1921",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20805494",
+"motivo": "CPV 92311000",
+"municipio": null,
+"nuts": "ES51",
+"organo": "Departament de Cultura",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 27720.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": null,
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": null,
+"importe_sin_iva": 27720.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Adquisició de les obres \"Las muertes chiquitas\" de l'artista Mireia Sallarès, per integrar-les a la Col·lecció Nacional d'Art Contemporani",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/72103203-189f-481c-9fbb-68997d115b4a/300923949",
+"valor_estimado": 27720.0,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20805495": {
+"actualizado": "2026-10-29T22:00:29.713+01:00",
+"cpv": [
+"92312240"
+],
+"estado": "ADJ",
+"expediente": "ICEC-2026-1102",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20805495",
+"motivo": "CPV 92312240",
+"municipio": null,
+"nuts": "ES51",
+"organo": "Institut Català de les Empreses Culturals",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 15840.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-26",
+"resultados": [
+{
+"fecha": null,
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": null,
+"importe_sin_iva": 15840.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contractació dels serveis de la Sra. Mariona Mas Abad per crear, dissenyar i produir continguts audiovisuals destinats al Tiktok de la Generalitat de Catalunya i a les xarxes socials de Cultura Jove.",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/ba1ef9de-2400-4cd7-b132-b7e60866bd26/300923945",
+"valor_estimado": 15840.0,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20810355": {
+"actualizado": "2026-10-29T14:09:42.932+01:00",
+"cpv": [
+"92312000"
+],
+"estado": "ADJ",
+"expediente": "TNC-2026-129",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20810355",
+"motivo": "CPV 92312000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Teatre Nacional de Catalunya, SA (TNC)",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 153917.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-09",
+"resultados": [
+{
+"fecha": null,
+"ganador": "Associació Teatres en Xarxa de Catalunya",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 153917.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contractació de la coproducció de l'espectacle \"La ràbia\"",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/b7879f4f-cc51-4370-9e72-7f9825fa965d/300923621",
+"valor_estimado": 153917.0,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20810356": {
+"actualizado": "2026-10-29T14:08:57.561+01:00",
+"cpv": [
+"92312000"
+],
+"estado": "ADJ",
+"expediente": "TNC-2026-143",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20810356",
+"motivo": "CPV 92312000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Teatre Nacional de Catalunya, SA (TNC)",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 25718.44,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-23",
+"resultados": [
+{
+"fecha": null,
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": null,
+"importe_sin_iva": 25718.44,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contractació de la coproducció de l'espectacle \"L'escletxa\"",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/b0a89f0e-53b3-4950-8904-aa506df5976b/300923527",
+"valor_estimado": 25718.44,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20810380": {
+"actualizado": "2026-10-29T13:42:14.554+01:00",
+"cpv": [
+"92000000"
+],
+"estado": "ADJ",
+"expediente": "CONTR 2026 0000360677",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20810380",
+"motivo": "CPV 92000000",
+"municipio": null,
+"nuts": "ES617",
+"organo": "Agencia Andaluza de Instituciones Culturales",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 62719.84,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": null,
+"ganador": "META PRODUCCIONES ESCENICAS, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 62719.84,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Representación pública espectáculos_T. Cánovas, Central y Alhambra",
+"url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=1035348",
+"valor_estimado": 62719.84,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20810437": {
+"actualizado": "2026-10-29T10:41:56.670+01:00",
+"cpv": [
+"92312000",
+"92310000",
+"92000000"
+],
+"estado": "ADJ",
+"expediente": "CONTR 2026 0000355934",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20810437",
+"motivo": "CPV 92312000",
+"municipio": null,
+"nuts": "ES618",
+"organo": "Agencia Andaluza de Instituciones Culturales",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 33300.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": null,
+"ganador": "CALLE CRUZADA, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 33300.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "rp personas, lugares y cosas.teatro central. 20 y 21 noviembre",
+"url": "https://www.juntadeandalucia.es/haciendayadministracionpublica/apl/pdc_sirec/perfiles-licitaciones/detalle-licitacion.jsf?idExpediente=1035298",
+"valor_estimado": 33300.0,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20810444": {
+"actualizado": "2026-10-29T10:06:18.540+01:00",
+"cpv": [
+"51314000"
+],
+"estado": "ADJ",
+"expediente": "2026AO0097AC",
+"fuente": "PLACSP (plataformas autonómicas)",
+"id": "https://contrataciondelestado.es/sindicacion/PlataformasAgregadasSinMenores/20810444",
+"motivo": "CPV 51314000",
+"municipio": null,
+"nuts": "ES511",
+"organo": "Barcelona de Serveis Municipals SA",
+"presupuesto_con_iva": null,
+"presupuesto_sin_iva": 28800.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": null,
+"ganador": "SOCIEDAD ESPAÑOLA DE FUTBOL PROFESIONAL, S.A.U,",
+"ganador_empresa": true,
+"importe_con_iva": null,
+"importe_sin_iva": 28800.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servei de visualització i control de càmeres de la UCO propietat de La Liga a l’Estadi Olímpic Lluís Companys a l’Anella Olímpica",
+"url": "https://contractaciopublica.cat/ca/detall-publicacio/c5768f5a-d638-4dc7-81f2-97bd392c65af/300922749",
+"valor_estimado": 28800.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/10441570": {
 "actualizado": "2026-10-28T14:24:12.410+01:00",
@@ -14900,7 +16289,7 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/14295929": {
-"actualizado": "2026-10-27T11:45:50.871+01:00",
+"actualizado": "2026-10-21T11:46:15.685+02:00",
 "cpv": [
 "92000000"
 ],
@@ -15143,6 +16532,45 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=W53lxqntwlWOUi78BmzhOQ%3D%3D",
 "valor_estimado": 334540.0,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/14588871": {
+"actualizado": "2026-10-29T13:56:16.187+01:00",
+"cpv": [
+"24613200",
+"92360000"
+],
+"estado": "RES",
+"expediente": "0969/2024",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/14588871",
+"motivo": "CPV 92360000",
+"municipio": "Lora del Río",
+"nuts": "ES618",
+"organo": "Alcaldía del Ayuntamiento de Lora del Río",
+"presupuesto_con_iva": 8800.0,
+"presupuesto_sin_iva": 7272.73,
+"procedimiento": "Abierto simplificado",
+"provincia": "Sevilla",
+"publicada": "2024-03-20",
+"resultados": [
+{
+"fecha": "2024-04-30",
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": 8772.8,
+"importe_sin_iva": 7250.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "El objeto del contrato es el suministro en suministro del material necesario y el disparo para los espectáculos de los Fuegos Artificiales para La Feria de Lora del del Río y las Fiestas de El Priorato, Setefilla y El Veredón del Acebuchal de 2024, en los términos establecidos en el Pliego de Prescripciones Técnicas para el Ayuntamiento de Lora del Río.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2BxiZIQOCW7bzAq95uGTrDQ%3D%3D",
+"valor_estimado": 34909.1,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/14725850": {
 "actualizado": "2026-10-07T09:41:49.837+02:00",
@@ -16240,6 +17668,59 @@
 "valor_estimado": 65200.0,
 "vista": "2026-10-29"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/16017006": {
+"actualizado": "2026-10-29T12:58:51.904+01:00",
+"cpv": [
+"79954000",
+"45223800",
+"44212320"
+],
+"estado": "RES",
+"expediente": "02.07.01.01 2024/78-SS_REYES",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/16017006",
+"motivo": "CPV 79954000",
+"municipio": "San Sebastián de los Reyes",
+"nuts": "ES300",
+"organo": "Junta de Gobierno del Ayuntamiento de San Sebastián de los Reyes",
+"presupuesto_con_iva": 340808.52,
+"presupuesto_sin_iva": 281659.93,
+"procedimiento": "Abierto",
+"provincia": "Madrid",
+"publicada": "2024-11-05",
+"resultados": [
+{
+"fecha": "2025-01-07",
+"ganador": "NEW SAMPER SL",
+"ganador_empresa": true,
+"importe_con_iva": 279034.54,
+"importe_sin_iva": 230607.06,
+"lote": "1",
+"oferta_maxima": 230607.06,
+"oferta_minima": 230607.06,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+},
+{
+"fecha": "2025-01-07",
+"ganador": "NEW SAMPER SL",
+"ganador_empresa": true,
+"importe_con_iva": 58365.86,
+"importe_sin_iva": 48236.25,
+"lote": "2",
+"oferta_maxima": 48236.25,
+"oferta_minima": 48236.25,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Servicio de transporte, montaje, mantenimiento, cierre, apertura, desmontaje, transporte y almacenamiento del vallado del encierro de propiedad municipal, así como el alquiler, montaje, movimiento, desmontaje, control de accesos y limpieza de gradas para el público en el recorrido del mismo; y prestación de servicios auxiliares.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=2H68HYejZNNt5r0ngvMetA%3D%3D",
+"valor_estimado": 422489.89,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/16085273": {
 "actualizado": "2026-10-20T08:58:59.385+02:00",
 "cpv": [
@@ -17306,7 +18787,7 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17557012": {
-"actualizado": "2026-10-26T08:18:21.716+01:00",
+"actualizado": "2026-10-16T13:50:00.724+02:00",
 "cpv": [
 "92521000"
 ],
@@ -17426,7 +18907,7 @@
 "oferta_minima": null,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 },
 {
 "fecha": "2025-11-17",
@@ -17484,6 +18965,49 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=43KMQC27k%2Be9Hd5zqvq9cg%3D%3D",
 "valor_estimado": 173575.83,
 "vista": "2026-10-20"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17620994": {
+"actualizado": "2026-10-29T14:04:07.707+01:00",
+"cpv": [
+"34991000",
+"50232100",
+"45310000",
+"39298900",
+"45316000",
+"31527260"
+],
+"estado": "RES",
+"expediente": "SG/CON/SUM/10/2025",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17620994",
+"motivo": "palabra «navideno»",
+"municipio": "Baeza",
+"nuts": "ES616",
+"organo": "Alcaldía del Ayuntamiento de Baeza",
+"presupuesto_con_iva": 85000.0,
+"presupuesto_sin_iva": 70247.94,
+"procedimiento": "Abierto",
+"provincia": "Jaén",
+"publicada": "2025-07-07",
+"resultados": [
+{
+"fecha": "2025-09-25",
+"ganador": "COPYXSA ELECTRICIDAD, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 84337.0,
+"importe_sin_iva": 69700.0,
+"lote": null,
+"oferta_maxima": 69700.0,
+"oferta_minima": 69700.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Contrato de mixto de arrendamiento y servicios de alumbrado extraordinario con motivo de las ferias, fiestas de barrios y navideño para el municipio de Baeza y sus anejos",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=C6zyaoVbEwnI8aL3PRS10Q%3D%3D",
+"valor_estimado": 154545.47,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17672296": {
 "actualizado": "2026-09-29T15:35:08.385+02:00",
@@ -17578,7 +19102,7 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17716535": {
-"actualizado": "2026-10-26T08:58:28.183+01:00",
+"actualizado": "2026-10-19T09:19:48.682+02:00",
 "cpv": [
 "31527260",
 "50232100",
@@ -17848,6 +19372,44 @@
 "valor_estimado": 24386.8,
 "vista": "2026-10-14"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17828028": {
+"actualizado": "2026-10-29T12:32:21.378+01:00",
+"cpv": [
+"92312000"
+],
+"estado": "RES",
+"expediente": "83/25",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17828028",
+"motivo": "CPV 92312000",
+"municipio": "Málaga",
+"nuts": "ES617",
+"organo": "Junta de Gobierno del Ayuntamiento de Málaga",
+"presupuesto_con_iva": 545237.52,
+"presupuesto_sin_iva": 450609.52,
+"procedimiento": "Abierto",
+"provincia": "Málaga",
+"publicada": "2025-08-10",
+"resultados": [
+{
+"fecha": "2025-11-03",
+"ganador": "MUNDO MANAGEMENT SA",
+"ganador_empresa": true,
+"importe_con_iva": 539239.91,
+"importe_sin_iva": 445652.82,
+"lote": null,
+"oferta_maxima": 445652.82,
+"oferta_minima": 445652.82,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicio de contratación de agencia de espectáculos para el desarrollo de las distintas actividades artísticas con motivo de la Cabalgata de Reyes 2026.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=2tXlmYuQXRY7u6%2B%2FR7DUoA%3D%3D",
+"valor_estimado": 1622194.27,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17834754": {
 "actualizado": "2026-10-07T14:19:28.526+02:00",
 "cpv": [
@@ -17962,6 +19524,51 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=EWwGUmzihka5HQrHoP3G5A%3D%3D",
 "valor_estimado": 115702.48,
 "vista": "2026-10-20"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17860402": {
+"actualizado": "2026-10-29T11:50:57.768+01:00",
+"cpv": [
+"79950000",
+"71330000",
+"71350000",
+"45310000",
+"92331210",
+"71310000",
+"71320000",
+"71340000"
+],
+"estado": "RES",
+"expediente": "SER 52/2025",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17860402",
+"motivo": "CPV 79950000",
+"municipio": "Calp (Alicante)",
+"nuts": "ES521",
+"organo": "Alcaldía del Ajuntament de Calp",
+"presupuesto_con_iva": 172425.0,
+"presupuesto_sin_iva": 142500.0,
+"procedimiento": "Abierto",
+"provincia": "Alicante/Alacant",
+"publicada": "2025-08-19",
+"resultados": [
+{
+"fecha": "2025-10-08",
+"ganador": "ESPECTACULOS AMB PRODUCCIONES, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 161131.16,
+"importe_sin_iva": 133166.25,
+"lote": null,
+"oferta_maxima": 133166.25,
+"oferta_minima": 38327.5,
+"ofertas": 3,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicio de organización de la “Fira de Nadal” de Calp (Alicante), anualidades 2025-2027",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=3aekqDEBILKP66GS%2BONYvQ%3D%3D",
+"valor_estimado": 142500.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/17884235": {
 "actualizado": "2026-10-02T10:11:05.592+02:00",
@@ -20607,6 +22214,47 @@
 "valor_estimado": 1749300.0,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/18833630": {
+"actualizado": "2026-10-29T11:17:03.788+01:00",
+"cpv": [
+"60100000",
+"39150000",
+"79956000",
+"66510000"
+],
+"estado": "RES",
+"expediente": "0003-26",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/18833630",
+"motivo": "CPV 79956000",
+"municipio": "Valencia",
+"nuts": "ES523",
+"organo": "Dirección General de la Ciudad de las Artes y de las Ciencias S.A.",
+"presupuesto_con_iva": 116430.53,
+"presupuesto_sin_iva": 96223.58,
+"procedimiento": "Abierto simplificado",
+"provincia": "Valencia/València",
+"publicada": "2026-01-15",
+"resultados": [
+{
+"fecha": "2026-02-18",
+"ganador": "ART I CLAR, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 108960.02,
+"importe_sin_iva": 95989.6,
+"lote": null,
+"oferta_maxima": 0.0,
+"oferta_minima": 0.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Contratación del transporte de ida y vuelta, seguro de transporte de ida y vuelta, seguro montaje y desmontaje, montaje y desmontaje de la exposición para exhibir la exposición en exteriores de Ciudad de las Artes y de las Ciencias del artista Park Eun Sun",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=ljs2c7FZe2A2wEhQbcAqug%3D%3D",
+"valor_estimado": 96223.58,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/18833651": {
 "actualizado": "2026-10-16T16:21:00.544+02:00",
 "cpv": [
@@ -21578,6 +23226,44 @@
 "valor_estimado": 145453.0,
 "vista": "2026-10-22"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19154750": {
+"actualizado": "2026-10-29T14:09:49.397+01:00",
+"cpv": [
+"79956000"
+],
+"estado": "RES",
+"expediente": "202600000020",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19154750",
+"motivo": "CPV 79956000",
+"municipio": "Madrid",
+"nuts": "ES300",
+"organo": "Dirección del Museo Nacional Centro de Arte Reina Sofía",
+"presupuesto_con_iva": 355725.0,
+"presupuesto_sin_iva": 293987.6,
+"procedimiento": "Abierto",
+"provincia": "Madrid",
+"publicada": "2026-03-02",
+"resultados": [
+{
+"fecha": "2026-05-22",
+"ganador": "INTERVENTO 2 S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 274157.69,
+"importe_sin_iva": 226576.6,
+"lote": null,
+"oferta_maxima": 226576.6,
+"oferta_minima": 213902.7,
+"ofertas": 2,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicio de montaje, mantenimiento y desmontaje museográfico de la exposición temporal “MARTA MINUJÍN. LA MENESUNDA”.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2FYU8p8BY7%2Ft70UvEyYJSGw%3D%3D",
+"valor_estimado": 293987.6,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19162778": {
 "actualizado": "2026-10-19T10:48:49.709+02:00",
 "cpv": [
@@ -22314,6 +24000,45 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=3zeIwRec446Izo3LHNPGcQ%3D%3D",
 "valor_estimado": 88440.0,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19347848": {
+"actualizado": "2026-10-29T19:40:53.342+01:00",
+"cpv": [
+"71000000",
+"71356100"
+],
+"estado": "RES",
+"expediente": "2568050M",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19347848",
+"motivo": "palabra «espectaculos»",
+"municipio": "Xirivella",
+"nuts": "ES523",
+"organo": "Alcaldía del Ayuntamiento de Xirivella",
+"presupuesto_con_iva": 35000.0,
+"presupuesto_sin_iva": 28925.6,
+"procedimiento": "Abierto simplificado",
+"provincia": "Valencia/València",
+"publicada": "2026-03-27",
+"resultados": [
+{
+"fecha": "2026-05-05",
+"ganador": "AB-AUCATEL INSPECCION Y CONTROL, SLU",
+"ganador_empresa": true,
+"importe_con_iva": 35000.0,
+"importe_sin_iva": 28925.6,
+"lote": null,
+"oferta_maxima": 10.0,
+"oferta_minima": 10.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Informes, certificados y registro correspondiente a las actividades recreativas, actividades socioculturales o espectáculos públicos abiertos a pública concurrencia que se celebren en vía pública del municipio de Xirivella o en establecimientos/recintos municipales, mediante la colocación de instalaciones eventuales, portátiles o desmontables",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Vd4kPZalPXfLIx6q1oPaMg%3D%3D",
+"valor_estimado": 63636.32,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19357497": {
 "actualizado": "2026-09-30T09:00:00.000+02:00",
@@ -26064,6 +27789,47 @@
 "valor_estimado": 121487.6,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19705902": {
+"actualizado": "2026-10-29T12:45:40.532+01:00",
+"cpv": [
+"32323500",
+"45311000",
+"51300000",
+"51314000"
+],
+"estado": "ADJ",
+"expediente": "186/2026/CMA",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19705902",
+"motivo": "CPV 51314000",
+"municipio": "Melilla",
+"nuts": "ES640",
+"organo": "Consejería de Hacienda de la Ciudad Autónoma de Melilla",
+"presupuesto_con_iva": 204617.35,
+"presupuesto_sin_iva": 201737.06,
+"procedimiento": "Abierto",
+"provincia": "Melilla",
+"publicada": "2026-05-19",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": "INNOVACIONES TECNOLÓGICAS DEL SUR, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 204617.35,
+"importe_sin_iva": 201737.06,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Ampliación de la Cobertura de la Red de Control y Supervisión de Trafico de la Policía Local de la Ciudad Autónoma de Melilla",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=7JHI%2FqfzW1c7u6%2B%2FR7DUoA%3D%3D",
+"valor_estimado": 201737.06,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19714751": {
 "actualizado": "2026-10-23T14:05:52.858+02:00",
 "cpv": [
@@ -27205,12 +28971,12 @@
 "vista": "2026-10-27"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19772885": {
-"actualizado": "2026-10-28T09:32:11.524+01:00",
+"actualizado": "2026-10-29T09:46:10.793+01:00",
 "cpv": [
 "92000000",
 "92200000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "CNMY26/CACVSA/04",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19772885",
@@ -27248,7 +29014,7 @@
 "oferta_minima": 55400.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Servicio de equipos ENG y mochila-ENG con operador para la delegación de Madrid, y ocasionalmente al resto del territorio nacional para la Corporación Audiovisual de la Comunitat Valenciana (CACVSA)",
@@ -27612,7 +29378,7 @@
 "vista": "2026-10-22"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19791571": {
-"actualizado": "2026-10-26T08:43:04.280+01:00",
+"actualizado": "2026-10-23T11:03:57.611+02:00",
 "cpv": [
 "92000000",
 "92600000"
@@ -27655,7 +29421,7 @@
 "oferta_minima": 21.21,
 "ofertas": 6,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 },
 {
 "fecha": "2026-09-25",
@@ -27668,7 +29434,7 @@
 "oferta_minima": 21.21,
 "ofertas": 6,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 },
 {
 "fecha": "2026-09-25",
@@ -27681,7 +29447,7 @@
 "oferta_minima": 21.21,
 "ofertas": 6,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 },
 {
 "fecha": "2026-09-25",
@@ -27694,7 +29460,7 @@
 "oferta_minima": 21.21,
 "ofertas": 6,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 },
 {
 "fecha": "2026-10-22",
@@ -28105,7 +29871,7 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19821117": {
-"actualizado": "2026-10-01T14:17:53.586+02:00",
+"actualizado": "2026-10-29T13:09:25.340+01:00",
 "cpv": [
 "24613000"
 ],
@@ -28423,7 +30189,7 @@
 "vista": "2026-10-14"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19831525": {
-"actualizado": "2026-10-27T11:40:17.138+01:00",
+"actualizado": "2026-10-20T10:38:39.459+02:00",
 "cpv": [
 "45220000",
 "71356200",
@@ -28455,7 +30221,7 @@
 "oferta_minima": 298095.18,
 "ofertas": 7,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 },
 {
 "fecha": "2026-10-08",
@@ -28494,7 +30260,7 @@
 "oferta_minima": 32106.43,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "contrato mixto denominado \"obras contenidas en el proyecto de ampliación de la infraestructura verde eje norte de Alcalá de Henares -parque lineal Isaac Peral, Paseo Rosalind Franklin, parque Santa Rosa de Lima, parque Reyes Magos y parque de la Chana- y dirección facultativa y coordinación de seguridad y salud de estas obras\".",
@@ -30378,6 +32144,46 @@
 "valor_estimado": 52243.88,
 "vista": "2026-10-14"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19893930": {
+"actualizado": "2026-10-29T10:38:57.790+01:00",
+"cpv": [
+"79952000",
+"55120000",
+"79950000"
+],
+"estado": "RES",
+"expediente": "0086-26",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19893930",
+"motivo": "CPV 79952000",
+"municipio": "Madrid",
+"nuts": "ES300",
+"organo": "Instituto Nacional de Seguridad y Salud en el Trabajo O.A. M.P. (INSST)",
+"presupuesto_con_iva": 223560.0,
+"presupuesto_sin_iva": 184760.33,
+"procedimiento": "Abierto",
+"provincia": "Madrid",
+"publicada": "2026-06-18",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": null,
+"oferta_maxima": 0.0,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "desierto"
+}
+],
+"titulo": "Servicio integral de organización del Congreso Nacional de Seguridad y Salud en el Trabajo que se celebrará en Barcelona los días 17 y 18 de marzo de 2027.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=UXFtGskaV5U%2B1TMyIiZmzw%3D%3D",
+"valor_estimado": 184760.33,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19900147": {
 "actualizado": "2026-10-28T10:59:13.637+01:00",
 "cpv": [
@@ -30925,12 +32731,12 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19918100": {
-"actualizado": "2026-09-30T13:33:50.766+02:00",
+"actualizado": "2026-10-29T11:27:12.628+01:00",
 "cpv": [
 "34928400",
 "92312230"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "I-2026/22",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19918100",
@@ -30955,7 +32761,7 @@
 "oferta_minima": 116572.5,
 "ofertas": 2,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Suministro e instalación de tres esculturas para el paseo de los poetas en el Muelle de Santa Catalina Sur dentro del Puerto de Las Palmas.",
@@ -31040,6 +32846,59 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=QhPe7Tf6%2FWaLAncw3qdZkA%3D%3D",
 "valor_estimado": 38942.0,
 "vista": "2026-10-14"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19918714": {
+"actualizado": "2026-10-29T15:54:40.653+01:00",
+"cpv": [
+"39151300",
+"44212000",
+"45237000"
+],
+"estado": "RES",
+"expediente": "1124/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19918714",
+"motivo": "CPV 45237000",
+"municipio": "Valle Gran Rey",
+"nuts": "ES706",
+"organo": "Alcaldía del Ayuntamiento de Valle Gran Rey",
+"presupuesto_con_iva": 52383.56,
+"presupuesto_sin_iva": 48956.6,
+"procedimiento": "Abierto simplificado",
+"provincia": "La Gomera",
+"publicada": "2026-06-22",
+"resultados": [
+{
+"fecha": "2026-10-20",
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": "1",
+"oferta_maxima": 35500.0,
+"oferta_minima": 34681.0,
+"ofertas": 2,
+"pyme": false,
+"resultado": "desierto"
+},
+{
+"fecha": "2026-10-20",
+"ganador": "REAL PRINT PUBLICIDAD S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 12894.31,
+"importe_sin_iva": 12894.31,
+"lote": "2",
+"oferta_maxima": 12894.31,
+"oferta_minima": 12894.31,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Contrato administrativo mixto de suministro de tarimas modulares y sus complementos para escenarios y servicio de montaje y desmontaje para los eventos organizados por el Iltre. Ayuntamiento de Valle Gran Rey",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=SGbZ9EkKt4m7JOCXkOhcDg%3D%3D",
+"valor_estimado": 62114.06,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19924938": {
 "actualizado": "2026-10-16T12:04:30.425+02:00",
@@ -31197,7 +33056,7 @@
 "vista": "2026-10-14"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19925113": {
-"actualizado": "2026-10-05T10:08:13.543+02:00",
+"actualizado": "2026-10-29T08:25:19.912+01:00",
 "cpv": [
 "79950000"
 ],
@@ -31428,7 +33287,7 @@
 "vista": "2026-10-22"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19930962": {
-"actualizado": "2026-10-27T09:30:21.299+01:00",
+"actualizado": "2026-10-20T10:27:48.172+02:00",
 "cpv": [
 "79956000",
 "32321100",
@@ -31442,7 +33301,7 @@
 "22462000",
 "32321300"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "594/26",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19930962",
@@ -31467,7 +33326,7 @@
 "oferta_minima": 21000.0,
 "ofertas": 2,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 },
 {
 "fecha": "2026-10-19",
@@ -31480,7 +33339,7 @@
 "oferta_minima": 27000.0,
 "ofertas": 2,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Contrato para la organización de la muestra EXPOMIEL y de las Jornadas Técnicas de Apicultura",
@@ -31592,7 +33451,7 @@
 "vista": "2026-10-14"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19931385": {
-"actualizado": "2026-10-26T09:18:44.684+01:00",
+"actualizado": "2026-10-16T16:21:46.473+02:00",
 "cpv": [
 "31500000",
 "45310000"
@@ -31855,6 +33714,44 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=7rjEZKMMeLEQyBAnWzHfCg%3D%3D",
 "valor_estimado": 357000.0,
 "vista": "2026-10-29"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19938736": {
+"actualizado": "2026-10-29T09:16:40.000+01:00",
+"cpv": [
+"92000000"
+],
+"estado": "ADJ",
+"expediente": "2/26 AYTOPARLA CONSER",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19938736",
+"motivo": "CPV 92000000",
+"municipio": "Parla",
+"nuts": "ES300",
+"organo": "Junta de Gobierno del Ayuntamiento de Parla",
+"presupuesto_con_iva": 60750.0,
+"presupuesto_sin_iva": 55231.8,
+"procedimiento": "Abierto",
+"provincia": "Madrid",
+"publicada": "2026-06-26",
+"resultados": [
+{
+"fecha": "2026-10-23",
+"ganador": "JC MADRID DEPORTE Y CULTURA SL",
+"ganador_empresa": true,
+"importe_con_iva": 57577.5,
+"importe_sin_iva": 52343.18,
+"lote": null,
+"oferta_maxima": 0.0,
+"oferta_minima": 0.0,
+"ofertas": 3,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Concesión de servicios, sin lotes, del Programa de días sin cole",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=rHwWRIzf4ZxeKgd8LfVV9g%3D%3D",
+"valor_estimado": 82847.7,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19938846": {
 "actualizado": "2026-10-21T10:27:36.323+02:00",
@@ -33182,6 +35079,44 @@
 "valor_estimado": 55000.0,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19972334": {
+"actualizado": "2026-10-29T09:48:48.679+01:00",
+"cpv": [
+"92312100"
+],
+"estado": "ADJ",
+"expediente": "2026/0073",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19972334",
+"motivo": "CPV 92312100",
+"municipio": "Leganés",
+"nuts": "ES300",
+"organo": "Junta de Gobierno del Ayuntamiento de Leganés",
+"presupuesto_con_iva": 48400.0,
+"presupuesto_sin_iva": 40000.0,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-07-02",
+"resultados": [
+{
+"fecha": "2026-10-27",
+"ganador": "IKEBANA ANIMACION Y OCIO SL",
+"ganador_empresa": true,
+"importe_con_iva": 46822.16,
+"importe_sin_iva": 38696.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Realización de actuaciones y actividades históricas de la ciudad de Leganés",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2FznSRAJA6Jmqb7rCcv76BA%3D%3D",
+"valor_estimado": 80000.0,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19972350": {
 "actualizado": "2026-10-15T10:12:50.951+02:00",
 "cpv": [
@@ -33554,7 +35489,7 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/19986564": {
-"actualizado": "2026-10-27T12:56:41.492+01:00",
+"actualizado": "2026-10-29T10:38:46.117+01:00",
 "cpv": [
 "92000000",
 "92300000",
@@ -34838,6 +36773,45 @@
 "valor_estimado": 399563.4,
 "vista": "2026-10-14"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20040609": {
+"actualizado": "2026-10-29T14:16:36.994+01:00",
+"cpv": [
+"80110000",
+"80100000"
+],
+"estado": "ADJ",
+"expediente": "2304/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20040609",
+"motivo": "palabra «nadal»",
+"municipio": "Chilches Xilxes",
+"nuts": "ES522",
+"organo": "Alcaldía del Ayuntamiento de Chilches Xilxes",
+"presupuesto_con_iva": 26500.0,
+"presupuesto_sin_iva": 26500.0,
+"procedimiento": "Abierto simplificado",
+"provincia": "Castellón/Castelló",
+"publicada": "2026-07-13",
+"resultados": [
+{
+"fecha": "2026-09-17",
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": 9400.0,
+"importe_sin_iva": 9400.0,
+"lote": null,
+"oferta_maxima": 10845.0,
+"oferta_minima": 9400.0,
+"ofertas": 7,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Actividades de \"Escola Matinera\", programa de refuerzo educativo para prevenir el fracaso escolar y \"Escoles de Nadal y de Pasqua\"",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=9%2FUQGluTijKTylGzYmBF9Q%3D%3D",
+"valor_estimado": 53000.0,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20040679": {
 "actualizado": "2026-10-01T11:43:22.505+02:00",
 "cpv": [
@@ -35274,6 +37248,48 @@
 "valor_estimado": 65912.19,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20050548": {
+"actualizado": "2026-10-29T12:59:26.420+01:00",
+"cpv": [
+"79710000",
+"90911200",
+"79992000",
+"92370000",
+"98341130"
+],
+"estado": "ADJ",
+"expediente": "530/2025/CMA",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20050548",
+"motivo": "CPV 92370000",
+"municipio": "Melilla",
+"nuts": "ES640",
+"organo": "Consejería de Hacienda de la Ciudad Autónoma de Melilla",
+"presupuesto_con_iva": 1339291.28,
+"presupuesto_sin_iva": 1287780.08,
+"procedimiento": "Abierto",
+"provincia": "Melilla",
+"publicada": "2026-07-14",
+"resultados": [
+{
+"fecha": "2026-10-28",
+"ganador": "SISTEMAS INTERACTIVOS MULTIMEDIA DE MELILLA, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 856003.21,
+"importe_sin_iva": 823080.01,
+"lote": "1",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Gestión Integral del Teatro Kursaal-Fernado Arrabal",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=tlU7rIXPHjkS7pcxhTeWOg%3D%3D",
+"valor_estimado": 2985532.37,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20060521": {
 "actualizado": "2026-10-20T11:50:55.553+02:00",
 "cpv": [
@@ -35554,11 +37570,11 @@
 "vista": "2026-10-14"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20060714": {
-"actualizado": "2026-10-14T12:54:37.623+02:00",
+"actualizado": "2026-10-29T12:40:23.995+01:00",
 "cpv": [
 "92312100"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "2026NAC00019",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20060714",
@@ -35583,7 +37599,7 @@
 "oferta_minima": 68000.0,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "CNDM - Servicio artístico del concierto de la agrupación musical Les accents",
@@ -36338,11 +38354,11 @@
 "vista": "2026-10-27"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20078037": {
-"actualizado": "2026-10-01T14:00:10.350+02:00",
+"actualizado": "2026-10-29T09:12:31.743+01:00",
 "cpv": [
 "34991000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "6507/2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20078037",
@@ -36367,7 +38383,7 @@
 "oferta_minima": null,
 "ofertas": 2,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Arrendamiento con instalación del alumbrado ornamental navideño del Municipio de San Bartolomé navidad 2026/2027.",
@@ -40770,7 +42786,7 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20232455": {
-"actualizado": "2026-10-22T10:31:25.638+02:00",
+"actualizado": "2026-10-29T12:05:07.391+01:00",
 "cpv": [
 "31527200",
 "31522000"
@@ -40826,7 +42842,7 @@
 "oferta_minima": 143900.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Suministro de la iluminación ornamental para las fiestas de Navidad 2026 y del Choco y de la Coca del año 2027 del Ayuntamiento de Redondela",
@@ -41168,14 +43184,14 @@
 "vista": "2026-10-20"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20232836": {
-"actualizado": "2026-10-23T13:19:59.387+02:00",
+"actualizado": "2026-10-22T14:37:21.277+02:00",
 "cpv": [
 "79822500",
 "79811000",
 "92000000",
 "72413000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "516/2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20232836",
@@ -41200,7 +43216,7 @@
 "oferta_minima": 32710.28,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 },
 {
 "fecha": "2026-10-22",
@@ -41213,7 +43229,7 @@
 "oferta_minima": 42056.07,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Contratación de los servicios de difusión, promoción, publicidad, divulgación y dinamización de la red de museos y de los centros de interpretación de Santa Lucía de Tirajana.",
@@ -41558,6 +43574,47 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=%2BdLHVuADt9szjChw4z%2FXvw%3D%3D",
 "valor_estimado": 57851.24,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20233303": {
+"actualizado": "2026-10-29T08:33:22.761+01:00",
+"cpv": [
+"50232100",
+"45310000",
+"31527200",
+"45316100"
+],
+"estado": "ADJ",
+"expediente": "6002/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20233303",
+"motivo": "palabra «navideno»",
+"municipio": "El Campello",
+"nuts": "ES521",
+"organo": "Alcaldía del Ayuntamiento de El Campello",
+"presupuesto_con_iva": 679343.08,
+"presupuesto_sin_iva": 561440.56,
+"procedimiento": "Abierto",
+"provincia": "Alicante/Alacant",
+"publicada": "2026-07-31",
+"resultados": [
+{
+"fecha": "2026-10-28",
+"ganador": "LA FABRICA ILUMINACION ORNAMENTAL SL",
+"ganador_empresa": true,
+"importe_con_iva": 159644.98,
+"importe_sin_iva": 131938.0,
+"lote": null,
+"oferta_maxima": 131939.0,
+"oferta_minima": 129972.0,
+"ofertas": 3,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contrato de servicio para la instalación del alumbrado extraordinario festivo y navideño en el Campello.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=z6BRgEKg1N4%2FbjW6njtWLw%3D%3D",
+"valor_estimado": 673728.67,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20233418": {
 "actualizado": "2026-09-30T09:05:38.501+02:00",
@@ -42200,11 +44257,11 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20248383": {
-"actualizado": "2026-10-27T08:07:58.151+01:00",
+"actualizado": "2026-10-21T09:37:07.082+02:00",
 "cpv": [
 "45315300"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "202620PAS174",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20248383",
@@ -42229,7 +44286,7 @@
 "oferta_minima": 105000.0,
 "ofertas": 3,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Ejecución del proyecto de iluminación artística exterior del Monasterio de Santa María la Real de Las Huelgas de Burgos",
@@ -42652,6 +44709,44 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=PgYj92Vtahv9pbnDwlaUlg%3D%3D",
 "valor_estimado": 35000.0,
 "vista": "2026-10-14"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20262148": {
+"actualizado": "2026-10-29T13:32:41.038+01:00",
+"cpv": [
+"92000000"
+],
+"estado": "ADJ",
+"expediente": "300/2026/00170",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20262148",
+"motivo": "CPV 92000000",
+"municipio": "Madrid",
+"nuts": "ES300",
+"organo": "Distrito de Latina",
+"presupuesto_con_iva": 190254.87,
+"presupuesto_sin_iva": 157235.43,
+"procedimiento": "Abierto",
+"provincia": "Madrid",
+"publicada": "2026-08-06",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": 188941.5,
+"importe_sin_iva": 156150.0,
+"lote": null,
+"oferta_maxima": 157000.0,
+"oferta_minima": 147800.9,
+"ofertas": 3,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Organización, desarrollo y ejecución de la Cabalgata de Reyes 2027 del distrito de Latina.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=xt8JSeR1WoPyoM4us5k4vw%3D%3D",
+"valor_estimado": 314470.86,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20262205": {
 "actualizado": "2026-10-01T12:33:03.773+02:00",
@@ -43955,13 +46050,13 @@
 "vista": "2026-10-22"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20276529": {
-"actualizado": "2026-10-26T09:08:59.892+01:00",
+"actualizado": "2026-10-29T10:06:21.183+01:00",
 "cpv": [
 "37529100",
 "92331210",
 "92331000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "6374/2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20276529",
@@ -43986,7 +46081,7 @@
 "oferta_minima": 38000.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "El suministro de atracciones infantiles y juveniles, la impartición de talleres y la prestación del servicio de monitores y personal de animación para la realización de actividades de ocio y participación del parque \"Viu el Nadal\" en el núcleo de Andratx.",
@@ -44192,11 +46287,11 @@
 "vista": "2026-10-23"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20287477": {
-"actualizado": "2026-10-19T08:46:51.074+02:00",
+"actualizado": "2026-10-29T12:43:03.153+01:00",
 "cpv": [
 "92312100"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "2026NAC00023",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20287477",
@@ -44221,7 +46316,7 @@
 "oferta_minima": 64000.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "TZ - Servicio artístico de representaciones de danza española en el Teatro de la Zarzuela del espectáculo titulado Les ballets espagnols de La Argentina",
@@ -45153,11 +47248,11 @@
 "vista": "2026-10-29"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20297226": {
-"actualizado": "2026-10-26T08:36:22.108+01:00",
+"actualizado": "2026-10-21T09:36:17.776+02:00",
 "cpv": [
 "92312240"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "15744/2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20297226",
@@ -45182,7 +47277,7 @@
 "oferta_minima": 24500.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Organización, gestión, producción y realización de la interpretación del concierto del grupo musical Maldita Nerea",
@@ -45488,6 +47583,48 @@
 "valor_estimado": 102400.0,
 "vista": "2026-10-22"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20297357": {
+"actualizado": "2026-10-29T08:14:01.574+01:00",
+"cpv": [
+"92331100",
+"39154100",
+"63100000",
+"60000000",
+"45223800"
+],
+"estado": "ADJ",
+"expediente": "PAT-2026/1",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20297357",
+"motivo": "CPV 92331100",
+"municipio": "Salamanca",
+"nuts": "ES415",
+"organo": "Presidencia del Patronato Provincial de Turismo de Salamanca",
+"presupuesto_con_iva": 55000.0,
+"presupuesto_sin_iva": 45454.55,
+"procedimiento": "Abierto",
+"provincia": "Salamanca",
+"publicada": "2026-08-14",
+"resultados": [
+{
+"fecha": "2026-10-26",
+"ganador": "VEO GESTIÓN Y PRODUCCIÓN DE EVENTOS S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 54994.5,
+"importe_sin_iva": 45450.0,
+"lote": null,
+"oferta_maxima": 45450.0,
+"oferta_minima": 39950.95,
+"ofertas": 4,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Diseño, construcción, decoración, montaje, desmontaje y transporte del Stand para la promoción turística de Salamanca en la Feria de INTUR 2026.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=cPXtREzyZ%2BvzAq95uGTrDQ%3D%3D",
+"valor_estimado": 45454.55,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20297375": {
 "actualizado": "2026-10-22T15:13:19.871+02:00",
 "cpv": [
@@ -45779,7 +47916,7 @@
 "vista": "2026-10-27"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20305199": {
-"actualizado": "2026-10-23T11:10:58.539+02:00",
+"actualizado": "2026-10-29T07:15:16.840+01:00",
 "cpv": [
 "31527200",
 "45316100",
@@ -45787,7 +47924,7 @@
 "45311000",
 "34991000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "2026/C005/000002",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20305199",
@@ -45812,7 +47949,7 @@
 "oferta_minima": 20850.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Suministro de iluminación ornamental de Navidad del Ayuntamiento de Fene",
@@ -45904,6 +48041,57 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=WYFcr4FxJAngL1BHd3qjQA%3D%3D",
 "valor_estimado": 103368.0,
 "vista": "2026-10-14"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20305475": {
+"actualizado": "2026-10-29T10:58:26.343+01:00",
+"cpv": [
+"32342410",
+"51313000",
+"92370000",
+"31120000",
+"34991000",
+"31518600",
+"71318100",
+"32321200",
+"34928310",
+"44115600",
+"35111300",
+"34928200",
+"32351200",
+"51310000"
+],
+"estado": "ADJ",
+"expediente": "SUMIN/ABR_SP_SMPL/2026000127",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20305475",
+"motivo": "CPV 32342410",
+"municipio": "Elche",
+"nuts": "ES521",
+"organo": "Teniente de Alcalde de Contratación Pública del Ayuntamiento de Elche",
+"presupuesto_con_iva": 72479.0,
+"presupuesto_sin_iva": 59900.0,
+"procedimiento": "Abierto simplificado",
+"provincia": "Alicante/Alacant",
+"publicada": "2026-08-17",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": "INPARES LEVANTE SL",
+"ganador_empresa": true,
+"importe_con_iva": 72479.0,
+"importe_sin_iva": 59900.0,
+"lote": null,
+"oferta_maxima": 0.0,
+"oferta_minima": 0.0,
+"ofertas": 4,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contrato de suministro, en régimen de arrendamiento bajo demanda, de equipos de iluminación, sonido y medios técnicos para las concejalías de cultura y turismo y de medioambiente y deportes del Excmo. Ayuntamiento de Elche, en barrios, pedanías y espacios expositivos. Ejercicios 2026-2027.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Jv3qKwd4yMo%2Bk2oCbDosIw%3D%3D",
+"valor_estimado": 59900.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20305497": {
 "actualizado": "2026-10-21T10:16:19.583+02:00",
@@ -46320,11 +48508,11 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20317357": {
-"actualizado": "2026-10-27T12:37:39.047+01:00",
+"actualizado": "2026-10-21T09:07:51.037+02:00",
 "cpv": [
 "31000000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "2026/0110",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20317357",
@@ -46349,7 +48537,7 @@
 "oferta_minima": null,
 "ofertas": 3,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Organización, producción y difusión de legaempleO, feria de empresas y empleo de Leganés 2026",
@@ -46358,7 +48546,7 @@
 "vista": "2026-10-22"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20317399": {
-"actualizado": "2026-10-26T09:18:45.191+01:00",
+"actualizado": "2026-10-23T08:23:39.281+02:00",
 "cpv": [
 "79341000",
 "92312211",
@@ -46369,7 +48557,7 @@
 "79961100",
 "79341200"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "2026/000499-PEAS",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20317399",
@@ -46394,7 +48582,7 @@
 "oferta_minima": null,
 "ofertas": 2,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Contratación de la gestión integral de la publicidad y comunicación transmedia para el 33º Festival de Jazz, 2026.",
@@ -47470,7 +49658,7 @@
 "vista": "2026-10-19"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20338035": {
-"actualizado": "2026-10-26T14:58:32.096+01:00",
+"actualizado": "2026-10-22T14:38:10.488+02:00",
 "cpv": [
 "92000000",
 "80590000",
@@ -47835,12 +50023,12 @@
 "vista": "2026-10-14"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20344497": {
-"actualizado": "2026-10-27T08:19:27.621+01:00",
+"actualizado": "2026-10-21T10:53:16.497+02:00",
 "cpv": [
 "34991000",
 "45316100"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "CON/2026/77",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20344497",
@@ -47865,7 +50053,7 @@
 "oferta_minima": 98000.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Iluminación exterior ornamental das rúas e prazas do Concello de Narón durante as Festas de Nadal 2026-2027",
@@ -48132,12 +50320,12 @@
 "vista": "2026-10-23"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20350629": {
-"actualizado": "2026-10-21T12:23:51.357+02:00",
+"actualizado": "2026-10-29T09:27:07.340+01:00",
 "cpv": [
 "79952000",
 "79952100"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "430/2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20350629",
@@ -48162,7 +50350,7 @@
 "oferta_minima": null,
 "ofertas": 3,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Organización y gestión de actividades para la XXIII Feria del Sureste",
@@ -49029,12 +51217,12 @@
 "vista": "2026-10-29"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20415683": {
-"actualizado": "2026-10-01T15:44:19.331+02:00",
+"actualizado": "2026-10-29T10:44:54.707+01:00",
 "cpv": [
 "92331210",
 "92000000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "30/2026-Servicios",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20415683",
@@ -49073,6 +51261,19 @@
 "ofertas": 0,
 "pyme": false,
 "resultado": "desierto"
+},
+{
+"fecha": "2026-10-28",
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": "3",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "desierto"
 }
 ],
 "titulo": "Planificación, organización, coordinación, dinamización, producción y ejecución de las actividades promovidas por la Concejalía\r\nde Servicios Sociales...Ver apartado A del Anexo I",
@@ -49081,12 +51282,12 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20415689": {
-"actualizado": "2026-10-26T10:51:53.521+01:00",
+"actualizado": "2026-10-16T09:06:10.412+02:00",
 "cpv": [
 "92000000",
 "55410000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "25/2026(bis)-G2036",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20415689",
@@ -49111,7 +51312,7 @@
 "oferta_minima": 0.0,
 "ofertas": 2,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "\"Concesión de servicios para la producción logística, gestión de infraestructuras, atención a artistas y explotación comercial (barra y taquilla) del Festival Rock Albox 2026",
@@ -49315,7 +51516,7 @@
 "vista": "2026-10-14"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20415826": {
-"actualizado": "2026-10-23T12:02:29.976+02:00",
+"actualizado": "2026-10-29T11:35:37.600+01:00",
 "cpv": [
 "79952100",
 "92312140",
@@ -49323,7 +51524,7 @@
 "92312100",
 "92312130"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "SFC/2026/053",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20415826",
@@ -49347,8 +51548,8 @@
 "oferta_maxima": null,
 "oferta_minima": null,
 "ofertas": 3,
-"pyme": false,
-"resultado": "adjudicado"
+"pyme": true,
+"resultado": "formalizado"
 }
 ],
 "titulo": "Diseño, producción, coordinación, dirección artística e interpretación musical de los conciertos conmemorativos organizados por SFM",
@@ -49357,7 +51558,7 @@
 "vista": "2026-10-26"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20415892": {
-"actualizado": "2026-10-27T12:54:22.060+01:00",
+"actualizado": "2026-10-29T14:01:34.579+01:00",
 "cpv": [
 "31522000",
 "45311000",
@@ -50642,7 +52843,7 @@
 "vista": "2026-10-23"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20417015": {
-"actualizado": "2026-10-28T12:54:28.896+01:00",
+"actualizado": "2026-10-29T12:15:02.432+01:00",
 "cpv": [
 "92000000"
 ],
@@ -50798,11 +52999,11 @@
 "vista": "2026-10-28"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20417161": {
-"actualizado": "2026-10-23T15:00:12.890+02:00",
+"actualizado": "2026-10-16T12:58:07.933+02:00",
 "cpv": [
 "71314100"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "300/2026/02599",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20417161",
@@ -50827,7 +53028,7 @@
 "oferta_minima": null,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Contrato de servicios de Iluminación ornamental de Navidad del distrito de Latina",
@@ -50874,14 +53075,14 @@
 "vista": "2026-10-27"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20417189": {
-"actualizado": "2026-10-28T12:18:43.383+01:00",
+"actualizado": "2026-10-29T14:10:34.272+01:00",
 "cpv": [
 "51300000",
 "51313000",
 "51314000",
 "79950000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "2026/76972Y",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20417189",
@@ -50906,7 +53107,7 @@
 "oferta_minima": 7705.0,
 "ofertas": 2,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Servicio de asistencia técnica audiovisual para los actos y eventos celebrados en el centro de Congresos Ciutat d´Elx.",
@@ -51273,13 +53474,13 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20417370": {
-"actualizado": "2026-10-27T07:42:58.111+01:00",
+"actualizado": "2026-10-21T08:36:22.914+02:00",
 "cpv": [
 "92300000",
 "92000000",
 "98000000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "2026/7104",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20417370",
@@ -51304,7 +53505,7 @@
 "oferta_minima": 32950.0,
 "ofertas": 3,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "servicios de talleres en Centro de participación activa de mayores de Tarifa",
@@ -52736,11 +54937,11 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20427044": {
-"actualizado": "2026-10-26T13:03:23.196+01:00",
+"actualizado": "2026-10-23T10:03:26.051+02:00",
 "cpv": [
 "79950000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "188761E",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20427044",
@@ -52765,7 +54966,7 @@
 "oferta_minima": 39500.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Servicio de organización y gestión de la feria \"AgroAlcañiz\"",
@@ -53136,6 +55337,44 @@
 "valor_estimado": 79915.0,
 "vista": "2026-10-14"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20435030": {
+"actualizado": "2026-10-29T10:00:53.564+01:00",
+"cpv": [
+"92111200"
+],
+"estado": "ADJ",
+"expediente": "SE-18/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20435030",
+"motivo": "palabra «festival»",
+"municipio": "Cádiz",
+"nuts": "ES612",
+"organo": "Consejo Rector del Instituto de Fomento, Empleo y Formación de la Ciudad de Cádiz - Ayuntamiento de Cádiz",
+"presupuesto_con_iva": 12100.0,
+"presupuesto_sin_iva": 10000.0,
+"procedimiento": "Abierto simplificado",
+"provincia": "Cádiz",
+"publicada": "2026-09-16",
+"resultados": [
+{
+"fecha": "2026-10-27",
+"ganador": "Narrable SL",
+"ganador_empresa": true,
+"importe_con_iva": 9982.5,
+"importe_sin_iva": 8250.0,
+"lote": null,
+"oferta_maxima": 9800.5,
+"oferta_minima": 0.0,
+"ofertas": 23,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Producción de un video promocional de la ciudad de Cádiz, como localización para rodajes audiovisuales con motivo de la celebración de la cuarta edición del \"South International Series Festival\"",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=o4alUapeBdqS81gZFETWmA%3D%3D",
+"valor_estimado": 10000.0,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20435037": {
 "actualizado": "2026-10-16T13:06:16.552+02:00",
 "cpv": [
@@ -53175,11 +55414,11 @@
 "vista": "2026-10-19"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20435209": {
-"actualizado": "2026-10-27T10:09:39.578+01:00",
+"actualizado": "2026-10-16T10:46:47.825+02:00",
 "cpv": [
 "79952000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "DPCR2026/54806",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20435209",
@@ -53204,7 +55443,7 @@
 "oferta_minima": 69003.0,
 "ofertas": 1,
 "pyme": false,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Servicio para la organización y ejecución de la actividad Encuentros Culturales: Embajadores Legado Quijote enmarcado dentro del proyecto Legado Quijote 2026",
@@ -53213,11 +55452,11 @@
 "vista": "2026-10-19"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20435214": {
-"actualizado": "2026-10-27T10:20:41.307+01:00",
+"actualizado": "2026-10-16T14:47:24.049+02:00",
 "cpv": [
 "79952000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "DPCR2026/55359",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20435214",
@@ -53242,7 +55481,7 @@
 "oferta_minima": 96030.0,
 "ofertas": 1,
 "pyme": false,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "contratación del servicio para la organización, y ejecución de la actividad  LAS TARDES DEL QUIJOTE; enmarcado dentro  del  proyecto Legado Quijote 2026.",
@@ -53289,7 +55528,7 @@
 "vista": "2026-10-26"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20446786": {
-"actualizado": "2026-10-27T15:05:32.166+01:00",
+"actualizado": "2026-10-29T12:37:42.406+01:00",
 "cpv": [
 "50340000",
 "45451000",
@@ -53297,7 +55536,7 @@
 "44812400",
 "45311200"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "PASA 26-01-1062",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20446786",
@@ -53322,7 +55561,7 @@
 "oferta_minima": 28588.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Servicios de producción, instalación, mantenimiento y desmontaje de elementos decorativos con motivo de la celebración de la Navidad 2026-2027 en el edificio del Archivo Histórico Municipal de la ciudad de Málaga.",
@@ -53993,6 +56232,47 @@
 "valor_estimado": 24958.68,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20479994": {
+"actualizado": "2026-10-29T09:04:04.247+01:00",
+"cpv": [
+"50800000",
+"37423300",
+"37535291",
+"92620000"
+],
+"estado": "ADJ",
+"expediente": "47736/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20479994",
+"motivo": "CPV 37535291",
+"municipio": "Rivas-Vaciamadrid",
+"nuts": "ES30",
+"organo": "Junta de Gobierno del Ayuntamiento de Rivas Vaciamadrid",
+"presupuesto_con_iva": 40051.0,
+"presupuesto_sin_iva": 33100.0,
+"procedimiento": "Abierto simplificado",
+"provincia": "Comunidad de Madrid",
+"publicada": "2026-09-21",
+"resultados": [
+{
+"fecha": "2026-10-28",
+"ganador": "Surfaces For Climbing s.l",
+"ganador_empresa": true,
+"importe_con_iva": 40051.0,
+"importe_sin_iva": 33100.0,
+"lote": null,
+"oferta_maxima": 0.0,
+"oferta_minima": 0.0,
+"ofertas": 2,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicio de mantenimiento de los rocódromos municipales del Ayuntamiento de Rivas-Vaciamadrid.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=k0vG3%2F6IBvfzAq95uGTrDQ%3D%3D",
+"valor_estimado": 72820.0,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20480000": {
 "actualizado": "2026-10-26T13:57:59.080+01:00",
 "cpv": [
@@ -54630,12 +56910,12 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20480285": {
-"actualizado": "2026-10-23T13:20:48.341+02:00",
+"actualizado": "2026-10-21T12:14:26.342+02:00",
 "cpv": [
 "79952000",
 "92312130"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "PASA 26/13/975",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20480285",
@@ -54660,7 +56940,7 @@
 "oferta_minima": 0.0,
 "ofertas": 2,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Contratación del servicio de gestión y coordinación del evento Pasacalles 4 de enero de 2027 por las calles del Distrito 4 Bailén-Miraflores",
@@ -54784,11 +57064,11 @@
 "vista": "2026-10-14"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20480560": {
-"actualizado": "2026-10-21T15:59:54.219+02:00",
+"actualizado": "2026-10-29T09:13:32.485+01:00",
 "cpv": [
 "92310000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "5312/2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20480560",
@@ -54813,7 +57093,7 @@
 "oferta_minima": 32710.28,
 "ofertas": 1,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Festival Cuentos Breña Alta",
@@ -55020,6 +57300,46 @@
 "valor_estimado": 34400.0,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20480749": {
+"actualizado": "2026-10-29T13:18:34.085+01:00",
+"cpv": [
+"34991000",
+"31000000",
+"51100000"
+],
+"estado": "RES",
+"expediente": "1705/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20480749",
+"motivo": "palabra «navidena»",
+"municipio": "Valle Gran Rey",
+"nuts": "ES706",
+"organo": "Alcaldía del Ayuntamiento de Valle Gran Rey",
+"presupuesto_con_iva": 95083.62,
+"presupuesto_sin_iva": 88863.2,
+"procedimiento": "Abierto simplificado",
+"provincia": "La Gomera",
+"publicada": "2026-09-18",
+"resultados": [
+{
+"fecha": "2026-10-21",
+"ganador": "ILUMINACIONES DECORATIVAS ARTE Y LED, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 82407.7,
+"importe_sin_iva": 77016.54,
+"lote": null,
+"oferta_maxima": 77016.54,
+"oferta_minima": 77016.54,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Contrato administrativo mixto de suministro en régimen de arrendamiento y servicio de diseño, montaje y desmontaje de la iluminación y ornamentación navideña del municipio de Valle Gran Rey",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=zVDolTQr8bkl5NjlNci%2BtA%3D%3D",
+"valor_estimado": 88863.2,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20480752": {
 "actualizado": "2026-10-05T15:29:13.016+02:00",
 "cpv": [
@@ -55200,6 +57520,44 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=nSOpC5sxSLqExvMJXBMHHQ%3D%3D",
 "valor_estimado": 6500.0,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20481024": {
+"actualizado": "2026-10-29T08:24:19.618+01:00",
+"cpv": [
+"92312000"
+],
+"estado": "ADJ",
+"expediente": "2026000035",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20481024",
+"motivo": "CPV 92312000",
+"municipio": "Dos Hermanas",
+"nuts": "ES618",
+"organo": "Junta de Gobierno del Ayuntamiento de Dos Hermanas",
+"presupuesto_con_iva": 19360.0,
+"presupuesto_sin_iva": 16000.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": "Sevilla",
+"publicada": "2026-09-18",
+"resultados": [
+{
+"fecha": "2026-10-28",
+"ganador": "PENTACION, S.A.",
+"ganador_empresa": true,
+"importe_con_iva": 19360.0,
+"importe_sin_iva": 16000.0,
+"lote": null,
+"oferta_maxima": 16000.0,
+"oferta_minima": 16000.0,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Representación teatral La comedia de la Olla",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=nb8ltgtbrDaqb7rCcv76BA%3D%3D",
+"valor_estimado": 16000.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20481031": {
 "actualizado": "2026-10-21T13:28:56.366+02:00",
@@ -55800,11 +58158,11 @@
 "vista": "2026-10-22"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20496796": {
-"actualizado": "2026-10-15T09:37:00.684+02:00",
+"actualizado": "2026-10-29T12:39:42.270+01:00",
 "cpv": [
 "92312100"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "2026NAC00021",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20496796",
@@ -55829,7 +58187,7 @@
 "oferta_minima": 77107.5,
 "ofertas": 1,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "CNDM -  Servicio artístico de las actuaciones musicales de la agrupación musical Cantoría bajo la dirección de Jorge Losana",
@@ -57291,11 +59649,11 @@
 "vista": "2026-10-27"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20499375": {
-"actualizado": "2026-10-26T10:30:15.585+01:00",
+"actualizado": "2026-10-22T13:15:05.071+02:00",
 "cpv": [
 "31527200"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "1841932P/2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20499375",
@@ -57320,7 +59678,7 @@
 "oferta_minima": 33016.52,
 "ofertas": 2,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Suministro en régimen de alquiler del alumbrado ornamental de la Navidad 2026/2027 de Haro",
@@ -57833,6 +60191,47 @@
 "valor_estimado": 24788.0,
 "vista": "2026-10-14"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20500020": {
+"actualizado": "2026-10-29T13:27:57.294+01:00",
+"cpv": [
+"34991000",
+"31500000",
+"45316000",
+"31520000"
+],
+"estado": "RES",
+"expediente": "CON/2026/97",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20500020",
+"motivo": "palabra «navidad»",
+"municipio": "Cangas del Narcea",
+"nuts": "ES120",
+"organo": "Alcaldía del Ayuntamiento de Cangas del Narcea",
+"presupuesto_con_iva": 30520.0,
+"presupuesto_sin_iva": 25000.0,
+"procedimiento": "Abierto simplificado",
+"provincia": "Asturias",
+"publicada": "2026-09-02",
+"resultados": [
+{
+"fecha": "2026-10-20",
+"ganador": "ORLUPRIN SL",
+"ganador_empresa": true,
+"importe_con_iva": 28435.0,
+"importe_sin_iva": 23500.0,
+"lote": null,
+"oferta_maxima": 24870.0,
+"oferta_minima": 23500.0,
+"ofertas": 2,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Alumbrado ornamental \"Navidad 2026\"",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=PrkedajNDpZeKgd8LfVV9g%3D%3D",
+"valor_estimado": 25000.0,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20545210": {
 "actualizado": "2026-10-16T10:07:35.692+02:00",
 "cpv": [
@@ -57993,6 +60392,44 @@
 "valor_estimado": 30841.12,
 "vista": "2026-10-15"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20545413": {
+"actualizado": "2026-10-29T14:48:25.787+01:00",
+"cpv": [
+"39154100"
+],
+"estado": "RES",
+"expediente": "378/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20545413",
+"motivo": "palabra «feria de»",
+"municipio": "El Pedroso",
+"nuts": "ES618",
+"organo": "Alcaldía del Ayuntamiento de El Pedroso",
+"presupuesto_con_iva": 37000.0,
+"presupuesto_sin_iva": 30578.51,
+"procedimiento": "Abierto",
+"provincia": "Sevilla",
+"publicada": "2026-09-22",
+"resultados": [
+{
+"fecha": "2026-10-08",
+"ganador": "FERIAS Y EVENTOS SL",
+"ganador_empresa": true,
+"importe_con_iva": 35890.0,
+"importe_sin_iva": 29661.16,
+"lote": null,
+"oferta_maxima": 29661.16,
+"oferta_minima": 29661.16,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Servicio alquiler carpas stand Feria de Muestras 2026",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=rlZZZyuzag170UvEyYJSGw%3D%3D",
+"valor_estimado": 30578.51,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20545502": {
 "actualizado": "2026-10-23T12:26:05.175+02:00",
 "cpv": [
@@ -58113,7 +60550,7 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20545522": {
-"actualizado": "2026-10-23T10:24:34.388+02:00",
+"actualizado": "2026-10-29T10:27:37.072+01:00",
 "cpv": [
 "55000000"
 ],
@@ -58143,6 +60580,19 @@
 "ofertas": 1,
 "pyme": false,
 "resultado": "desierto"
+},
+{
+"fecha": "2026-10-28",
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": 13310.0,
+"importe_sin_iva": 11000.0,
+"lote": "2",
+"oferta_maxima": 11000.0,
+"oferta_minima": 11000.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Servicios para el desarrollo de actividades destinadas a mayores. Dos Lotes. Lote 1: Celebración de Magostos. Lote 2: Ágapes navideños en Centros Sociales.",
@@ -58225,6 +60675,46 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=j4ouMteiyxZ6nTs9LZ9RhQ%3D%3D",
 "valor_estimado": 9500.0,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20570881": {
+"actualizado": "2026-10-29T13:26:59.574+01:00",
+"cpv": [
+"79956000",
+"79952000",
+"39154100"
+],
+"estado": "ADJ",
+"expediente": "A41119033-2026/000092-PeAS",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20570881",
+"motivo": "CPV 79956000",
+"municipio": "Sevilla",
+"nuts": "ES618",
+"organo": "Gerencia de la Sociedad Provincial de Informática de Sevilla S.A.U.",
+"presupuesto_con_iva": 84700.0,
+"presupuesto_sin_iva": 70000.0,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-09-28",
+"resultados": [
+{
+"fecha": "2026-10-27",
+"ganador": "VIAJES EL CORTE INGLÉS S.A.",
+"ganador_empresa": true,
+"importe_con_iva": 83006.0,
+"importe_sin_iva": 68600.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicios integrales de diseño, producción, montaje, equipamiento y desmontaje de la XIII feria de innovación y nuevas tecnologías de la Diputación de Sevilla",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Y7wdswjUS83s%2BnLj3vAg5A%3D%3D",
+"valor_estimado": 70000.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20570934": {
 "actualizado": "2026-10-05T10:53:48.840+02:00",
@@ -58790,7 +61280,7 @@
 "vista": "2026-10-28"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20571684": {
-"actualizado": "2026-10-26T10:02:04.613+01:00",
+"actualizado": "2026-10-21T15:55:44.210+02:00",
 "cpv": [
 "34991000",
 "31527260",
@@ -58798,7 +61288,7 @@
 "51100000",
 "50232100"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "2984604J",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20571684",
@@ -58823,7 +61313,7 @@
 "oferta_minima": 66000.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Contrato mixto de suministro y servicios, por arrendamiento, de luces ornamentales navideñas en el municipio de Silla",
@@ -59139,11 +61629,11 @@
 "vista": "2026-10-14"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20572357": {
-"actualizado": "2026-10-23T14:20:26.415+02:00",
+"actualizado": "2026-10-16T14:20:37.711+02:00",
 "cpv": [
 "34223000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "S-03852-2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20572357",
@@ -59168,7 +61658,7 @@
 "oferta_minima": 39800.0,
 "ofertas": 2,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Alquiler vehículo y servicios adicionales Carroza Cabalgata Reyes 2027",
@@ -59428,6 +61918,45 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=YSGVtw3mgFyzz8fXU2i3eQ%3D%3D",
 "valor_estimado": 37490.0,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20572514": {
+"actualizado": "2026-10-29T10:30:54.134+01:00",
+"cpv": [
+"92312240",
+"92331210"
+],
+"estado": "ADJ",
+"expediente": "816/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20572514",
+"motivo": "CPV 92312240",
+"municipio": "El Escorial (Madrid)",
+"nuts": "ES300",
+"organo": "Junta de Gobierno del Ayuntamiento de la Leal Villa de El Escorial",
+"presupuesto_con_iva": 31127.25,
+"presupuesto_sin_iva": 25725.0,
+"procedimiento": "Abierto simplificado",
+"provincia": "Madrid",
+"publicada": "2026-09-24",
+"resultados": [
+{
+"fecha": "2026-10-28",
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": 31127.25,
+"importe_sin_iva": 25725.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicios de espectáculo navideño que represente la llegada de Papá Noel, acompañado de elfos ayudantes, en un trineo\ntirado por renos reales, en el municipio de El Escorial.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=IhtJnk8bDRAeIBJRHQiPkQ%3D%3D",
+"valor_estimado": 25725.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20572516": {
 "actualizado": "2026-09-30T14:01:08.919+02:00",
@@ -61373,11 +63902,11 @@
 "vista": "2026-10-15"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20593750": {
-"actualizado": "2026-10-28T09:51:43.296+01:00",
+"actualizado": "2026-10-29T09:17:09.609+01:00",
 "cpv": [
 "15890000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "2026/AR21U/00002011E",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20593750",
@@ -61402,7 +63931,7 @@
 "oferta_minima": 489.33,
 "ofertas": 3,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "(02J) PASA Adquisición de productos de alimentación navideños no incluidos en el AM destinado a las unidades del ámbito JESAT",
@@ -62563,6 +65092,59 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=v2UOYwnKQvbzAq95uGTrDQ%3D%3D",
 "valor_estimado": 80000.0,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20603164": {
+"actualizado": "2026-10-29T14:19:36.289+01:00",
+"cpv": [
+"32000000",
+"71315000",
+"51310000"
+],
+"estado": "ADJ",
+"expediente": "S-03105-2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20603164",
+"motivo": "CPV 51310000",
+"municipio": "Pozuelo de Alarcón",
+"nuts": "ES511",
+"organo": "Compras de la Corporación de Radio y Televisión Española S.A.",
+"presupuesto_con_iva": 110957.0,
+"presupuesto_sin_iva": 91700.0,
+"procedimiento": "Abierto simplificado",
+"provincia": "Barcelona",
+"publicada": "2026-10-01",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": "CARAMA OBRAS E INSTALACIONES, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 84700.0,
+"importe_sin_iva": 70000.0,
+"lote": "1",
+"oferta_maxima": 70000.0,
+"oferta_minima": 70000.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+},
+{
+"fecha": "2026-10-29",
+"ganador": "CARAMA OBRAS E INSTALACIONES, S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 24200.0,
+"importe_sin_iva": 20000.0,
+"lote": "2",
+"oferta_maxima": 20000.0,
+"oferta_minima": 20000.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Fabricación, instalación y suministro de paneles de monitores para sedes de RTVE",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=jNax9XpzM0rN3k3tjedSGw%3D%3D",
+"valor_estimado": 91700.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20603199": {
 "actualizado": "2026-10-13T21:11:23.440+02:00",
@@ -64218,6 +66800,44 @@
 "valor_estimado": 12000.0,
 "vista": "2026-10-29"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20622432": {
+"actualizado": "2026-10-29T11:15:55.407+01:00",
+"cpv": [
+"79340000"
+],
+"estado": "ADJ",
+"expediente": "SLU-2026-PNSP-COM-0009",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20622432",
+"motivo": "palabra «conciertos»",
+"municipio": "Málaga",
+"nuts": "ES617",
+"organo": "Gerencia de Turismo y Planificación Costa del Sol S.L.U.",
+"presupuesto_con_iva": 30250.0,
+"presupuesto_sin_iva": 25000.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": "Málaga",
+"publicada": "2026-10-05",
+"resultados": [
+{
+"fecha": "2026-10-27",
+"ganador": "Fundación Hispania Música",
+"ganador_empresa": true,
+"importe_con_iva": 30250.0,
+"importe_sin_iva": 25000.0,
+"lote": null,
+"oferta_maxima": 0.0,
+"oferta_minima": 0.0,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Difusión de la imagen de marca y destino para la empresa pública Turismo y Planificación Costa del Sol, S.L.U. a través del patrocinio del ciclo de conciertos Hispania Música en Nueva York 2026.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=AZS1F%2BMAffJ70UvEyYJSGw%3D%3D",
+"valor_estimado": 25000.0,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20622481": {
 "actualizado": "2026-10-05T14:44:54.769+02:00",
 "cpv": [
@@ -64799,6 +67419,44 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=SXm5iePUvdRt5r0ngvMetA%3D%3D",
 "valor_estimado": 90000.0,
 "vista": "2026-10-15"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20622803": {
+"actualizado": "2026-10-29T15:05:48.401+01:00",
+"cpv": [
+"92331000"
+],
+"estado": "ADJ",
+"expediente": "65-2026 RCT",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20622803",
+"motivo": "CPV 92331000",
+"municipio": "Eivissa",
+"nuts": "ES531",
+"organo": "Vicepresidencia del Consejo de Administración de Fires, Congressos i Esdeveniments D'Eivissa, S.A.U.",
+"presupuesto_con_iva": 66550.0,
+"presupuesto_sin_iva": 55000.0,
+"procedimiento": "Abierto simplificado",
+"provincia": null,
+"publicada": "2026-10-05",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": "Alba y Zeus servicios y Espectáculos s.l.",
+"ganador_empresa": true,
+"importe_con_iva": 66550.0,
+"importe_sin_iva": 55000.0,
+"lote": null,
+"oferta_maxima": 55000.0,
+"oferta_minima": 55000.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicio de arrendamiento, montaje, mantenimiento y desmontaje de atracciones para la feria DIVERESPAI 2026-2027 (Eivissa, Illes Balears)",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=YhsTnHHldGL9pbnDwlaUlg%3D%3D",
+"valor_estimado": 55000.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20622824": {
 "actualizado": "2026-10-05T11:07:24.327+02:00",
@@ -67378,6 +70036,44 @@
 "valor_estimado": 17900.0,
 "vista": "2026-10-14"
 },
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20659061": {
+"actualizado": "2026-10-29T13:56:10.371+01:00",
+"cpv": [
+"71318100"
+],
+"estado": "ADJ",
+"expediente": "1708/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20659061",
+"motivo": "palabra «festejos»",
+"municipio": "Olvera",
+"nuts": "ES612",
+"organo": "Junta de Gobierno del Ayuntamiento de Olvera",
+"presupuesto_con_iva": 188704.93,
+"presupuesto_sin_iva": 155954.49,
+"procedimiento": "Negociado sin publicidad",
+"provincia": "Cádiz",
+"publicada": "2026-10-06",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": "AINELEC LM",
+"ganador_empresa": true,
+"importe_con_iva": 59756.55,
+"importe_sin_iva": 49385.58,
+"lote": null,
+"oferta_maxima": 51900.0,
+"oferta_minima": 49385.58,
+"ofertas": 2,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicio de iluminación para festejos.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=26MQpj35fdY3vLk2DU2Ddg%3D%3D",
+"valor_estimado": 155954.49,
+"vista": "2026-10-30"
+},
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20659073": {
 "actualizado": "2026-10-06T09:22:11.062+02:00",
 "cpv": [
@@ -67731,11 +70427,11 @@
 "vista": "2026-10-14"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20670704": {
-"actualizado": "2026-10-09T14:07:37.437+02:00",
+"actualizado": "2026-10-29T10:25:39.637+01:00",
 "cpv": [
 "92312000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "CU296/2026/CNSP",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20670704",
@@ -67760,7 +70456,7 @@
 "oferta_minima": 16238.0,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Servicios para la realización del espectáculo pirotécnico Nit del Foc Canaria dentro de la celebración de las Fiestas del Pilar, en el barrio de Guanarteme, en la ciudad de Las Palmas de Gran Canaria.",
@@ -67927,6 +70623,44 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=9D2pfprMnbY7u6%2B%2FR7DUoA%3D%3D",
 "valor_estimado": 54545.45,
 "vista": "2026-10-14"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20670915": {
+"actualizado": "2026-10-29T13:23:41.986+01:00",
+"cpv": [
+"44212320"
+],
+"estado": "RES",
+"expediente": "33/2026/CONT_001",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20670915",
+"motivo": "palabra «fiestas patronales»",
+"municipio": "Arnedo",
+"nuts": "ES230",
+"organo": "Alcaldia del Ayuntamiento de Arnedo",
+"presupuesto_con_iva": 37510.0,
+"presupuesto_sin_iva": 31000.0,
+"procedimiento": "Abierto",
+"provincia": "La Rioja",
+"publicada": "2026-10-09",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": null,
+"ganador_empresa": null,
+"importe_con_iva": null,
+"importe_sin_iva": null,
+"lote": null,
+"oferta_maxima": 30900.0,
+"oferta_minima": 30900.0,
+"ofertas": 1,
+"pyme": false,
+"resultado": "desierto"
+}
+],
+"titulo": "Suministro, en régimen de ALQUILER, así como el montaje y desmontaje de una CARPA destinada a la organización de eventos durante las fiestas de San José  y las fiestas patronales de San Cosme y San Damián, que se celebran en el municipio de Arnedo, durante los meses de marzo y septiembre",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=1HC123rugGbgL1BHd3qjQA%3D%3D",
+"valor_estimado": 124000.0,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20670930": {
 "actualizado": "2026-10-13T08:59:15.629+02:00",
@@ -73686,11 +76420,11 @@
 "vista": "2026-10-22"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20743165": {
-"actualizado": "2026-10-26T11:56:48.275+01:00",
+"actualizado": "2026-10-21T11:17:34.343+02:00",
 "cpv": [
 "92360000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "D22/2026/20",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20743165",
@@ -73715,7 +76449,7 @@
 "oferta_minima": 10345.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Servicio de disparo del Castillo de fuegos artificiales y traca Fin de Fiestas el domingo 25 de octubre durante la celebración de la Fira d' Onda 2026",
@@ -73800,12 +76534,12 @@
 "vista": "2026-10-22"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20743515": {
-"actualizado": "2026-10-26T10:36:07.675+01:00",
+"actualizado": "2026-10-20T23:28:12.806+02:00",
 "cpv": [
 "79952100",
 "79952000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "51/26-S",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20743515",
@@ -73830,7 +76564,7 @@
 "oferta_minima": 27576.1,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Acto de celebración del 40º Aniversario de la Universidad Popular Juan Rodríguez Doreste",
@@ -73877,12 +76611,12 @@
 "vista": "2026-10-22"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20743852": {
-"actualizado": "2026-10-20T12:36:48.374+02:00",
+"actualizado": "2026-10-29T08:07:46.785+01:00",
 "cpv": [
 "92310000",
 "92312000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "PR26-0094.7",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20743852",
@@ -73907,7 +76641,7 @@
 "oferta_minima": null,
 "ofertas": 1,
 "pyme": true,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Exhibición del espectáculo teatral único Yerma en la Sala principal del Teatro Español del 30 de octubre al 27 de diciembre de 2026 y su producción en Gira.",
@@ -73954,11 +76688,11 @@
 "vista": "2026-10-22"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20743965": {
-"actualizado": "2026-10-23T13:15:27.983+02:00",
+"actualizado": "2026-10-20T11:01:11.223+02:00",
 "cpv": [
 "92312000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "101/2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20743965",
@@ -73983,7 +76717,7 @@
 "oferta_minima": 7500.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Servicio de producción de la representación  teatral de la obra NO ME TOQUES EL CUENTO, el día 24 de octubre de 2026.",
@@ -74580,11 +77314,11 @@
 "vista": "2026-10-23"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20758014": {
-"actualizado": "2026-10-27T10:01:32.029+01:00",
+"actualizado": "2026-10-22T08:16:54.121+02:00",
 "cpv": [
 "92312000"
 ],
-"estado": "RES",
+"estado": "ADJ",
 "expediente": "PRIVADOS 19/26",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20758014",
@@ -74609,7 +77343,7 @@
 "oferta_minima": 12632.0,
 "ofertas": 1,
 "pyme": true,
-"resultado": "formalizado"
+"resultado": "adjudicado"
 }
 ],
 "titulo": "Ejecución de los trabajos consistentes en la ejecución de los trabajos consistentes en desarrollar el FESTIVAL INTERNACIONAL DE MAGIA\r\nTOLEDO ILUSION",
@@ -74618,11 +77352,11 @@
 "vista": "2026-10-23"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20758015": {
-"actualizado": "2026-10-22T08:15:57.177+02:00",
+"actualizado": "2026-10-29T09:26:46.583+01:00",
 "cpv": [
 "92312000"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "98/2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20758015",
@@ -74647,7 +77381,7 @@
 "oferta_minima": 5500.0,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "Servicio de representación de la obra teatral -MEJOR NO DECIRLO-, los días 31 de octubre y 1 de noviembre de de 2026, en el marco de la programación cultural del segundo semestre del año 2026, organizada por la Concejalía de Cultura y Patrimonio Arqueológico del Excmo. Ayuntamiento de Huelva.",
@@ -77019,11 +79753,11 @@
 "vista": "2026-10-29"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20798390": {
-"actualizado": "2026-10-28T09:27:52.803+01:00",
+"actualizado": "2026-10-29T07:28:48.593+01:00",
 "cpv": [
 "92312120"
 ],
-"estado": "ADJ",
+"estado": "RES",
 "expediente": "14542/2026",
 "fuente": "PLACSP",
 "id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20798390",
@@ -77048,7 +79782,7 @@
 "oferta_minima": 33000.0,
 "ofertas": 1,
 "pyme": false,
-"resultado": "adjudicado"
+"resultado": "formalizado"
 }
 ],
 "titulo": "T/054/2026: Interpretación artística de diversos grupos para el festival de ROCK D´AKÍ de Puerto Real, que se celebrará el día 7 de noviembre de 2026 en la Caseta municipal.",
@@ -77132,6 +79866,513 @@
 "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=KZUwswzPeGKIzo3LHNPGcQ%3D%3D",
 "valor_estimado": 7851.24,
 "vista": "2026-10-29"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806405": {
+"actualizado": "2026-10-29T16:23:58.402+01:00",
+"cpv": [
+"31000000",
+"32342410",
+"32351000"
+],
+"estado": "ADJ",
+"expediente": "SP26-00175 CAT3 CE7",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806405",
+"motivo": "CPV 32342410",
+"municipio": "Madrid",
+"nuts": "ES300",
+"organo": "Madrid Destino Cultura Turismo y Negocio, S.A.",
+"presupuesto_con_iva": 32119.09,
+"presupuesto_sin_iva": 26544.7,
+"procedimiento": "Restringido",
+"provincia": "Madrid",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": "MILAN ACUSTICA S.A.",
+"ganador_empresa": true,
+"importe_con_iva": 32119.09,
+"importe_sin_iva": 26544.7,
+"lote": "1",
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "SP26-00175 CAT3 CE7. Suministro de material técnico de SONIDO a instalar en el Teatro Fernán Gómez y en el especio cultural CentroCentro, con motivo de la celebración del Festival Internacional de Jazz de Madrid (JazzMadrid26)",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=MzgD9GOsBQjyoM4us5k4vw%3D%3D",
+"valor_estimado": 26544.7,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806417": {
+"actualizado": "2026-10-29T15:51:02.966+01:00",
+"cpv": [
+"92312000"
+],
+"estado": "RES",
+"expediente": "NSP ARTS 474/26",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806417",
+"motivo": "CPV 92312000",
+"municipio": "Valencia",
+"nuts": "ES523",
+"organo": "Dirección General de la Fundación Palau de Les Arts Reina Sofía",
+"presupuesto_con_iva": 82280.0,
+"presupuesto_sin_iva": 68000.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": "Valencia/València",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-10-26",
+"ganador": "Iniciativas musicales S.L.",
+"ganador_empresa": true,
+"importe_con_iva": 82280.0,
+"importe_sin_iva": 68000.0,
+"lote": null,
+"oferta_maxima": 68000.0,
+"oferta_minima": 68000.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Servicios artísticos por parte de Iniciativas Musicales S.L. para la exhibición del espectáculo \"Riccardo primo\" de G.F. Händel en versión concierto",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=AhXGHW%2FkoiYIYE3ZiZ%2BxmQ%3D%3D",
+"valor_estimado": 68000.0,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806510": {
+"actualizado": "2026-10-29T14:14:50.012+01:00",
+"cpv": [
+"92300000",
+"92312000"
+],
+"estado": "RES",
+"expediente": "2026/0136",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806510",
+"motivo": "CPV 92300000",
+"municipio": "Cádiz",
+"nuts": "ES612",
+"organo": "Fundación Municipal de Cultura del Excmo. Ayuntamiento de Cádiz",
+"presupuesto_con_iva": 33820.18,
+"presupuesto_sin_iva": 27950.56,
+"procedimiento": "Negociado sin publicidad",
+"provincia": "Cádiz",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-10-14",
+"ganador": "PROCREARTIS",
+"ganador_empresa": true,
+"importe_con_iva": 33820.18,
+"importe_sin_iva": 27950.56,
+"lote": null,
+"oferta_maxima": 27950.56,
+"oferta_minima": 27950.56,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Actividades complementarias del Festival Iberoamericano de Teatro de Cádiz 2026.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=EyRP1eQ6Yxt6nTs9LZ9RhQ%3D%3D",
+"valor_estimado": 27950.56,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806596": {
+"actualizado": "2026-10-29T13:27:35.476+01:00",
+"cpv": [
+"22100000"
+],
+"estado": "RES",
+"expediente": "300/2024/00045-1136",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806596",
+"motivo": "palabra «navidena»",
+"municipio": "Madrid",
+"nuts": "ES300",
+"organo": "Área de Gobierno de Economía, Innovación y Hacienda del Ayuntamiento de Madrid",
+"presupuesto_con_iva": 2991.97,
+"presupuesto_sin_iva": 2472.7,
+"procedimiento": "Abierto",
+"provincia": "Madrid",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-10-28",
+"ganador": "ADVANTIA COMUNICACIÓN GRÁFICA, S.A.",
+"ganador_empresa": true,
+"importe_con_iva": 2991.97,
+"importe_sin_iva": 2472.7,
+"lote": null,
+"oferta_maxima": 0.0,
+"oferta_minima": 0.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Suministro de 255 carteles para mupis y 110 carteles para marquesinas para la campaña informativa sobre el tercer concurso escolar de dibujo para el diseño de iluminación navideña promovida por la Secretaría General Técnica del Área de Gobierno de Obras y Equipamientos.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=iNESnTs7fkCOUi78BmzhOQ%3D%3D",
+"valor_estimado": 2472.7,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806616": {
+"actualizado": "2026-10-29T13:18:01.583+01:00",
+"cpv": [
+"92312000",
+"92312120"
+],
+"estado": "ADJ",
+"expediente": "PR26-0258.2",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806616",
+"motivo": "CPV 92312000",
+"municipio": "Madrid",
+"nuts": "ES300",
+"organo": "Madrid Destino Cultura Turismo y Negocio, S.A.",
+"presupuesto_con_iva": 112353.34,
+"presupuesto_sin_iva": 92854.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": "Madrid",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": "SIAMM PRODUCCIONES",
+"ganador_empresa": true,
+"importe_con_iva": 112353.34,
+"importe_sin_iva": 92854.0,
+"lote": null,
+"oferta_maxima": 92854.0,
+"oferta_minima": 92854.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contratación de servicios de ejecución de las actuaciones artísticas únicas conciertos de James Carter Organ Trio, Kenny Barron Trio, Kurt Elling & Yellowjackets y Chris Potter, dentro del Festival de Jazzmadrid 2026 en Teatro Fernán Gómez. Centro Cultural de la Villa, a adjudicar mediante procedimiento negociado sin publicidad.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=aNawZzN7lvtt5r0ngvMetA%3D%3D",
+"valor_estimado": 92854.0,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806747": {
+"actualizado": "2026-10-29T12:15:40.732+01:00",
+"cpv": [
+"79956000"
+],
+"estado": "ADJ",
+"expediente": "9403/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806747",
+"motivo": "CPV 79956000",
+"municipio": "Pola de Siero (Principado de Asturias)",
+"nuts": "ES120",
+"organo": "Alcaldía del Ayuntamiento de Siero",
+"presupuesto_con_iva": 39412.12,
+"presupuesto_sin_iva": 32572.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": "Asturias",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": "KUMAI EVENTOS SL",
+"ganador_empresa": true,
+"importe_con_iva": 38453.8,
+"importe_sin_iva": 31780.0,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 2,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Contratación de la prestación del Servicio Integral de Organización del Mercado Navideño  de la Pola Siero",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=WkjgtWj6FGnmnwcj%2BxbdTg%3D%3D",
+"valor_estimado": 39086.4,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806863": {
+"actualizado": "2026-10-29T10:48:49.650+01:00",
+"cpv": [
+"92400000",
+"92000000"
+],
+"estado": "ADJ",
+"expediente": "146/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806863",
+"motivo": "CPV 92000000",
+"municipio": "Santa Cruz de Tenerife",
+"nuts": "ES709",
+"organo": "Gerencia de TEA Tenerife Espacio de las Artes",
+"presupuesto_con_iva": 78785.16,
+"presupuesto_sin_iva": 73630.99,
+"procedimiento": "Negociado sin publicidad",
+"provincia": "Tenerife",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-10-28",
+"ganador": "persona física",
+"ganador_empresa": false,
+"importe_con_iva": 78645.0,
+"importe_sin_iva": 73500.0,
+"lote": null,
+"oferta_maxima": 73500.0,
+"oferta_minima": 73500.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicios de comunicación para la entidad Pública TEA Tenerife Espacio de las Artes.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=K%2BXbNmVZdOG9Hd5zqvq9cg%3D%3D",
+"valor_estimado": 220892.97,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806984": {
+"actualizado": "2026-10-29T09:40:40.174+01:00",
+"cpv": [
+"92000000",
+"92312000",
+"92312140"
+],
+"estado": "RES",
+"expediente": "6706/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806984",
+"motivo": "CPV 92000000",
+"municipio": "Villanueva del Pardillo",
+"nuts": "ES300",
+"organo": "Junta de Gobierno Local del Ayuntamiento de Villanueva del Pardillo",
+"presupuesto_con_iva": 50820.0,
+"presupuesto_sin_iva": 42000.0,
+"procedimiento": "Negociado sin publicidad",
+"provincia": "Madrid",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-10-09",
+"ganador": "DT PRO EVENTOS, S.L",
+"ganador_empresa": true,
+"importe_con_iva": 50820.0,
+"importe_sin_iva": 42000.0,
+"lote": null,
+"oferta_maxima": 42000.0,
+"oferta_minima": 42000.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "formalizado"
+}
+],
+"titulo": "Servicios artísticos para la actuación de la \"Orquesta Panorama\" con motivo de las fiestas patronales en honor a \"San Lucas Evangelista\" del municipio de Villanueva del Pardillo.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=9iWMhIVyMQmOUi78BmzhOQ%3D%3D",
+"valor_estimado": 42000.0,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806997": {
+"actualizado": "2026-10-29T09:34:08.273+01:00",
+"cpv": [
+"92331100",
+"45223800",
+"39154100"
+],
+"estado": "ADJ",
+"expediente": "26E.2.5.0084",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20806997",
+"motivo": "CPV 92331100",
+"municipio": "Salamanca",
+"nuts": "ES415",
+"organo": "Presidencia de la Diputación Provincial de Salamanca",
+"presupuesto_con_iva": 108636.62,
+"presupuesto_sin_iva": 89782.33,
+"procedimiento": "Negociado sin publicidad",
+"provincia": "Salamanca",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-10-29",
+"ganador": "IBERSTAND",
+"ganador_empresa": true,
+"importe_con_iva": 108149.8,
+"importe_sin_iva": 89380.0,
+"lote": null,
+"oferta_maxima": 89380.0,
+"oferta_minima": 89380.0,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicio de diseño, alquiler, montaje, mantenimiento y desmontaje de los Stands para la celebración de la \"X Feria Ecoraya 2026\" los próximos 7 y 8 de noviembre de 2026 en el Pabellón Central del Recinto Ferial de la Diputación de Salamanca.",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=Zd6%2FzfBnVYn%2B3JAijKO%2Bkg%3D%3D",
+"valor_estimado": 89782.33,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20807008": {
+"actualizado": "2026-10-29T09:28:28.362+01:00",
+"cpv": [
+"51310000"
+],
+"estado": "RES",
+"expediente": "11/2023/JUVE C.B.9",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20807008",
+"motivo": "CPV 51310000",
+"municipio": "Fuengirola",
+"nuts": "ES617",
+"organo": "Junta de Gobierno del Ayuntamiento de Fuengirola",
+"presupuesto_con_iva": 2247.27,
+"presupuesto_sin_iva": 1857.25,
+"procedimiento": "Derivado de acuerdo marco",
+"provincia": "Málaga",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-09-02",
+"ganador": "Montañez sonido e iluminación profesional S.L",
+"ganador_empresa": true,
+"importe_con_iva": 2247.27,
+"importe_sin_iva": 1857.25,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Fiestas en plazas del municipio",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=QTQ6BPmuk33XOjazN1Dw9Q%3D%3D",
+"valor_estimado": 1857.25,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20807018": {
+"actualizado": "2026-10-29T09:23:00.026+01:00",
+"cpv": [
+"79800000",
+"79822000",
+"79822500",
+"79822400",
+"79811000"
+],
+"estado": "RES",
+"expediente": "2026000153/AYTO/SERV/MAR",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20807018",
+"motivo": "palabra «navidad»",
+"municipio": "Málaga",
+"nuts": "ES617",
+"organo": "Tenencia de Alcaldía Delegada del Área Específica de Servicios Operativos, Régimen Interior, Playas y Fiestas",
+"presupuesto_con_iva": 0.0,
+"presupuesto_sin_iva": 0.0,
+"procedimiento": "Abierto",
+"provincia": null,
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-09-28",
+"ganador": "PUBLIPRINTERS GLOBAL SOCIEDAD LIMITADA",
+"ganador_empresa": true,
+"importe_con_iva": 3205.14,
+"importe_sin_iva": 2648.88,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Servicio de material publicitario para la difusión de actividades Navidad 2026",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=mVfGrcpBk9Mtm4eBPtV6eQ%3D%3D",
+"valor_estimado": 70483.2,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20807019": {
+"actualizado": "2026-10-29T09:20:19.177+01:00",
+"cpv": [
+"51310000"
+],
+"estado": "RES",
+"expediente": "11/2023/JUVE C.B.8",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20807019",
+"motivo": "CPV 51310000",
+"municipio": "Fuengirola",
+"nuts": "ES617",
+"organo": "Junta de Gobierno del Ayuntamiento de Fuengirola",
+"presupuesto_con_iva": 1487.16,
+"presupuesto_sin_iva": 1229.06,
+"procedimiento": "Derivado de acuerdo marco",
+"provincia": "Málaga",
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-07-30",
+"ganador": "Montañez sonido e iluminación profesional S.L",
+"ganador_empresa": true,
+"importe_con_iva": 1487.16,
+"importe_sin_iva": 1229.06,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": false,
+"resultado": "adjudicado"
+}
+],
+"titulo": "Actuación de grupo de musical",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=eS0eKMoh86xrSd8H4b2soA%3D%3D",
+"valor_estimado": 1229.06,
+"vista": "2026-10-30"
+},
+"https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20807043": {
+"actualizado": "2026-10-29T08:55:50.390+01:00",
+"cpv": [
+"79952000"
+],
+"estado": "ADJ",
+"expediente": "XP0550/2026",
+"fuente": "PLACSP",
+"id": "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/20807043",
+"motivo": "CPV 79952000",
+"municipio": "Las Palmas de Gran Canaria",
+"nuts": "ES705",
+"organo": "Consejería de Gobierno de Presidencia y Movilidad Sostenible del Cabildo de Gran Canaria",
+"presupuesto_con_iva": 83566.76,
+"presupuesto_sin_iva": 78099.78,
+"procedimiento": "Negociado sin publicidad",
+"provincia": null,
+"publicada": "2026-10-29",
+"resultados": [
+{
+"fecha": "2026-10-28",
+"ganador": "FUNDACIÓN AUDITORIO Y TEATRO DE LAS PALMAS DE GRAN CANARIA",
+"ganador_empresa": true,
+"importe_con_iva": 83546.76,
+"importe_sin_iva": 78099.78,
+"lote": null,
+"oferta_maxima": null,
+"oferta_minima": null,
+"ofertas": 1,
+"pyme": true,
+"resultado": "adjudicado"
+}
+],
+"titulo": "según información del expediente",
+"url": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=d1O09zJTg8IadbH3CysQuQ%3D%3D",
+"valor_estimado": 78099.78,
+"vista": "2026-10-30"
 },
 "https://contrataciondelestado.es/sindicacion/licitacionesPerfilContratante/6521840": {
 "actualizado": "2026-10-13T10:06:04.008+02:00",
